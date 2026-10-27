@@ -2,7 +2,7 @@
 
 <h1 align="center">Unidentified Loot</h1>
 
-<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">CurseForge</a> · <a href="https://github.com/Mikaaah/TNK-Loot-Identification/wiki">Wiki</a> · <a href="https://github.com/Mikaaah/TNK-Loot-Identification/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/TNK-Loot-Identification/blob/main/CHANGELOG.md">Changelog</a></p>
+<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">CurseForge</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Wiki</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/blob/main/CHANGELOG.md">Changelog</a></p>
 
 <p align="center"><img alt="Minecraft 1.21.1" src="https://img.shields.io/badge/Minecraft-1.21.1-568736?style=flat-square"> <img alt="NeoForge" src="https://img.shields.io/badge/Loader-NeoForge-d77828?style=flat-square"></p>
 
@@ -20,7 +20,7 @@ Turn equipment drops into unidentified finds, then reveal their potential at a *
 
 Install the mod on **client and server** with **Java 21**, **Minecraft 1.21.1** and **NeoForge 21.1.262 or newer**. **Apotheosis is required**, with Placebo, Patchouli, Apothic Attributes, Apothic Spawners and Apothic Enchanting. FTB Quests and FTB Teams are optional.
 
-[Download a successful GitHub artifact](https://github.com/Mikaaah/TNK-Loot-Identification/actions/workflows/build.yml): open a successful run, then download its plain mod JAR from Artifacts.
+[Download a successful GitHub artifact](https://github.com/Mikaaah/Unidentified-Loot/actions/workflows/build.yml): open a successful run, then download its plain mod JAR from Artifacts.
 
 ## First steps
 
@@ -35,11 +35,11 @@ Modpacks can change equipment pools, identification costs, tier names and unlock
 
 | Guide | Includes |
 | --- | --- |
-| [Identifier and loot](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Identifier-and-Loot) | Tokens, the counter and revealed equipment |
-| [Progression and teams](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Progression-and-Teams) | Unlock modes and shared progress |
-| [Configuration](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Configuration) | Prices, tiers and equipment pools |
-| [Commands and editor](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Commands-and-Admin-Editor) | Rewards and operator tools |
-| [FTB Quests](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/FTB-Quests-Integration) | Tier-aware quest rewards |
+| [Identifier and loot](https://github.com/Mikaaah/Unidentified-Loot/wiki/Identifier-and-Loot) | Tokens, the counter and revealed equipment |
+| [Progression and teams](https://github.com/Mikaaah/Unidentified-Loot/wiki/Progression-and-Teams) | Unlock modes and shared progress |
+| [Configuration](https://github.com/Mikaaah/Unidentified-Loot/wiki/Configuration) | Prices, tiers and equipment pools |
+| [Commands and editor](https://github.com/Mikaaah/Unidentified-Loot/wiki/Commands-and-Admin-Editor) | Rewards and operator tools |
+| [FTB Quests](https://github.com/Mikaaah/Unidentified-Loot/wiki/FTB-Quests-Integration) | Tier-aware quest rewards |
 
 ## Credits and license
 

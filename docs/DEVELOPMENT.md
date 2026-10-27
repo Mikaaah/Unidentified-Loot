@@ -12,4 +12,4 @@ Windows: `gradlew.bat build`. Output: `build/libs/tnkloot-0.6.1-alpha.jar`. The 
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and [CHANGELOG.md](CHANGELOG.md). All rights reserved, matching the original project metadata.
 
-See [Apotheosis presets](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Apotheosis-Presets) for the affix ladder and datapack customization. Existing `tiers.json` files are preserved; new worlds receive the improved material pools. Apply the [example](examples/tiers.example.json) manually if you want those pool changes in an existing pack.
+See [Apotheosis presets](https://github.com/Mikaaah/Unidentified-Loot/wiki/Apotheosis-Presets) for the affix ladder and datapack customization. Existing `tiers.json` files are preserved; new worlds receive the improved material pools. Apply the [example](examples/tiers.example.json) manually if you want those pool changes in an existing pack.

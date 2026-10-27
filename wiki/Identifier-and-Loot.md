@@ -13,7 +13,7 @@ Payment and validation happen for the whole batch before animation begins. Inven
 
 ## Loot replacement
 
-Configured equipment IDs in generated loot become category tokens. With a player context, the token records the player’s effective tier; context-free loot starts at rank 0, clamped to the configured item’s inclusive tier range. Unrelated items stay unchanged. See [Configuration](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Configuration) for replacement switches and weighted item pools.
+Configured equipment IDs in generated loot become category tokens. With a player context, the token records the player’s effective tier; context-free loot starts at rank 0, clamped to the configured item’s inclusive tier range. Unrelated items stay unchanged. See [Configuration](https://github.com/Mikaaah/Unidentified-Loot/wiki/Configuration) for replacement switches and weighted item pools.
 
 ## Token identity
 

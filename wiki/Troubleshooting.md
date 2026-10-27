@@ -18,8 +18,8 @@ Use Command Rewards with `tnkloot tier unlock @s <tier>` at permission level 2. 
 
 ## A reset is undone
 
-Advancement mode can restore tiers from completed advancements on login or reload. Use manual or quest mode for a lasting administrative rollback. Shared team ranks and members' personal ranks are separate; review [Progression and Teams](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Progression-and-Teams).
+Advancement mode can restore tiers from completed advancements on login or reload. Use manual or quest mode for a lasting administrative rollback. Shared team ranks and members' personal ranks are separate; review [Progression and Teams](https://github.com/Mikaaah/Unidentified-Loot/wiki/Progression-and-Teams).
 
 ## Report a problem
 
-Use [GitHub Issues](https://github.com/Mikaaah/TNK-Loot-Identification/issues/new?template=bug_report.yml). Include mod/runtime versions, reproduction steps, relevant configuration, command output and logs. Team integration still requires validation against your pack's installed FTB Teams version.
+Use [GitHub Issues](https://github.com/Mikaaah/Unidentified-Loot/issues/new?template=bug_report.yml). Include mod/runtime versions, reproduction steps, relevant configuration, command output and logs. Team integration still requires validation against your pack's installed FTB Teams version.
