@@ -1,6 +1,6 @@
-<p align="center"><img src="docs/assets/banner.png" alt="Loot Unidentified" width="100%"></p>
+<p align="center"><img src="docs/assets/banner.png" alt="Unidentified Loot" width="100%"></p>
 
-<h1 align="center">Loot Unidentified</h1>
+<h1 align="center">Unidentified Loot</h1>
 
 <p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">CurseForge</a> · <a href="https://github.com/Mikaaah/TNK-Loot-Identification/wiki">Wiki</a> · <a href="https://github.com/Mikaaah/TNK-Loot-Identification/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/TNK-Loot-Identification/blob/main/CHANGELOG.md">Changelog</a></p>
 

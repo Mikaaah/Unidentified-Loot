@@ -1,4 +1,4 @@
-**Loot Unidentified**
+**Unidentified Loot**
 
 - [Home](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Home)
 - [Getting started](https://github.com/Mikaaah/TNK-Loot-Identification/wiki/Getting-Started)
