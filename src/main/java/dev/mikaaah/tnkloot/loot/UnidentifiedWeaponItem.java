@@ -90,6 +90,7 @@ public final class UnidentifiedWeaponItem extends Item {
         CompoundTag payload = data(stack);
         String name = payload.contains("tier_name") ? payload.getString("tier_name") : TnkConfig.get().tierForRank(rank).name();
         tooltip.add(Component.translatable("tooltip.tnkloot.tier", rank, name).withStyle(ChatFormatting.GOLD));
+        if (payload.contains("tnk_rarity")) tooltip.add(Component.literal("Rarity: " + payload.getString("tnk_rarity").replace("tnkloot:", "")).withStyle(ChatFormatting.AQUA));
         tooltip.add(Component.translatable("tooltip.tnkloot.identify_cost").withStyle(ChatFormatting.GRAY));
         tooltip.add(Component.translatable("tooltip.tnkloot.identify").withStyle(ChatFormatting.GRAY));
     }

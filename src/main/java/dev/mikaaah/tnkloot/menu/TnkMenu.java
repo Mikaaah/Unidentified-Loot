@@ -143,8 +143,7 @@ public final class TnkMenu extends AbstractContainerMenu {
                 int rank = UnidentifiedWeaponItem.tier(token);
                 ItemStack base = UnidentifiedWeaponItem.baseResult(player.level(), token);
                 if (base.isEmpty()) throw new IllegalStateException("Empty item pool for tier " + rank);
-                prepared[i] = ApotheosisCompat.apply(base, rank, player,
-                    UnidentifiedWeaponItem.data(token).getLong("roll_seed"));
+                prepared[i] = ApotheosisCompat.applyToken(base, token, player);
                 List<ItemStack> options = TnkConfig.get().weapons().stream()
                     .filter(w -> w.category() == item.category() && rank >= w.minTier() && rank <= w.maxTier() && WeaponSelector.available(w))
                     .map(w -> BuiltInRegistries.ITEM.get(ResourceLocation.parse(w.id())))

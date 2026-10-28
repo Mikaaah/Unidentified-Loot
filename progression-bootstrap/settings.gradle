@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url = uri('https://maven.neoforged.net/releases') }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+rootProject.name = 'TNK-Progression'

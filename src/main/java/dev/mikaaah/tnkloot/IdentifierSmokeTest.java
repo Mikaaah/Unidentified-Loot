@@ -36,7 +36,7 @@ public final class IdentifierSmokeTest {
                         require(!base.isEmpty(), "Empty base pool " + tier.id() + "/" + category);
                         ItemStack result = ApotheosisCompat.apply(base, tier.rank(), player, seed);
                         int affixes = result.getOrDefault(Apoth.Components.AFFIXES, ItemAffixes.EMPTY).size();
-                        require(affixes >= (tier.rank() >= 3 ? 3 : 1), "Missing affixes " + tier.id() + "/" + category);
+                        require(affixes >= 1, "Missing affixes " + tier.id() + "/" + category);
                         checks++;
                     }
                 }

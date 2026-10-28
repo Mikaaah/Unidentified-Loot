@@ -40,7 +40,7 @@ class TnkConfigTest {
             base.replace("minecraft:story/upgrade_tools", "Bad ID!"),
             base.replace("\"weight\"", "\"wieght\""),
             base.replace("\"rank\": 0", "\"rank\": -1"),
-            base.replace("\"progression_mode\": \"ADVANCEMENTS\"", "\"progression_mode\": \"UNKNOWN\"")
+            base.replace("\"progression_mode\": \"MANUAL\"", "\"progression_mode\": \"UNKNOWN\"")
         }) assertThrows(RuntimeException.class, () -> TnkConfig.parse(bad), bad);
     }
     @Test void reloadIsAtomicAndGeneratesDefaults() throws Exception {
@@ -56,7 +56,7 @@ class TnkConfigTest {
     }
     @Test void modesAndOptionalItemsRequireNoFtbDependency() throws Exception {
         for (var mode : TnkConfig.Mode.values()) {
-            var cfg = TnkConfig.parse(defaults().replace("ADVANCEMENTS", mode.name()).replace("minecraft:wooden_sword", "optionalmod:blade"));
+            var cfg = TnkConfig.parse(defaults().replace("MANUAL", mode.name()).replace("minecraft:wooden_sword", "optionalmod:blade"));
             assertEquals(mode, cfg.mode());
         }
     }

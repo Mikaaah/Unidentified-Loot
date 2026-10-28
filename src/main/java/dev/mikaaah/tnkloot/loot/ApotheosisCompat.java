@@ -20,7 +20,13 @@ public final class ApotheosisCompat {
         return apply(stack, rank, player, player.getRandom().nextLong());
     }
     public static ItemStack apply(ItemStack stack, int rank, Player player, long seed) {
-        var wanted = TnkConfig.get().tierForRank(rank).apotheosisRarity();
+        return applyRarity(stack, net.minecraft.resources.ResourceLocation.parse("tnkloot:common"), player, seed);
+    }
+    public static ItemStack applyToken(ItemStack stack, ItemStack token, net.minecraft.server.level.ServerPlayer player) {
+        var data = UnidentifiedWeaponItem.data(token);
+        return applyRarity(stack, net.minecraft.resources.ResourceLocation.parse(data.contains("tnk_rarity") ? data.getString("tnk_rarity") : "tnkloot:common"), player, data.getLong("roll_seed"));
+    }
+    private static ItemStack applyRarity(ItemStack stack, net.minecraft.resources.ResourceLocation wanted, Player player, long seed) {
         LootRarity rarity = RarityRegistry.getSortedRarities().stream()
             .filter(r -> wanted.equals(RarityRegistry.INSTANCE.getKey(r))).findFirst()
             .orElseThrow(() -> new IllegalStateException("Unknown Apotheosis rarity " + wanted));

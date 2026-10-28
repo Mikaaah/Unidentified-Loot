@@ -4,7 +4,7 @@ plugins {
     id 'idea'
 }
 
-version = '0.6.1-alpha'
+version = '0.6.2-tnk-beta.1'
 group = 'dev.mikaaah.tnkloot'
 base { archivesName = 'tnkloot' }
 
@@ -58,3 +58,8 @@ dependencies { testRuntimeOnly 'org.junit.platform:junit-platform-launcher' }
 
 // Forward console commands during the development server run.
 tasks.named('runServer', JavaExec) { standardInput = System.in }
+
+// Required TNK companion supplied by the pack or the beta CI bootstrap build.
+if (providers.gradleProperty('tnkProgressionJar').isPresent()) {
+    dependencies { runtimeOnly files(providers.gradleProperty('tnkProgressionJar').get()) }
+}

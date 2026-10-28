@@ -27,20 +27,20 @@ public final class WeaponLootModifier extends LootModifier {
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         if (!TnkConfig.get().replaceWeaponLoot() || !TnkConfig.get().enableIdentification()) return generatedLoot;
         ServerPlayer player = playerFrom(context);
-        int rank = player == null ? 0 : ProgressionService.getTier(player);
+        if (context.getParamOrNull(LootContextParams.THIS_ENTITY) instanceof net.minecraft.world.entity.LivingEntity living
+            && !(living instanceof ServerPlayer)) return generatedLoot;
+        // Only chest tables: never turn block breaks, fishing or nested loot into extra equipment rolls.
+        if (player == null || !context.getQueriedLootTableId().getPath().startsWith("chests/")) return generatedLoot;
+        int sourceLevel = Math.min(TnkLevelBridge.level(player), TnkLevelBridge.ceiling(player));
         for (int i = 0; i < generatedLoot.size(); i++) {
             ItemStack stack = generatedLoot.get(i);
-            var configured = TnkConfig.get().weapons().stream().filter(w ->
-                BuiltInRegistries.ITEM.getKey(stack.getItem()).equals(net.minecraft.resources.ResourceLocation.parse(w.id()))
-                    && WeaponSelector.available(w)).findFirst();
-            if (configured.isEmpty()) continue;
-            Category category = configured.get().category();
-            generatedLoot.remove(i--);
-            int itemTier = Math.max(configured.get().minTier(), Math.min(rank, configured.get().maxTier()));
-            String sourceType = context.getParamOrNull(LootContextParams.THIS_ENTITY) == null ? "loot_table" : "entity_drop";
-            String sourceItem = BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
-            for (int n = 0; n < stack.getCount(); n++)
-                generatedLoot.add(UnidentifiedWeaponItem.create(category, itemTier, sourceItem, sourceType));
+            String id = BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
+            if (dev.shadowsoffire.apotheosis.affix.AffixHelper.hasAffixes(stack)
+                || TnkConfig.get().weapons().stream().anyMatch(w -> w.id().equals(id))) generatedLoot.remove(i--);
+        }
+        if (context.getRandom().nextDouble() < TnkBetaConfig.current.chestEquipmentChance) {
+            ItemStack token = TnkLootRolls.roll(player, sourceLevel, "tnk_chest");
+            if (!token.isEmpty()) generatedLoot.add(token);
         }
         return generatedLoot;
     }

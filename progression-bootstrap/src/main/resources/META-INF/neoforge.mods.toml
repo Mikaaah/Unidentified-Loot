@@ -1,0 +1,19 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="tnkprogression"
+version="${version}"
+displayName="Towns & Kingdoms Progression"
+authors="Mikaaah"
+description="Progressive activity XP, quest and team milestones, mob levels and skill-point integration."
+[[dependencies.tnkprogression]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+side="BOTH"
+[[dependencies.tnkprogression]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.262,)"
+side="BOTH"
