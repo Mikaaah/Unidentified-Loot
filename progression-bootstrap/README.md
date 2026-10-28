@@ -1,4 +1,4 @@
-# Towns & Kingdoms Progression — 0.1.0-beta.1
+# Towns & Kingdoms Progression — 0.1.0-beta.2
 
 Minecraft **1.21.1**, NeoForge **21.1.262+**, Java **21**. Original implementation; no Auto Leveling or Just Leveling code is bundled. This is an initial pack beta; tune the balance in a test world.
 
@@ -27,6 +27,14 @@ FTB Teams is optional. When installed, milestones are stored by team UUID and im
 ## Pufferfish's Skills
 
 Optional bridge targets the public 0.19.2 API on the 1.21 branch. Configure the exact existing tree category ID (default `tnk:character`). Disable that category's native experience and point exchange sources. This mod sets **total earned entitlement**, not unspent points, under `tnkprogression:character_level`, at login and level-up. Respecs and reconnects do not add points. Remove old point sources during migration; this mod does not destroy existing skill data automatically. Missing/API-incompatible integration logs a warning. The reduced tree itself must be authored separately from this mod.
+
+## Player level badges
+
+An original, icon-free bronze `LVL 0`–`LVL 100` badge appears before the player name in standard chat and on the normal overhead nameplate. It displays **character level**, never vanilla XP level. Actual progression still starts at 1; artwork also supports 0. Every level uses the same simple frame and cream lettering. The bitmap font and all 101 badges are bundled in the mod jar; no separate badge resource pack is needed. Install this version on **both server and clients**.
+
+The server sends authoritative levels on login, level-up, respawn and dimension change. New arrivals receive existing players' levels, and existing players receive the arrival's level. Client state clears when disconnecting. Name formatting preserves the existing display-name component and leaves scoreboard teams and signed chat message content alone. It refreshes the cached name without adding duplicate prefixes. Hidden nameplate/team visibility rules still apply. Custom chat or nameplate mods that replace vanilla display names need an in-pack compatibility check. Tab-list badges are not enabled.
+
+Regenerate the original pixel artwork with `python tools/build_level_badges.py` (Pillow required only for asset generation). `Level-Badges-Preview.png` is a placement mockup using the shipped artwork, not a game capture.
 
 ## Mob levels
 

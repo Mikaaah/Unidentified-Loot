@@ -18,14 +18,14 @@ jobs:
       - name: Build progression companion
         run: ./progression-bootstrap/gradlew -p progression-bootstrap build --stacktrace
       - name: Build and unit tests
-        run: ./gradlew build --stacktrace -PtnkProgressionJar="$PWD/progression-bootstrap/build/libs/tnkprogression-0.1.0-beta.1.jar"
+        run: ./gradlew build --stacktrace -PtnkProgressionJar="$PWD/progression-bootstrap/build/libs/tnkprogression-0.1.0-beta.2.jar"
       - name: Dedicated server affix and identifier integration checks
         env:
           JAVA_TOOL_OPTIONS: -Dtnkloot.smokeTest=true
         run: |
           mkdir -p run
           printf 'eula=true\n' > run/eula.txt
-          timeout 300 ./gradlew runServer --stacktrace -PtnkProgressionJar="$PWD/progression-bootstrap/build/libs/tnkprogression-0.1.0-beta.1.jar" 2>&1 | tee smoke-test.log
+          timeout 300 ./gradlew runServer --stacktrace -PtnkProgressionJar="$PWD/progression-bootstrap/build/libs/tnkprogression-0.1.0-beta.2.jar" 2>&1 | tee smoke-test.log
           grep -q TNKLOOT_SMOKE_OK smoke-test.log
       - uses: actions/upload-artifact@v4
         if: always()

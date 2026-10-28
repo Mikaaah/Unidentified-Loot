@@ -20,7 +20,7 @@ public final class ProgressionAPI {
   long remaining=amount;
   while(remaining>0 && level<ceiling(p) && level<100){long needed=ProgressionMath.levelCost(level)-xp;long take=Math.min(remaining,needed);xp+=take;remaining-=take;if(xp>=ProgressionMath.levelCost(level)){level++;xp=0;}}
   n.putInt("level",level);n.putLong("xp",xp);ProgressionData.get(p.server).setDirty();
-  if(level!=old){p.sendSystemMessage(Component.literal("Character level "+level+" — "+level+" skill points earned"));SkillBridge.sync(p);}
+  if(level!=old){p.sendSystemMessage(Component.literal("Character level "+level+" — "+level+" skill points earned"));SkillBridge.sync(p);LevelBadges.changed(p);}
   return amount-remaining;
  }
  public static boolean rewardOnce(ServerPlayer p,String id,long amount){
