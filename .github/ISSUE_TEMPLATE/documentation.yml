@@ -1,0 +1,24 @@
+name: Documentation correction
+description: Report an outdated guide, broken link or unclear explanation.
+title: "[Docs] "
+labels: []
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or link
+      placeholder: Paste the affected page URL
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Installed version
+      description: Include Minecraft, loader and mod versions if relevant.
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs changing?
+      description: Quote the unclear information and describe the expected correction.
+    validations:
+      required: true

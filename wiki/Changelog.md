@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Project](https://github.com/Mikaaah/Unidentified-Loot) · [Get help](https://github.com/Mikaaah/Unidentified-Loot/issues)
+
 # Changelog
 
 ## 0.6.1-alpha

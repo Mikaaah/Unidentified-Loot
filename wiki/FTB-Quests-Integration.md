@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Project](https://github.com/Mikaaah/Unidentified-Loot) · [Get help](https://github.com/Mikaaah/Unidentified-Loot/issues)
+
 # FTB Quests bridge: no KubeJS / no FTB API required
 
 Set `progression_mode` to `FTB_QUESTS` in `config/tnkloot/tiers.json`, then `/tnkloot reload`.

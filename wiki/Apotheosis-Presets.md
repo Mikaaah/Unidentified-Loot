@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Project](https://github.com/Mikaaah/Unidentified-Loot) · [Get help](https://github.com/Mikaaah/Unidentified-Loot/issues)
+
 # Apotheosis presets
 
 Guild rank selects an Apotheosis rarity. These are real Apotheosis affixes and components, including their attribute modifiers, sockets, effects, names and tooltip support.

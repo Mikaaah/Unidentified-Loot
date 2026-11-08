@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Community & setup help
+    url: https://discord.gg/CRYk3uDPVt
+    about: Questions, screenshots and project discussion in the Modding Hub.
+  - name: Player guide
+    url: https://github.com/Mikaaah/Unidentified-Loot/wiki
+    about: Read the guide for this project.

@@ -10,3 +10,9 @@
 - [FTB Quests](https://github.com/Mikaaah/Unidentified-Loot/wiki/FTB-Quests-Integration)
 - [Troubleshooting](https://github.com/Mikaaah/Unidentified-Loot/wiki/Troubleshooting)
 - [Changelog](https://github.com/Mikaaah/Unidentified-Loot/wiki/Changelog)
+
+### Community
+
+- [All mod projects](https://mikaaah.github.io/TownsAndKingdoms/projects/)
+- [Join Discord](https://discord.gg/CRYk3uDPVt)
+- [Report an issue](https://github.com/Mikaaah/Unidentified-Loot/issues)
