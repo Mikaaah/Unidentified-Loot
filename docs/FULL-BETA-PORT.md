@@ -29,14 +29,10 @@ tooltip and affix metadata. Existing configured pools are not overwritten.
 
 ## Build
 
-Use Java 21 and the Gradle wrapper. `./gradlew build` downloads pinned, checksum
 verified Create/Ponder compile inputs with `tools/prepare_ponder.py`; these are
 not bundled into the mod. Supply the separate companion JAR when running tests:
 
-```sh
-./gradlew build -PtnkProgressionJar=/absolute/path/to/tnkprogression.jar
-python3 verification/verify_release.py
-```
+
 
 The complete recovered sources are under `src/main/java/`. This replaces the
 old binary-overlay packaging chain with a single Gradle compilation. Create is

@@ -51,5 +51,3 @@ World saved data: `tnkprogression.dat`. It stores personal profiles, reward clai
 Existing worlds begin at character level 1. Back up before installation. No automatic conversion of the old 150-point tree or old loot tokens is performed. Legacy unsealed loot tokens fall back to Common in the TNK loot beta rather than upgrading when identified later.
 
 ## Build / validation
-
-`./gradlew build` with Java 21. Run dedicated-server assertions in a **disposable world only** using `-Dtnkprogression.smoke=true`; they create a test profile, validate caps, quest claims and save roundtrip, then stop the server. See the workflow. Runtime integration with FTB Teams and the installed Pufferfish version must be checked in the pack before publishing.

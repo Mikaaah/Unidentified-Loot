@@ -28,7 +28,6 @@ Rarity is a second roll, independent of equipment tier: Common, Uncommon, Rare, 
 
 ## Release checks
 
-Build with Java 21: `./gradlew build`. Test in a disposable pack world with both jars. Check 0%/100% configured drop chances, boundary mob levels, two FTB team members and a late joiner, reconnects and team changes, chest opening and token identification after milestones. Optional other mod items must be installed to validate their pools. Never publish this beta as the general-purpose release.
 
 ## Companion source
 

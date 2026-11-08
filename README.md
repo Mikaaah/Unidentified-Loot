@@ -1,6 +1,17 @@
-# Unidentified Loot — TNK Edition
+<p align="center"><img src="docs/assets/banner.png" alt="Unidentified Loot" width="100%"></p>
 
-Release 1 candidate: **1.0.0-tnk-neoforge-1.21.1**, Minecraft **1.21.1**, NeoForge **21.1.262**, Java **21**.
+<h1 align="center">Unidentified Loot</h1>
+
+<p align="center"><strong>Bring home a mystery. Identify your finds, discover powerful equipment, and build around the result.</strong></p>
+
+<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">Downloads</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Player guide</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.0/CHANGELOG.md">Changelog</a> · <a href="https://discord.gg/CRYk3uDPVt">Discord</a></p>
+
+<p align="center"><img src="https://img.shields.io/badge/Minecraft-1.21.1-5b8731?style=flat-square" alt="Minecraft 1.21.1"> <img src="https://img.shields.io/badge/NeoForge-d77828?style=flat-square" alt="NeoForge"> <a href="https://mikaaah.github.io/TownsAndKingdoms/projects/"><img src="https://img.shields.io/badge/Towns_%26_Kingdoms-Modding_Hub-7f384a?style=flat-square" alt="Towns & Kingdoms Modding Hub"></a></p>
+
+
+## A mystery worth bringing home
+
+**Minecraft 1.21.1 · NeoForge 21.1.262 · Java 21 · 1.0.0 TNK release candidate**
 
 This edition uses the real TNK Progression API for source levels, milestone ceilings, rarity caps and mob levels. It retains the Beta 1.0 / 0.19.15 Identifier, seven-slot identification and salvage, previews, collection, custom artwork, boss editor, dimension rewards and optional Create Mechanical Identifier/Ponder integration.
 
@@ -21,15 +32,10 @@ Replace the old `tnkloot` JAR on **both client and server**; install only one co
 The pack item catalogue's fully disabled equipment and infinite-food removals also apply to automatic imports, reward pools and previews. `/tnkloot reload` refreshes this policy.
 
 Use `/tnkloot audit` as an operator to export the actual runtime item groups, source-level ranges, item modifiers, registered attributes, affix definitions and boss mappings to `config/tnkloot/reports`.
+## Pull up a chair
 
-Build with Java 21:
+Questions, builds, feedback, server news and the occasional wildly overambitious factory: join the **Towns & Kingdoms Modding Hub**.
 
-```sh
-python3 tools/prepare_progression.py
-./gradlew build -PtnkProgressionJar=/absolute/path/to/build-deps/tnkprogression-1.2.0-private.1.jar
-python3 verification/verify_release.py
-```
+[![Join the Towns & Kingdoms Discord](https://i.imgur.com/Ojgcccm.png)](https://discord.gg/CRYk3uDPVt)
 
-Pinned, checksum-verified build inputs download automatically. APIs and companion mods are not embedded in the release JAR. `-sources.jar` is for development, not installation. The historical `progression-bootstrap` project is not the release companion.
-
-For disposable-world server checks, use `-PtnkReleaseSmoke`, `-PtnkBetaSmoke`, `-PtnkAdvancementSmoke` or `-PtnkMachineSmoke` with the actual companion/runtime mods. These checks stop the server. The machine check additionally needs the actual Create and Liquid XP provider JARs in `-PextraRuntimeDirectory=/absolute/path/to/jars`.
+**[Join Discord](https://discord.gg/CRYk3uDPVt)** · [Explore all projects](https://mikaaah.github.io/TownsAndKingdoms/projects/) · [CurseForge projects](https://www.curseforge.com/members/mikaaah/projects)
