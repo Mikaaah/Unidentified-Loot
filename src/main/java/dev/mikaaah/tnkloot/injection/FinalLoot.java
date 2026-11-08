@@ -35,6 +35,7 @@ public final class FinalLoot {
  public static boolean enabled(){return TnkConfig.get().enableIdentification()&&TnkConfig.get().replaceWeaponLoot();}
  public static boolean own(ItemStack s){return s.getItem() instanceof UnidentifiedWeaponItem||UnidentifiedWeaponItem.data(s).contains("tnk_rarity");}
  public static TnkConfig.Category category(ItemStack s){
+  if(!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(s.getItem()).toString()))return null;
   var defined=items().get(BuiltInRegistries.ITEM.getKey(s.getItem()).toString());if(defined!=null)return defined.category();
   // Decorative blocks are not equipment unless explicitly entered in a reward pool.
   if(s.getItem() instanceof BlockItem)return null;
@@ -43,7 +44,7 @@ public final class FinalLoot {
  }
  /** An empty replacement means the original drop remains, including its components. */
  public static ItemStack replacement(ItemStack original,ServerLevel level,ServerPlayer player,String source){
-  if(!enabled()||original.isEmpty()||own(original)||LootProtection.keepNative(original))return ItemStack.EMPTY;
+  if(!enabled()||original.isEmpty()||own(original)||!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(original.getItem()).toString())||LootProtection.keepNative(original))return ItemStack.EMPTY;
   String id=BuiltInRegistries.ITEM.getKey(original.getItem()).toString();
   // Unique native boss prizes still produce the corresponding universal crate.
   var owners=owners(id);

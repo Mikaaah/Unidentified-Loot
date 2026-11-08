@@ -10,7 +10,7 @@ public final class PresetCleanup {
    }
 
    public static boolean excluded(String var0) {
-      if ("wom:claw".equals(var0)) {
+      if (!PackItemPolicy.allowed(var0) || "wom:claw".equals(var0)) {
          return true;
       } else {
          String var1 = var0.substring(var0.indexOf(58) + 1);

@@ -35,6 +35,26 @@ public final class ReleaseSmoke {
             var profile = (CompoundTag) Class.forName("dev.mikaaah.tnkprogression.ProgressionAPI").getMethod("profile", ServerPlayer.class).invoke(null, player);
             profile.putInt("level", 100); profile.putInt("ceiling", 100);
             int identifications = 0, rewards = 0, equipment = 0;
+            var policyFile = net.neoforged.fml.loading.FMLPaths.GAMEDIR.get().resolve("kubejs/pack_catalog.json");
+            byte[] priorPolicy = java.nio.file.Files.exists(policyFile) ? java.nio.file.Files.readAllBytes(policyFile) : null;
+            var priorExclusions = PackItemPolicy.disabled();
+            try {
+                java.nio.file.Files.createDirectories(policyFile.getParent());
+                java.nio.file.Files.writeString(policyFile, "{\"fullyDisabledItems\":[\"minecraft:diamond_sword\"],\"infiniteFoods\":[]}");
+                require(PackItemPolicy.reload() && !PackItemPolicy.allowed("minecraft:diamond_sword"), "Pack policy override was ignored");
+                TnkLoot.LOG.info("TNKLOOT_POLICY_CHECK: intentionally rejecting a malformed test override");
+                java.nio.file.Files.writeString(policyFile, "invalid policy");
+                require(!PackItemPolicy.reload() && !PackItemPolicy.allowed("minecraft:diamond_sword"), "Invalid policy discarded active exclusions");
+            } finally {
+                if (priorPolicy == null) java.nio.file.Files.deleteIfExists(policyFile); else java.nio.file.Files.write(policyFile, priorPolicy);
+                PackItemPolicy.reload();
+                require(PackItemPolicy.disabled().equals(priorExclusions), "Policy override was not restored");
+            }
+            for (String blocked : PackItemPolicy.disabled()) {
+                require(TnkConfig.get().weapons().stream().noneMatch(w -> w.id().equals(blocked) && WeaponSelector.available(w)), "Disabled pack item imported: " + blocked);
+                for (var pool : BossRewards.active()) require(BossRewards.options(pool, TnkConfig.Category.WEAPON).stream().noneMatch(stack -> BuiltInRegistries.ITEM.getKey(stack.getItem()).toString().equals(blocked)), "Disabled pack item in boss options: " + blocked);
+            }
+            TnkLoot.LOG.info("TNKLOOT_PACK_POLICY_OK: overrides/reload retained; disabled equipment excluded from normal and boss pools");
             for (int source = 1; source <= 100; source++) {
                 var token = TnkLootRolls.roll(player, source, "release_check");
                 require(!token.isEmpty(), "Empty equipment pool at level " + source);

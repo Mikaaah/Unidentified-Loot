@@ -20,7 +20,7 @@ The real Progression 1.2.0-private.1 pack JAR and latest supplied 1.3.0-private.
 | Advancement rewards | Restore all four required origin/context mixins; skip every TNK replacement, bonus injection, routing and cap path for actual advancement rewards, including reused chest table IDs | `injection/FinalLoot`, `injection/mixin/*` |
 | Decorative loot | Banners, trophy blocks and heads are not auto-classified as equipment; explicitly configured equipment remains supported | `dimension/BaseCompat`, `injection/FinalLoot` |
 | Fixed native rewards | Preserve named/custom-component native rewards; copy the installed Legendary Spellbooks spell-slot components into randomly selected matching boss rewards | `injection/LootProtection`, `compat/NativeLootTemplates` |
-| Boss crates | Universal boss crates accept armour, accessories and other configured categories; boss-exclusive equipment stays out of normal vault pools | `compat/BossRewards`, `client/VaultAtlasScreen` |
+| Boss crates | Universal boss crates accept armour, accessories and other configured categories; boss-exclusive equipment stays out of normal vault pools | `compat/BossRewards`, `menu/TnkMenu` |
 | Invalid boss definitions | Correct `ender_hammer` → `monstrous_anchor` and `sickle_of_harvest` → `totem_of_moss`; remove the nonexistent Sculptor trial entity | `compat/ReleaseConfigMigration`, bundled boss presets |
 | Additional bosses/rewards | Add Eye of the Storm and The Obliterator pools; include Cloud Golem's optional Stormbound Grimoire; route Deep Aether earned treasure tables | Boss presets and `dimension/DimensionLoot` |
 | Duplicate boss awards | Stop bonus crates on the Aether bosses' key-only deaths and each Knight Phantom phase; earned treasure still routes to its pool | Boss presets/migration |
@@ -28,13 +28,16 @@ The real Progression 1.2.0-private.1 pack JAR and latest supplied 1.3.0-private.
 | Item catalogue | Share subgroup and source-level labels across the vault, collection and operator export | `compat/EquipmentGroups`, `EquipmentAudit` |
 | Collection QoL | Discover identified gear acquired from automation/trading; repeated inventory scans do not inflate identification counts | `features/PlayerLedger`, `FeatureHooks` |
 | Readability | Show sealed source levels, actual capped rarity probabilities, and clearer boss reward/discovery tooltips; accept old namespaced rarity IDs | Item/collection screens and rarity helpers |
+| Pack item policy | Respect `fullyDisabledItems` and `infiniteFoods` from the supplied KubeJS catalogue in ordinary/boss pools and previews; prevent reintroduction of disabled Artifacts/infinite-food equipment | `compat/PackItemPolicy`, `PresetCleanup`, selector/reward paths |
 | Maintenance | Cache boss-exclusive lookups, use long weighted-roll totals, correct dependency metadata and release CI, and retain migration backups | Build tools and compatibility classes |
+
+The pack policy is read from `kubejs/pack_catalog.json` when present, with the shipped Beta policy as the fallback. `/tnkloot reload` refreshes it; invalid overrides retain the last valid exclusions. `pack-disabled-items.csv` lists the explicit exclusions. Static review also found global LootJS filters in `cleanup.js`, `ae2_compat.js` and `ie_compat.js`; the new TNK advancement guard does not bypass those established pack policies. Their end-to-end behavior still needs the corrected full-pack run.
 
 The one-time release migration cleans **stock Beta preset entries** that are unavailable or boss-exclusive, normalizes the old Ancient tier reference to Mythic, and keeps progression under TNK Progression. User-added entries are retained by this migration; pre-existing compatibility import/cleanup behavior still applies. Backups use `.before-tnk-release-1.bak`. New optional compatibility does not require every supported mod to be installed.
 
 ## Equipment, levels and attributes
 
-The reports contain **1,196 items observed in successful runtime batches**, grouped by category, subgroup, tier range, possible source-level range, origin dimension, boss pool, weight and actual base item modifiers. The groups include melee, spellcasting, ranged weapons, shields, fishing, farming, mining, axes, armour slots and accessories.
+The reports contain **1,190 items observed in successful runtime batches**, grouped by category, subgroup, tier range, possible source-level range, origin dimension, boss pool, weight and actual base item modifiers. The groups include melee, spellcasting, ranged weapons, shields, fishing, farming, mining, axes, armour slots and accessories.
 
 The **491 stock Beta item IDs not observed in those successful batches** are in a separate file. Some may be obsolete; others depend on mods excluded from the successful batches. They are not represented as verified or all missing. In particular, BetterEnd, BetterNether and Knaves' Needs cannot be certified from these runs. The real full-pack `/tnkloot audit` resolves the installed registries after startup.
 
@@ -72,17 +75,18 @@ The actual Minecraft client replayed all four tutorials and saved **12 rendered 
 | --- | --- |
 | Gradle build / JUnit | Successful; 19 tests, no failures or errors |
 | Boss integration batch | 100 source-level identifications; 774 equipment/rarity checks; 149 boss rewards; 29 advancement/banner/trophy checks |
-| Magic/accessory batch | 100 source-level identifications; 794 equipment/rarity checks; 5 boss rewards; 24 protected reward checks |
+| Magic/accessory batch | 100 source-level identifications; 782 equipment/rarity checks; 5 boss rewards; 24 protected reward checks |
 | Weapons/Epic Fight/Alex's Caves batch | 100 source-level identifications; 920 equipment/rarity checks; 4 boss rewards; 18 protected reward checks |
 | TNK Beta integration | 448 identifications; milestone/rarity caps; legacy rarity migration; sealed trading; 0/100% mob/chest chance and idempotence |
 | Boss editor integration | 160 mixed-category Mythic rolls; imports/ghost guards, material/player protection, percentages and persistence |
 | Real advancement context | Reward counts/components preserved by TNK; reused-builder origin isolation; reused chest IDs; normal equipment still identifiable |
+| Pack policy regression | Actual catalogue override applied; malformed override rejected without losing exclusions; forbidden equipment absent from ordinary/boss options |
 | Mechanical Identifier | Actual Create 6.0.10 / CEI 2.4.2; sided capabilities, real Liquid XP, capacity and simulation, affixes, persisted in-flight job, no double payment, blocked inputs and invalid boss safety |
 | Companion minimum | Dedicated server smoke passed with actual Progression 1.2.0-private.1; focused batches use 1.3.0-private.1 |
 | Client Ponder | All four tutorials replayed; 12 rendered checkpoints inspected |
 | Packaging | 88 unchanged Beta artwork PNGs; 48 exact rarity icons; 70 acyclic/complete models; four mixins; 342 optional affixes; no embedded Minecraft/Create/Progression APIs or screenshot harness |
 
-Total focused equipment/rarity checks: **2,488**, including repeated equipment shared by the batches. These tests exercise real registered items and affix application, not a mock list. Logs with positive `TNKLOOT_*_OK` markers are included. A successful Gradle task alone was not treated as a passing Minecraft test.
+Total focused equipment/rarity checks: **2,476**, including repeated equipment shared by the batches. These tests exercise real registered items and affix application, not a mock list. Logs with positive `TNKLOOT_*_OK` markers are included. A successful Gradle task alone was not treated as a passing Minecraft test.
 
 Other mods may append bonus loot when an advancement intentionally reuses a chest table. The CommonHooks regression verifies the awarded original stacks and absence of TNK sealing while allowing those third-party additions; TNK does not disable other mods' global loot modifiers.
 

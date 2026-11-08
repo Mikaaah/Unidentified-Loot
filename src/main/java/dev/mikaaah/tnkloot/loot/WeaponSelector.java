@@ -18,7 +18,7 @@ public final class WeaponSelector {
 
    public static boolean available(TnkConfig.Weapon weapon) {
       ResourceLocation id = ResourceLocation.parse(weapon.id());
-      return weapon.enabled() && BuiltInRegistries.ITEM.containsKey(id) && BuiltInRegistries.ITEM.get(id) != Items.AIR;
+      return dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(weapon.id()) && weapon.enabled() && BuiltInRegistries.ITEM.containsKey(id) && BuiltInRegistries.ITEM.get(id) != Items.AIR;
    }
 
    public static WeightedPool<Item> pool(int tier) {

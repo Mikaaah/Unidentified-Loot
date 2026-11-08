@@ -39,7 +39,7 @@ public final class FeatureMenus extends ChestMenu {
  private void listing(int size,java.util.function.IntConsumer render){int pages=Math.max(1,(size+35)/36);page=Math.min(page,pages-1);for(int i=page*36;i<Math.min(size,(page+1)*36);i++)render.accept(i);
   button(45,Items.ARROW,"Previous",()->{page=Math.max(0,page-1);refresh();});button(49,Items.PAPER,"Page "+(page+1)+" / "+pages,null);button(53,Items.ARROW,"Next",()->{page=Math.min(pages-1,page+1);refresh();});}
  public static List<Option> options(ItemStack token){return dev.mikaaah.tnkloot.dimension.DimensionLoot.options(token);}
- private static boolean available(String id){var key=ResourceLocation.tryParse(id);return key!=null&&BuiltInRegistries.ITEM.containsKey(key)&&BuiltInRegistries.ITEM.get(key)!=Items.AIR;}
+ private static boolean available(String id){var key=ResourceLocation.tryParse(id);return dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(id)&&key!=null&&BuiltInRegistries.ITEM.containsKey(key)&&BuiltInRegistries.ITEM.get(key)!=Items.AIR;}
  public static Map<String,String> catalogue(ServerPlayer p){
   var entries=new TreeMap<String,String>();
   for(var w:TnkConfig.get().weapons())if(WeaponSelector.available(w)&&!BossRewards.exclusive(w.id()))entries.merge(w.id(),"Levels "+dev.mikaaah.tnkloot.compat.EquipmentGroups.levels(w.minTier(),w.maxTier())+" · Tiers "+w.minTier()+"–"+w.maxTier(),(a,b)->a.equals(b)?a:a+", "+b);

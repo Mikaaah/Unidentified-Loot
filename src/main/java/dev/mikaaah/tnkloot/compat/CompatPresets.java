@@ -47,6 +47,7 @@ public final class CompatPresets {
    }
 
    public static void started(ServerStartedEvent event) {
+      PackItemPolicy.reload();
       RaritySupport.reload();
       install();
       BossRewards.reload();

@@ -7,8 +7,10 @@
 - Correct invalid boss IDs, add Eye of the Storm/The Obliterator rewards, protect native spell components and reserved trial prizes, and prevent boss gear/duplicate cache rewards leaking into ordinary loot.
 - Add 342 optional TNK rarity adapters for installed Iron's Apothic and Apothic Compats definitions, including source attribution/licences.
 - Preserve earned advancement rewards, decorative items and custom native prizes through all TNK replacement paths.
+- Respect the Beta pack catalogue removals so automatic imports and identification cannot restore disabled Artifacts or infinite-food equipment. Validate catalogue override/reload and retain valid policy on malformed input.
+- Restore Gradle wrapper execute permissions after source recovery.
 - Correct capped chance displays, legacy rarity lookups, source-level tooltips, dependency metadata, pinned build inputs and CI's real companion dependency.
-- Build and 19 unit tests pass; focused runtime checks include 2,488 equipment/rarity applications, 49 boss pools, real advancement contexts, Liquid XP machine persistence and client Ponder replay.
+- Build and 19 unit tests pass; focused runtime checks include 2,476 equipment/rarity applications, 49 boss pools, real advancement contexts, Liquid XP machine persistence and client Ponder replay.
 - Full Beta 1.0 pack certification remains blocked by optional-integration/dimension startup failures. See docs/TNK-RELEASE-1-AUDIT.md for exact coverage and receipts.
 
 ## 0.18.1-tnk-beta.1 — Advancement reward protection

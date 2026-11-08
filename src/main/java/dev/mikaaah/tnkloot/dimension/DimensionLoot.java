@@ -31,8 +31,8 @@ public final class DimensionLoot {
   if(!(token.getItem() instanceof UnidentifiedWeaponItem item))return List.of();var tag=UnidentifiedWeaponItem.data(token);
   if(item.boss()){
    var pool=BossRewards.find(tag.getString("boss_pool"));if(pool.isEmpty())return List.of();
-   if(tag.contains("boss_result")){String id=tag.getCompound("boss_result").getString("id");return id.isBlank()?List.of():List.of(new FeatureMenus.Option(id,1,pool.get().name()));}
-   return pool.get().items().stream().filter(w->(tag.getBoolean("boss_universal")||w.category()==item.category())&&BuiltInRegistries.ITEM.containsKey(net.minecraft.resources.ResourceLocation.parse(w.item()))).map(w->new FeatureMenus.Option(w.item(),w.weight(),pool.get().name())).toList();
+   if(tag.contains("boss_result")){String id=tag.getCompound("boss_result").getString("id");return id.isBlank()||!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(id)?List.of():List.of(new FeatureMenus.Option(id,1,pool.get().name()));}
+   return pool.get().items().stream().filter(w->(tag.getBoolean("boss_universal")||w.category()==item.category())&&dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(w.item())&&BuiltInRegistries.ITEM.containsKey(net.minecraft.resources.ResourceLocation.parse(w.item()))).map(w->new FeatureMenus.Option(w.item(),w.weight(),pool.get().name())).toList();
   }
   return pool(UnidentifiedWeaponItem.tier(token),item.category(),origin(token)).stream().map(w->new FeatureMenus.Option(w.id(),w.weight(),origin(token)+" · Tier "+UnidentifiedWeaponItem.tier(token))).toList();
  }
@@ -51,7 +51,7 @@ public final class DimensionLoot {
   if(!TnkConfig.get().enableIdentification()||!TnkConfig.get().replaceWeaponLoot())return loot;
   var boss=rewardPool(ctx);
   if(boss.isPresent()){
-   var p=boss.get();var ids=p.items().stream().map(BossRewards.Reward::item).collect(java.util.stream.Collectors.toSet());
+   var p=boss.get();var ids=p.items().stream().filter(w->dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(w.item())).map(BossRewards.Reward::item).collect(java.util.stream.Collectors.toSet());
    boolean already=loot.stream().anyMatch(s->s.getItem() instanceof UnidentifiedWeaponItem&&UnidentifiedWeaponItem.data(s).getString("boss_pool").equals(p.id()));
    if(!already&&loot.stream().anyMatch(s->!UnidentifiedWeaponItem.data(s).contains("tnk_rarity")&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(s)&&ids.contains(BuiltInRegistries.ITEM.getKey(s.getItem()).toString()))){loot.removeIf(s->!UnidentifiedWeaponItem.data(s).contains("tnk_rarity")&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(s)&&ids.contains(BuiltInRegistries.ITEM.getKey(s.getItem()).toString()));loot.add(BossRewards.token(p,TnkConfig.Category.WEAPON,ctx.getLevel(),ItemStack.EMPTY));}
    for(var s:loot)if(s.getItem() instanceof UnidentifiedWeaponItem)bindOrigin(s,ctx.getLevel());return loot;

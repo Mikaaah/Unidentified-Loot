@@ -23,7 +23,7 @@ public final class BetaLoot {
  private static boolean special(ItemStack s){return s.getOrDefault(Apoth.Components.FROM_BOSS,false)||UnidentifiedWeaponItem.data(s).getBoolean("apotheosis_invader")||BossRewards.exclusive(BuiltInRegistries.ITEM.getKey(s.getItem()).toString())||(s.getItem() instanceof UnidentifiedWeaponItem item&&item.boss());}
  private static boolean equipment(ItemStack s){
   if(s.getItem() instanceof UnidentifiedWeaponItem item)return !item.boss();
-  return !FinalLoot.own(s)&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(s)&&(AffixHelper.hasAffixes(s)||FinalLoot.category(s)!=null);
+  return dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(s.getItem()).toString())&&!FinalLoot.own(s)&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(s)&&(AffixHelper.hasAffixes(s)||FinalLoot.category(s)!=null);
  }
  public static ServerPlayer player(LootContext ctx){
   var killer=ctx.getParamOrNull(LootContextParams.LAST_DAMAGE_PLAYER);if(killer instanceof ServerPlayer p)return p;

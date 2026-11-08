@@ -686,7 +686,7 @@ public final class TnkMenu extends AbstractContainerMenu {
       int priorRank = this.header().getInt("rank");
       this.seenSettings = TnkConfig.get();
       TnkConfig.Tier tier = this.selectedTier();
-      List<TnkConfig.Weapon> all = TnkConfig.tierWeapons(tier.rank()).stream().filter(w -> !BossRewards.exclusive(w.id())).toList();
+      List<TnkConfig.Weapon> all = TnkConfig.tierWeapons(tier.rank()).stream().filter(w -> dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(w.id()) && !BossRewards.exclusive(w.id())).toList();
       this.vaultEntries = all.stream()
          .filter(w -> this.adminView() == 2 && w.category() == this.filterCategory())
          .sorted(Comparator.<TnkConfig.Weapon>comparingInt(w -> w.category().ordinal()).thenComparing(TnkConfig.Weapon::id))

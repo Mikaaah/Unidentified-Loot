@@ -75,6 +75,7 @@ public final class EquipmentAudit {
             items.add(row); csv(csv, row);
         }
         report.add("items", items);
+        JsonArray disabled = new JsonArray(); PackItemPolicy.disabled().stream().sorted().forEach(disabled::add); report.add("pack_disabled_items", disabled);
         JsonArray attributes = new JsonArray();
         for (var attribute : BuiltInRegistries.ATTRIBUTE) {
             JsonObject row = new JsonObject();

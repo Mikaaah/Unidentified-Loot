@@ -131,7 +131,7 @@ public final class BossRewards {
 
     public static List<Pool> parse(JsonObject root) { return dev.mikaaah.tnkloot.boss.BossStore.parse(root); }
     private static boolean registered(Reward w) {
-        return BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse((String)w.item()));
+        return PackItemPolicy.allowed(w.item()) && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse((String)w.item()));
     }
 
     public static List<ItemStack> options(Pool pool, TnkConfig.Category category) {
@@ -158,7 +158,7 @@ public final class BossRewards {
         if (tag.contains("boss_result", 10)) {
             ItemStack result = ItemStack.parseOptional((HolderLookup.Provider)level.registryAccess(), (CompoundTag)tag.getCompound("boss_result"));
             String id = BuiltInRegistries.ITEM.getKey(result.getItem()).toString();
-            return pool.get().items().stream().anyMatch(w -> w.item().equals(id) && (tag.getBoolean("boss_universal") || w.category() == item2.category())) ? result.copyWithCount(1) : ItemStack.EMPTY;
+            return PackItemPolicy.allowed(id) && pool.get().items().stream().anyMatch(w -> w.item().equals(id) && (tag.getBoolean("boss_universal") || w.category() == item2.category())) ? result.copyWithCount(1) : ItemStack.EMPTY;
         }
         List<WeightedPool.Entry<Item>> entries = pool.get().items().stream().filter(w -> (tag.getBoolean("boss_universal") || w.category() == item2.category()) && BossRewards.registered(w)).map(w -> new WeightedPool.Entry<Item>((Item)BuiltInRegistries.ITEM.get(ResourceLocation.parse((String)w.item())), w.weight())).toList();
         return new WeightedPool<Item>(entries).roll(() -> ((RandomSource)RandomSource.create((long)tag.getLong("roll_seed"))).nextLong()).map(ItemStack::new).map(base -> NativeLootTemplates.apply(pool.get().entity(), base)).orElse(ItemStack.EMPTY);
@@ -191,9 +191,9 @@ public final class BossRewards {
         if(playerOnly && !event.isRecentlyHit() && !(event.getSource().getEntity() instanceof ServerPlayer)) return;
         if(event.getDrops().stream().anyMatch(d->d.getItem().getItem() instanceof UnidentifiedWeaponItem&&UnidentifiedWeaponItem.data(d.getItem()).getString("boss_pool").equals(pool.id()))) return;
         if(pool.items().stream().noneMatch(BossRewards::registered)) return;
-        boolean equipment=event.getDrops().stream().anyMatch(d->!UnidentifiedWeaponItem.data(d.getItem()).contains("tnk_rarity")&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(d.getItem())&&pool.items().stream().anyMatch(w->w.item().equals(BuiltInRegistries.ITEM.getKey(d.getItem().getItem()).toString())));
+        boolean equipment=event.getDrops().stream().anyMatch(d->!UnidentifiedWeaponItem.data(d.getItem()).contains("tnk_rarity")&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(d.getItem())&&pool.items().stream().anyMatch(w->registered(w)&&w.item().equals(BuiltInRegistries.ITEM.getKey(d.getItem().getItem()).toString())));
         if(!equipment && (!pool.additional() || level.getRandom().nextDouble()>=pool.chance()))return;
-        event.getDrops().removeIf(d->!UnidentifiedWeaponItem.data(d.getItem()).contains("tnk_rarity")&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(d.getItem())&&pool.items().stream().anyMatch(w->w.item().equals(BuiltInRegistries.ITEM.getKey(d.getItem().getItem()).toString())));
+        event.getDrops().removeIf(d->!UnidentifiedWeaponItem.data(d.getItem()).contains("tnk_rarity")&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(d.getItem())&&pool.items().stream().anyMatch(w->registered(w)&&w.item().equals(BuiltInRegistries.ITEM.getKey(d.getItem().getItem()).toString())));
         var e=event.getEntity();
         event.getDrops().add(new ItemEntity(level,e.getX(),e.getY()+0.5,e.getZ(),token(pool,TnkConfig.Category.WEAPON,level,ItemStack.EMPTY)));
     }

@@ -18,6 +18,8 @@ The equipment and boss integration checks pass in focused dependency batches. **
 
 Replace the old `tnkloot` JAR on **both client and server**; install only one copy. Keep the Progression companion as a separate mod. Existing sealed drops retain their rarity and tier. The release migrates the shipped Beta preset once and writes configuration backups. Custom additions are retained by the release migration; existing compatibility import rules still apply. The optional full-pack configuration supplied with the audit is for the stock Beta pack, not a wholesale replacement for a customized server configuration.
 
+The pack item catalogue's fully disabled equipment and infinite-food removals also apply to automatic imports, reward pools and previews. `/tnkloot reload` refreshes this policy.
+
 Use `/tnkloot audit` as an operator to export the actual runtime item groups, source-level ranges, item modifiers, registered attributes, affix definitions and boss mappings to `config/tnkloot/reports`.
 
 Build with Java 21:

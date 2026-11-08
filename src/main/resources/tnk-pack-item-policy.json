@@ -1,0 +1,27 @@
+{
+  "fullyDisabledItems": [
+    "rubberworks:rubber",
+    "rubberworks:rubber_sheet",
+    "rubberworks:rubber_block",
+    "rubberworks:rubber_sheet_block",
+    "extendedae:circuit_cutter",
+    "ae2:spatial_anchor",
+    "apothic_enchanting:flimsy_ender_lead",
+    "apothic_enchanting:ender_lead",
+    "apothic_enchanting:occult_ender_lead",
+    "create_enchantment_industry:ender_woven_bag",
+    "sophisticatedbackpacks:mob_catcher_upgrade",
+    "sophisticatedbackpacks:advanced_mob_catcher_upgrade",
+    "artifacts:helium_flamingo",
+    "alexscaves:nuclear_bomb",
+    "immersiveengineering:chunk_loader",
+    "artifacts:whoopee_cushion",
+    "artifacts:plastic_drinking_hat",
+    "artifacts:novelty_drinking_hat"
+  ],
+  "infiniteFoods": [
+    "relics:infinity_ham",
+    "artifacts:everlasting_beef",
+    "artifacts:eternal_steak"
+  ]
+}

@@ -130,7 +130,7 @@ public final class TnkCommands {
                         ((LiteralArgumentBuilder)Commands.literal("reload").requires(source -> source.hasPermission(2)))
                            .executes(
                               ctx -> {
-                                 boolean ok = RaritySupport.reloadAll() && BossRewards.reload();
+                                 boolean ok = dev.mikaaah.tnkloot.compat.PackItemPolicy.reload() && RaritySupport.reloadAll() && BossRewards.reload();
                                  if (ok) {
                                     ((CommandSourceStack)ctx.getSource()).getServer().getPlayerList().getPlayers().forEach(ProgressionEvents::reconcile);
                                  }
