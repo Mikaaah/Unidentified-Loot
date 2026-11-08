@@ -1,0 +1,133 @@
+{
+  "source": "assets/minecraft/textures/gui/container/anvil.png",
+  "source_sha256": "7e5dae4d039ea07a5c1511ff14a4f835c6985815b7aff310ff7967c8c24a4a58",
+  "logical_size": [
+    256,
+    252
+  ],
+  "texture_size": [
+    272,
+    280
+  ],
+  "outline": [
+    [
+      0,
+      10
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      40,
+      2
+    ],
+    [
+      40,
+      -10
+    ],
+    [
+      216,
+      -10
+    ],
+    [
+      216,
+      2
+    ],
+    [
+      248,
+      2
+    ],
+    [
+      256,
+      10
+    ],
+    [
+      256,
+      134
+    ],
+    [
+      250,
+      140
+    ],
+    [
+      250,
+      150
+    ],
+    [
+      256,
+      156
+    ],
+    [
+      256,
+      246
+    ],
+    [
+      250,
+      252
+    ],
+    [
+      204,
+      252
+    ],
+    [
+      194,
+      246
+    ],
+    [
+      184,
+      252
+    ],
+    [
+      8,
+      252
+    ],
+    [
+      0,
+      244
+    ]
+  ],
+  "balance_attached": true,
+  "inventory_header_closed": true,
+  "right_column": [
+    191,
+    248
+  ],
+  "inventory_source": [
+    0,
+    68,
+    176,
+    166
+  ],
+  "inventory_destination": [
+    6,
+    154
+  ],
+  "inventory_translation": [
+    6,
+    86
+  ],
+  "player_first_cell": [
+    14,
+    170
+  ],
+  "hotbar_first_cell": [
+    14,
+    228
+  ],
+  "input_source_frame": [
+    25,
+    45,
+    46,
+    67
+  ],
+  "input_source_item_origin": [
+    27,
+    47
+  ],
+  "input_first_cell": [
+    20,
+    103
+  ],
+  "input_pitch": 24
+}

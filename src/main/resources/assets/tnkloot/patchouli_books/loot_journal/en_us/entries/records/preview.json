@@ -1,0 +1,17 @@
+{
+  "name": "Reward Previews",
+  "category": "tnkloot:records",
+  "icon": "minecraft:ender_eye",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Read the Reward Pool",
+      "text": "At the Identifier, choose Preview and select an unidentified drop. It lists eligible gear and each item's chance.$(br2)The pool respects tier, category, origin and boss provenance. It cannot show exact affixes or native jewelry patterns."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Inspect Your Drops",
+      "text": "$(c:/tnkloot preview)$(bold)Open reward previews$(/c)$()$(br2)Choose a drop from your inventory to inspect it. Previewing never consumes it or rerolls its rarity.$(br2)Use $(bold)/tnkloot journal$() to reopen this guide. Craft the journal from a Book and an Amethyst Shard."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "type": "apotheosis:rarity",
-  "color": "#FFAA00",
-  "material": "minecraft:gold_ingot",
+  "color": "#55DDFF",
+  "material": "minecraft:diamond",
   "sort_index": 750,
   "rules": [
     {

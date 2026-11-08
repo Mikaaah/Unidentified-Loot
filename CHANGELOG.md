@@ -1,3 +1,36 @@
+## 1.0.0-tnk-neoforge-1.21.1 — Release 1 candidate
+
+- Align the complete 0.19.15 feature set and all original artwork with the 0.18.1 advancement-origin fix.
+- Use the current TNK Progression API for mob/source levels, milestone ceilings and sealed rarity caps; verify both 1.2.0 and 1.3.0 companions.
+- Rebuild all four Create Ponder tutorials around actual stations, readable captions and correct XP/item paths.
+- Add shared equipment subgroups, source-level ranges, full operator item/attribute/affix export and acquired-gear discoveries without inflated identification counts.
+- Correct invalid boss IDs, add Eye of the Storm/The Obliterator rewards, protect native spell components and reserved trial prizes, and prevent boss gear/duplicate cache rewards leaking into ordinary loot.
+- Add 342 optional TNK rarity adapters for installed Iron's Apothic and Apothic Compats definitions, including source attribution/licences.
+- Preserve earned advancement rewards, decorative items and custom native prizes through all TNK replacement paths.
+- Correct capped chance displays, legacy rarity lookups, source-level tooltips, dependency metadata, pinned build inputs and CI's real companion dependency.
+- Build and 19 unit tests pass; focused runtime checks include 2,488 equipment/rarity applications, 49 boss pools, real advancement contexts, Liquid XP machine persistence and client Ponder replay.
+- Full Beta 1.0 pack certification remains blocked by optional-integration/dimension startup failures. See docs/TNK-RELEASE-1-AUDIT.md for exact coverage and receipts.
+
+## 0.18.1-tnk-beta.1 — Advancement reward protection
+
+- Preserve advancement loot rewards, including their quantities and item components.
+- Exclude advancement reward contexts from equipment replacement, accessory injection, boss routing and progression capping, even when they reuse chest loot tables.
+- Stop automatically classifying decorative block items as equipment; explicit configured equipment entries remain supported.
+- Keep ordinary chest/mob equipment conversion and the full beta feature set.
+
+## 0.18.0-tnk-beta.1 — Full feature beta
+
+- Restored the complete 0.17.0 feature set to the TNK Progression beta.
+- Restored compact brown/parchment Identifier, Salvage, Preview and Collection screens.
+- Restored all supplied rarity, NPC and journal textures, six rarities and optional tooltip styles.
+- Restored boss groups, manual boss editing, universal boss crates and signature perks.
+- Restored XP costs, salvage credit, Patchouli guide, discoveries and reward previews.
+- Restored dimension-aware pools and optional compatibility presets.
+- Restored optional Create Ponder tutorials on the Identifier, Journal and all sealed loot items.
+- Retained level-weighted regular mob/chest rolls and progression rarity caps.
+- Added old-beta rarity migration and protection against duplicate processing.
+- Replaced the binary-overlay build chain with complete Gradle-compilable source.
+
 # Changelog
 
 ## 0.6.1-alpha

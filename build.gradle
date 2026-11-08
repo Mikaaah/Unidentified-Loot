@@ -4,7 +4,7 @@ plugins {
     id 'idea'
 }
 
-version = '0.6.2-tnk-beta.1'
+version = '1.0.0-tnk-neoforge-1.21.1'
 group = 'dev.mikaaah.tnkloot'
 base { archivesName = 'tnkloot' }
 
@@ -13,8 +13,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 neoForge {
     version = project.neo_version
     runs {
-        client { client() }
-        server { server(); programArgument '--nogui' }
+        client { client(); jvmArgument '-Xmx3G' }
+        server { server(); jvmArgument '-Xmx3G'; programArgument '--nogui' }
     }
     mods {
         tnkloot { sourceSet(sourceSets.main) }
@@ -24,23 +24,16 @@ neoForge {
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
 
 repositories {
+    maven { url = uri('build-deps/maven') }
+    maven { url = 'https://maven.neoforged.net/releases' }
     mavenCentral()
     maven { url = 'https://maven.shadowsoffire.dev/releases' }
     maven { url = 'https://api.modrinth.com/maven' }
 }
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
-    // Development runtime dependencies validate the required Apotheosis stack in NeoForge tests.
-    implementation 'dev.shadowsoffire:Placebo:1.21.1-9.9.4'
-    implementation('dev.shadowsoffire:ApothicAttributes:1.21.1-2.10.0') { exclude group: 'top.theillusivec4.curios' }
-    implementation 'dev.shadowsoffire:ApothicSpawners:1.21.1-1.4.0'
-    implementation('dev.shadowsoffire:ApothicEnchanting:1.21.1-1.6.2') { exclude group: 'top.theillusivec4.curios' }
-    implementation('dev.shadowsoffire:Apotheosis:1.21.1-8.9.0') {
-        // Optional upstream integrations are not required to boot the mod test runtime.
-        exclude group: 'top.theillusivec4.curios'
-        exclude group: 'vazkii.patchouli', module: 'Patchouli'
-    }
-    runtimeOnly 'maven.modrinth:nU0bVIaL:h6hKI2ob'
+    implementation files('build-deps/apotheosis.jar','build-deps/placebo.jar','build-deps/apothic_attributes.jar','build-deps/patchouli.jar')
+    runtimeOnly files('build-deps/curios.jar')
 }
 tasks.named('test', Test) { useJUnitPlatform() }
 java { withSourcesJar() }
@@ -63,3 +56,81 @@ tasks.named('runServer', JavaExec) { standardInput = System.in }
 if (providers.gradleProperty('tnkProgressionJar').isPresent()) {
     dependencies { runtimeOnly files(providers.gradleProperty('tnkProgressionJar').get()) }
 }
+
+dependencies { compileOnly files('build-deps/create-1.21.1-6.0.10.jar', 'build-deps/ponder-1.0.82.jar') }
+if (providers.gradleProperty('createRuntimeJar').isPresent()) {
+    dependencies { runtimeOnly files(providers.gradleProperty('createRuntimeJar').get()) }
+}
+if (providers.gradleProperty('extraRuntimeDirectory').isPresent()) {
+    dependencies { runtimeOnly fileTree(providers.gradleProperty('extraRuntimeDirectory').get()) { include '*.jar' } }
+}
+
+if (providers.gradleProperty('clientVisualCheck').isPresent()) {
+    sourceSets.main.java.srcDir('verification/client')
+    neoForge.runs.client {
+        programArgument '--quickPlaySingleplayer'
+        programArgument 'TNKLootVisual'
+        programArgument '--width'
+        programArgument '1280'
+        programArgument '--height'
+        programArgument '900'
+    }
+}
+
+// Keep optional API jars out of the mod; fetch the pinned unmodified build inputs.
+tasks.register('preparePonder', Exec) {
+    commandLine 'python3', 'tools/prepare_ponder.py'
+    outputs.files('build-deps/create-1.21.1-6.0.10.jar', 'build-deps/ponder-1.0.82.jar')
+}
+tasks.named('compileJava') { dependsOn tasks.named('preparePonder') }
+tasks.register('writeVerificationClasspath') {
+    dependsOn tasks.named('classes')
+    doLast { file('build/verification-classpath.txt').text = sourceSets.main.compileClasspath.asPath }
+}
+
+tasks.named('jar') { exclude 'dev/mikaaah/tnkloot/client/ClientVisualCheck.class' }
+
+if (providers.gradleProperty('ponderRegressionTests').isPresent()) {
+    sourceSets.test.java.srcDir('verification/ponder')
+    dependencies { testImplementation files('build-deps/create-1.21.1-6.0.10.jar', 'build-deps/ponder-1.0.82.jar') }
+}
+if (providers.gradleProperty('ponderVisualCheck').isPresent()) {
+    sourceSets.main.java.srcDir('verification/ponderclient')
+    neoForge.runs.client {
+        programArgument '--quickPlaySingleplayer'
+        programArgument 'TNKPonderVisual'
+        programArgument '--width'
+        programArgument '1280'
+        programArgument '--height'
+        programArgument '900'
+    }
+}
+tasks.named('jar') { exclude 'dev/mikaaah/tnkloot/client/ponder/PonderClientCheck*.class' }
+
+if (providers.gradleProperty('tnkReleaseSmoke').isPresent()) {
+    neoForge.runs.server {
+        systemProperty 'tnkloot.releaseSmokeTest', 'true'
+        systemProperty 'tnkloot.exportAudit', 'true'
+    }
+}
+if (providers.gradleProperty('tnkAdvancementSmoke').isPresent()) {
+    neoForge.runs.server { systemProperty 'tnkloot.advancementRewardSmokeTest', 'true' }
+}
+if (providers.gradleProperty('tnkBetaSmoke').isPresent()) {
+    neoForge.runs.server { systemProperty 'tnkloot.betaSmokeTest', 'true' }
+}
+if (providers.gradleProperty('tnkMachineSmoke').isPresent()) {
+    neoForge.runs.server { systemProperty 'tnkloot.machineSmokeTest', 'true' }
+}
+
+tasks.named('processResources') {
+    from('third-party-licenses') { into 'META-INF/licenses' }
+    from('THIRD_PARTY_NOTICES.md')
+}
+
+
+tasks.register('prepareBuildDependencies', Exec) {
+    commandLine 'python3', 'tools/prepare_build_dependencies.py'
+    outputs.files('build-deps/apotheosis.jar', 'build-deps/placebo.jar', 'build-deps/apothic_attributes.jar', 'build-deps/patchouli.jar', 'build-deps/curios.jar')
+}
+tasks.named('compileJava') { dependsOn 'prepareBuildDependencies' }

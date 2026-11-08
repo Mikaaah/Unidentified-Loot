@@ -4,3 +4,12 @@ run/
 .idea/
 *.iml
 out/
+build-deps/
+
+__pycache__/
+*.pyc
+logs/
+restored-src/
+
+run-kubejs-beta1-reference/
+ponder-release-check/

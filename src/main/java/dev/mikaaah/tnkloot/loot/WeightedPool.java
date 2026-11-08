@@ -4,37 +4,64 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.LongSupplier;
 
-/** Immutable weighted pool with unbiased bounded selection and long totals. */
 public final class WeightedPool<T> {
-    public record Entry<T>(T value, int weight) {
-        public Entry { if (weight < 1) throw new IllegalArgumentException("Weight must be positive"); }
-    }
-    private final List<Entry<T>> entries;
-    private final long total;
+   private final List<WeightedPool.Entry<T>> entries;
+   private final long total;
 
-    public WeightedPool(List<Entry<T>> entries) {
-        this.entries = List.copyOf(entries);
-        long sum = 0;
-        for (Entry<T> entry : entries) sum = Math.addExact(sum, entry.weight());
-        total = sum;
-    }
-    public boolean isEmpty() { return entries.isEmpty(); }
-    public Optional<T> roll(LongSupplier random) {
-        if (isEmpty()) return Optional.empty();
-        // Rejection avoids modulo bias, including totals larger than Integer.MAX_VALUE.
-        long bits, ticket;
-        do {
+   public WeightedPool(List<WeightedPool.Entry<T>> entries) {
+      this.entries = List.copyOf(entries);
+      long sum = 0L;
+
+      for (WeightedPool.Entry<T> entry : entries) {
+         sum = Math.addExact(sum, (long)entry.weight());
+      }
+
+      this.total = sum;
+   }
+
+   public boolean isEmpty() {
+      return this.entries.isEmpty();
+   }
+
+   public Optional<T> roll(LongSupplier random) {
+      if (this.isEmpty()) {
+         return Optional.empty();
+      } else {
+         long bits;
+         long ticket;
+         do {
             bits = random.getAsLong() >>> 1;
-            ticket = bits % total;
-        } while (bits - ticket + (total - 1) < 0L);
-        return Optional.of(at(ticket));
-    }
-    T at(long ticket) {
-        if (ticket < 0 || ticket >= total) throw new IllegalArgumentException("Ticket outside pool");
-        for (Entry<T> entry : entries) {
-            if (ticket < entry.weight()) return entry.value();
-            ticket -= entry.weight();
-        }
-        throw new IllegalStateException("Weighted pool exhausted");
-    }
+            ticket = bits % this.total;
+         } while (bits - ticket + (this.total - 1L) < 0L);
+
+         return Optional.of(this.at(ticket));
+      }
+   }
+
+   T at(long ticket) {
+      if (ticket >= 0L && ticket < this.total) {
+         for (WeightedPool.Entry<T> entry : this.entries) {
+            if (ticket < (long)entry.weight()) {
+               return entry.value();
+            }
+
+            ticket -= (long)entry.weight();
+         }
+
+         throw new IllegalStateException("Weighted pool exhausted");
+      } else {
+         throw new IllegalArgumentException("Ticket outside pool");
+      }
+   }
+
+   public static record Entry<T>(T value, int weight) {
+      public Entry(T value, int weight) {
+         if (weight < 1) {
+            throw new IllegalArgumentException("Weight must be positive");
+         } else {
+            this.value = value;
+            this.weight = weight;
+         }
+      }
+   }
 }

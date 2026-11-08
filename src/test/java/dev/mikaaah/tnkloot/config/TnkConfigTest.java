@@ -18,7 +18,7 @@ class TnkConfigTest {
         assertEquals("novice", cfg.tierForRank(-1).id());
         assertEquals("legendary", cfg.tierForRank(100).id());
         assertEquals(3, cfg.tierForName("EXPLORER").orElseThrow().rank());
-        assertEquals("tnkloot:ancient", cfg.tierForName("legendary").orElseThrow().apotheosisRarity().toString());
+        assertEquals("tnkloot:mythic", cfg.tierForName("legendary").orElseThrow().apotheosisRarity().toString());
         assertTrue(cfg.replaceWeaponLoot());
         assertFalse(cfg.handheldIdentification());
         assertTrue(cfg.stationIdentification());
@@ -31,13 +31,13 @@ class TnkConfigTest {
         for (String bad : new String[] {
             base.replace("\"rank\": 1", "\"rank\": 0"),
             base.replace("\"id\": \"apprentice\"", "\"id\": \"novice\""),
-            base.replace("\"weight\": 5", "\"weight\": 0"),
-            base.replace("\"weight\": 5", "\"weight\": 1.5"),
-            base.replace("\"weight\": 5", "\"weight\": 4294967296"),
-            base.replace("\"weight\": 5", "\"weight\": \"5\""),
+            base.replace("\"weight\": 1", "\"weight\": 0"),
+            base.replace("\"weight\": 1", "\"weight\": 1.5"),
+            base.replace("\"weight\": 1", "\"weight\": 4294967296"),
+            base.replace("\"weight\": 1", "\"weight\": \"5\""),
             base.replace("\"share_ftb_teams\": true", "\"share_ftb_teams\": \"true\""),
             base.replace("minecraft:wooden_sword", "Bad ID!"),
-            base.replace("minecraft:story/upgrade_tools", "Bad ID!"),
+            base.replace("\"advancements\": []", "\"advancements\": [\"Bad ID!\"]"),
             base.replace("\"weight\"", "\"wieght\""),
             base.replace("\"rank\": 0", "\"rank\": -1"),
             base.replace("\"progression_mode\": \"MANUAL\"", "\"progression_mode\": \"UNKNOWN\"")
@@ -47,7 +47,7 @@ class TnkConfigTest {
         Path file = directory.resolve("nested/tiers.json");
         assertTrue(TnkConfig.reload(file));
         var previous = TnkConfig.get();
-        Files.writeString(file, defaults().replace("\"weight\": 5", "\"weight\": -1"));
+        Files.writeString(file, defaults().replace("\"weight\": 1", "\"weight\": -1"));
         assertFalse(TnkConfig.reload(file));
         assertSame(previous, TnkConfig.get());
         Files.writeString(file, "{broken");
@@ -60,12 +60,12 @@ class TnkConfigTest {
             assertEquals(mode, cfg.mode());
         }
     }
-    @Test void rejectsUncoveredTierUnlessIdentificationDisabled() throws Exception {
+    @Test void emptyEditorTiersRemainEditableWithoutFallbackEquipment() throws Exception {
         String config = """
             {"tiers":[{"rank":0,"id":"start"},{"rank":10,"id":"end"}],
              "weapons":[{"item":"minecraft:wooden_sword","min_tier":0,"max_tier":0}]}
             """;
-        assertThrows(IllegalArgumentException.class, () -> TnkConfig.parse(config));
+        assertEquals(1, TnkConfig.parse(config).weapons().size());
         var disabled = TnkConfig.parse(config.replace("{\"tiers\"", "{\"identification_enabled\":false,\"tiers\""));
         assertEquals(0, disabled.tierForRank(8).rank());
         assertEquals(10, disabled.tierForRank(999).rank());
@@ -93,7 +93,7 @@ class TnkConfigTest {
         }
         var cfg = TnkConfig.parse(defaults());
         assertEquals("tnkloot:common", cfg.tierForRank(0).apotheosisRarity().toString());
-        assertEquals("tnkloot:ancient", cfg.tierForRank(7).apotheosisRarity().toString());
+        assertEquals("tnkloot:mythic", cfg.tierForRank(7).apotheosisRarity().toString());
     }
 
     @Test void costsSupportTierDefaultsAndPerItemOverrides() throws Exception {
@@ -105,12 +105,12 @@ class TnkConfigTest {
         assertThrows(RuntimeException.class, () -> TnkConfig.parse(config.replace("\"minecraft:wooden_sword\": 4", "\"minecraft:wooden_sword\": -4")));
     }
 
-    @Test void everyConfiguredTokenCategoryHasPoolCoveragePerTier() throws Exception {
+    @Test void categoryMayHaveAnIntentionallyEmptyHigherTier() throws Exception {
         String config = """
             {"tiers":[{"rank":0,"id":"start"},{"rank":1,"id":"next"}],
              "weapons":[{"item":"minecraft:leather_helmet","category":"helmet","min_tier":0,"max_tier":0}]}
             """;
-        assertThrows(IllegalArgumentException.class, () -> TnkConfig.parse(config));
+        assertEquals(0, TnkConfig.parse(config).weapons().getFirst().maxTier());
     }
 
     @Test void everyPresetStatRangeDecodesWithPlacebosActualCodec() throws Exception {

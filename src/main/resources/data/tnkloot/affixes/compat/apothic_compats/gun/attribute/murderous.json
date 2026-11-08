@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothic_compats"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_artifice"
+    }
+  ],
+  "type": "apotheosis:attribute",
+  "attribute": "apothic_compats:gun_damage",
+  "categories": [
+    "apothic_compats:gun"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "operation": "add_multiplied_base",
+  "values": {
+    "tnkloot:common": {
+      "min": 0.05,
+      "max": 0.1
+    },
+    "tnkloot:uncommon": {
+      "min": 0.15,
+      "max": 0.2
+    },
+    "tnkloot:rare": {
+      "min": 0.25,
+      "max": 0.3
+    },
+    "tnkloot:epic": {
+      "min": 0.35,
+      "max": 0.4
+    },
+    "tnkloot:legendary": {
+      "min": 0.45,
+      "max": 0.5
+    },
+    "tnkloot:mythic": {
+      "min": 0.45,
+      "max": 0.5
+    }
+  }
+}

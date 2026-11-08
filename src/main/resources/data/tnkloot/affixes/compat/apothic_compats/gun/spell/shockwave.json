@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothic_compats"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_artifice"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_apothic"
+    }
+  ],
+  "type": "irons_apothic:spell_trigger",
+  "casting_slowdown": false,
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "player_animations": false,
+  "spell": "irons_spellbooks:shockwave",
+  "target": "self",
+  "trigger": "projectile_hit",
+  "types": [
+    "apothic_compats:gun"
+  ],
+  "values": {
+    "tnkloot:rare": {
+      "cooldown": 500,
+      "level": {
+        "min": 1.0,
+        "max": 2.0,
+        "step": 1.0
+      }
+    },
+    "tnkloot:epic": {
+      "cooldown": 440,
+      "level": {
+        "min": 2.0,
+        "max": 3.0,
+        "step": 1.0
+      }
+    },
+    "tnkloot:legendary": {
+      "cooldown": 380,
+      "level": {
+        "min": 3.0,
+        "max": 4.0,
+        "step": 1.0
+      }
+    },
+    "tnkloot:mythic": {
+      "cooldown": 380,
+      "level": {
+        "min": 3.0,
+        "max": 4.0,
+        "step": 1.0
+      }
+    }
+  }
+}

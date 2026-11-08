@@ -84,5 +84,6 @@
   "affix.tnkloot:ranged/magical": "Magical",
   "affix.tnkloot:ranged/magical.suffix": "of the Arcane",
   "affix.tnkloot:ranged/magical.desc": "Your arrows deal magic damage.",
-  "itemGroup.tnkloot": "T&K Loot"
+  "itemGroup.tnkloot": "T&K Loot",
+  "block.tnkloot.mechanical_identifier": "Mechanische Identificeerder"
 }

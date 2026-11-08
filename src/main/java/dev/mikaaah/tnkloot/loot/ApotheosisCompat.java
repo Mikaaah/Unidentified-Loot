@@ -1,57 +1,77 @@
 package dev.mikaaah.tnkloot.loot;
 
 import dev.mikaaah.tnkloot.config.TnkConfig;
-import dev.shadowsoffire.apotheosis.Apoth;
+import dev.mikaaah.tnkloot.rarity.NativeQuality;
+import dev.mikaaah.tnkloot.rarity.RaritySupport;
+import dev.shadowsoffire.apotheosis.Apoth.Components;
+import dev.shadowsoffire.apotheosis.affix.Affix;
 import dev.shadowsoffire.apotheosis.affix.AffixHelper;
 import dev.shadowsoffire.apotheosis.affix.ItemAffixes;
-import dev.shadowsoffire.apotheosis.loot.*;
+import dev.shadowsoffire.apotheosis.loot.LootCategory;
+import dev.shadowsoffire.apotheosis.loot.LootController;
+import dev.shadowsoffire.apotheosis.loot.LootRarity;
+import dev.shadowsoffire.apotheosis.loot.LootRule;
+import dev.shadowsoffire.apotheosis.loot.RarityRegistry;
+import dev.shadowsoffire.apotheosis.loot.LootRule.AffixLootRule;
 import dev.shadowsoffire.apotheosis.tiers.GenContext;
+import dev.shadowsoffire.placebo.reload.DynamicHolder;
+import java.util.ArrayList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import java.util.ArrayList;
 
-/** Required, compile-checked Apotheosis API. Missing affixes reject the transaction. */
 public final class ApotheosisCompat {
-    private ApotheosisCompat() {}
-    public static ItemStack apply(ItemStack stack, int rank, Player player) {
-        return apply(stack, rank, player, player.getRandom().nextLong());
-    }
-    public static ItemStack apply(ItemStack stack, int rank, Player player, long seed) {
-        return applyRarity(stack, net.minecraft.resources.ResourceLocation.parse("tnkloot:common"), player, seed);
-    }
-    public static ItemStack applyToken(ItemStack stack, ItemStack token, net.minecraft.server.level.ServerPlayer player) {
-        var data = UnidentifiedWeaponItem.data(token);
-        return applyRarity(stack, net.minecraft.resources.ResourceLocation.parse(data.contains("tnk_rarity") ? data.getString("tnk_rarity") : "tnkloot:common"), player, data.getLong("roll_seed"));
-    }
-    private static ItemStack applyRarity(ItemStack stack, net.minecraft.resources.ResourceLocation wanted, Player player, long seed) {
-        LootRarity rarity = RarityRegistry.getSortedRarities().stream()
-            .filter(r -> wanted.equals(RarityRegistry.INSTANCE.getKey(r))).findFirst()
-            .orElseThrow(() -> new IllegalStateException("Unknown Apotheosis rarity " + wanted));
-        LootCategory category = LootCategory.forItem(stack);
-        if (category.isNone()) throw new IllegalStateException("No Apotheosis loot category for " + stack.getItem());
-        GenContext context = GenContext.forPlayer(RandomSource.create(seed ^ 0x544E4B4C4F4F54L), player);
-        stack.set(Apoth.Components.AFFIXES, ItemAffixes.EMPTY);
-        AffixHelper.setRarity(stack, rarity);
-        for (LootRule rule : rarity.getRules(category)) {
-            // Some item categories have no effect/ability affixes. Skip those optional rules.
-            if (rule instanceof LootRule.AffixLootRule affix
-                && LootController.getWeightedAffixes(stack, rarity, affix.type(), context).stream()
-                    .noneMatch(a -> a.getWeight().asInt() > 0)) continue;
-            rule.execute(stack, rarity, context);
-        }
-        ItemAffixes affixes = stack.getOrDefault(Apoth.Components.AFFIXES, ItemAffixes.EMPTY);
-        if (affixes.size() == 0)
+   private ApotheosisCompat() {
+   }
+
+   public static ItemStack apply(ItemStack stack, int rank, Player player) {
+      return apply(stack, rank, player, player.getRandom().nextLong());
+   }
+
+   public static ItemStack apply(ItemStack stack, int rank, Player player, long seed) {
+      stack = NativeQuality.prepare(stack, rank, player, seed);
+      TnkConfig.get().tierForRank(rank).apotheosisRarity();
+      ResourceLocation wanted = RaritySupport.resolve(stack, rank, seed);
+      LootRarity rarity = RarityRegistry.getSortedRarities()
+         .stream()
+         .filter(r -> wanted.equals(RarityRegistry.INSTANCE.getKey(r)))
+         .findFirst()
+         .orElseThrow(() -> new IllegalStateException("Unknown Apotheosis rarity " + wanted));
+      LootCategory category = LootCategory.forItem(stack);
+      if (category.isNone()) {
+         return RaritySupport.finish(stack, rank, seed);
+      } else {
+         GenContext context = GenContext.forPlayer(RandomSource.create(seed ^ 23729983353474900L), player);
+         stack.set(Components.AFFIXES, ItemAffixes.EMPTY);
+         AffixHelper.setRarity(stack, rarity);
+
+         for (LootRule rule : rarity.getRules(category)) {
+            if (!(rule instanceof AffixLootRule affix)
+               || !LootController.getWeightedAffixes(stack, rarity, affix.type(), context).stream().noneMatch(a -> a.getWeight().asInt() > 0)) {
+               rule.execute(stack, rarity, context);
+            }
+         }
+
+         ItemAffixes affixes = (ItemAffixes)stack.getOrDefault(Components.AFFIXES, ItemAffixes.EMPTY);
+         if (affixes.size() == 0) {
             throw new IllegalStateException("No eligible affixes for " + stack.getItem() + " at rarity " + wanted);
-        var names = new ArrayList<>(affixes.keySet());
-        // Keep the display name tied to actual affixes and the configured rarity.
-        String key = names.size() > 1 ? "misc.apotheosis.affix_name.three" : "misc.apotheosis.affix_name.two";
-        AffixHelper.setName(stack, Component.translatable(key, names.getFirst().get().getName(true), "",
-            names.size() > 1 ? names.getLast().get().getName(false) : "")
-            .withStyle(Style.EMPTY.withColor(rarity.color()).withItalic(false)));
-        stack.remove(Apoth.Components.TOUCHED_BY_MALICE);
-        return stack;
-    }
+         } else {
+            ArrayList<DynamicHolder<Affix>> names = new ArrayList<>(affixes.keySet());
+            String key = names.size() > 1 ? "misc.apotheosis.affix_name.three" : "misc.apotheosis.affix_name.two";
+            AffixHelper.setName(
+               stack,
+               Component.translatable(
+                     key,
+                     new Object[]{((Affix)names.getFirst().get()).getName(true), "", names.size() > 1 ? ((Affix)names.getLast().get()).getName(false) : ""}
+                  )
+                  .withStyle(Style.EMPTY.withColor(rarity.color()).withItalic(false))
+            );
+            stack.remove(Components.TOUCHED_BY_MALICE);
+            return RaritySupport.finish(stack, rank, seed);
+         }
+      }
+   }
 }

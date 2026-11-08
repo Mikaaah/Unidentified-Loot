@@ -1,0 +1,6756 @@
+{
+  "revision": 2,
+  "profiles": [
+    {
+      "id": "epicfight",
+      "requires": [
+        "epicfight"
+      ],
+      "items": [
+        {
+          "item": "epicfight:diamond_dagger",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:diamond_greatsword",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:diamond_longsword",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:diamond_spear",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:diamond_tachi",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:iron_dagger",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:iron_greatsword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:iron_longsword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:iron_spear",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:iron_tachi",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:netherite_dagger",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:netherite_greatsword",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:netherite_longsword",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:netherite_spear",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:netherite_tachi",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stone_dagger",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stone_greatsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stone_longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stone_spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stone_tachi",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:wooden_dagger",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:wooden_greatsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:wooden_longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:wooden_spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:wooden_tachi",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight_legacy:iron_greatsword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:uchigatana",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:bokken",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:glove",
+          "category": "weapon",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stray_hat",
+          "category": "helmet",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stray_robe",
+          "category": "chestplate",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "epicfight:stray_pants",
+          "category": "leggings",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "simplyswords",
+      "requires": [
+        "simplyswords"
+      ],
+      "items": [
+        {
+          "item": "simplyswords:diamond_chakram",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_claymore",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_cutlass",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_glaive",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_greataxe",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_greathammer",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_halberd",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_katana",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_longsword",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_rapier",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_sai",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_scythe",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_spear",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_twinblade",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:diamond_warglaive",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_chakram",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_claymore",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_cutlass",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_glaive",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_greataxe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_greathammer",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_halberd",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_katana",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_longsword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_rapier",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_sai",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_scythe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_spear",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_twinblade",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:iron_warglaive",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_chakram",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_claymore",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_cutlass",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_glaive",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_greataxe",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_greathammer",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_halberd",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_katana",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_longsword",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_rapier",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_sai",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_scythe",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_spear",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_twinblade",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:netherite_warglaive",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_chakram",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_claymore",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_cutlass",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_glaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_greataxe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_greathammer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_halberd",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_katana",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_longsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_rapier",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_sai",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_scythe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_spear",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_twinblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:runic_warglaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:arcanethyst",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:awakened_lichblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:bloodwake",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:bramblethorn",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:brimstone_claymore",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:caelestis",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:chompolotl",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:dawnquiver",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:dreadtide",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:dreadwhisper",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:emberblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:emberlash",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:enigma",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:flamewind",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:frostfall",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:gloampiercer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:harbinger",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:hearthflame",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:hiveheart",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:icewhisper",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:ionbound_stormscale",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:livyatan",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:magiblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:magiscythe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:magispear",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:mjolnir",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:molten_edge",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:ribboncleaver",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:riftmane",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:shadowsting",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:slumbering_lichblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:soulkeeper",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:soulpyre",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:soulrender",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:soulstalker",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:soulstealer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:stars_edge",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:stormbringer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:storms_edge",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:stormscale",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:sunfire",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:sword_on_a_stick",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:tempest",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:the_devourer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:thunderbrand",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:toxic_longsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:twisted_blade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:waking_lichblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:watcher_claymore",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:watching_warglaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:waxweaver",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:whisperwind",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:wickpiercer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:wraithfang",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "simplyswords:wraithmaw",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "wom",
+      "requires": [
+        "wom"
+      ],
+      "items": [
+        {
+          "item": "wom:diamond_greataxe",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:diamond_staff",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:iron_greataxe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:iron_staff",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_greataxe",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_staff",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_tachi",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:stone_staff",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:wooden_staff",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:diamond_crown",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:diamond_armbracelet",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:diamond_legtopseal",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:diamond_legbottomseal",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:emerald_earrings",
+          "category": "helmet",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:emerald_chakra",
+          "category": "chestplate",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:emerald_tasset",
+          "category": "leggings",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:emerald_anklebracelet",
+          "category": "boots",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_mask",
+          "category": "helmet",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_manicle",
+          "category": "chestplate",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_belt",
+          "category": "leggings",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:netherite_chains",
+          "category": "boots",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:agony",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:tormented_mind",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:ruine",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:satsujin",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:ender_blaster",
+          "category": "bow",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:herrscher",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:gesetz",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:moonless",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:solar",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:antitheus",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:napoleon",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:evil_tachi",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:hollow_longsword",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:jabberwocky",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:orbit",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:nova",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "wom:blackstar",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "efn",
+      "requires": [
+        "efn"
+      ],
+      "items": [
+        {
+          "item": "efn:meen_spear",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:ruinsgreatsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:nf_shortsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:exsiliumgladius",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:crimson_moon",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:nf_dual_sword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:sword_of_pioneer",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:thornwheel",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:nf_shortsword_2",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:duskfire_boots",
+          "category": "boots",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:co_tachi",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:duskfire_helmet",
+          "category": "helmet",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:nf_claw",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:ruinfighter_helmet",
+          "category": "helmet",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:crescent_moon",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:excalibur",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:duskfire_leggings",
+          "category": "leggings",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:ruinfighter_boots",
+          "category": "boots",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:yamato_dmc",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:broadblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:ruinfighter_leggings",
+          "category": "leggings",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:fire_exsiliumgladius",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:kusabimaru",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:ruinfighter_chestplate",
+          "category": "chestplate",
+          "min_tier": 4,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:hf_blade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:duskfire_chestplate",
+          "category": "chestplate",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:yamato_dmc4",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:air_tachi",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "efn:hf_murasama",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "irons_spellbooks",
+      "requires": [
+        "irons_spellbooks"
+      ],
+      "items": [
+        {
+          "item": "irons_spellbooks:wizard_helmet",
+          "category": "helmet",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wizard_chestplate",
+          "category": "chestplate",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wizard_leggings",
+          "category": "leggings",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wizard_boots",
+          "category": "boots",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wandering_magician_helmet",
+          "category": "helmet",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wandering_magician_chestplate",
+          "category": "chestplate",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wandering_magician_leggings",
+          "category": "leggings",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:wandering_magician_boots",
+          "category": "boots",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pyromancer_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pyromancer_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pyromancer_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pyromancer_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:electromancer_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:electromancer_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:electromancer_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:electromancer_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cultist_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cultist_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cultist_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cultist_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:archevoker_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:archevoker_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:archevoker_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:archevoker_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cryomancer_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cryomancer_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cryomancer_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cryomancer_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:shadowwalker_helmet",
+          "category": "helmet",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:shadowwalker_chestplate",
+          "category": "chestplate",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:shadowwalker_leggings",
+          "category": "leggings",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:shadowwalker_boots",
+          "category": "boots",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:priest_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:priest_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:priest_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:priest_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:plagued_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:plagued_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:plagued_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:plagued_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pumpkin_helmet",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pumpkin_chestplate",
+          "category": "chestplate",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pumpkin_leggings",
+          "category": "leggings",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pumpkin_boots",
+          "category": "boots",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_helmet",
+          "category": "helmet",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_chestplate",
+          "category": "chestplate",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_leggings",
+          "category": "leggings",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_boots",
+          "category": "boots",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:claymore",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:amethyst_rapier",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:boreal_blade",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:graybeard_staff",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:ice_staff",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:pyrium_staff",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:autoloader_crossbow",
+          "category": "bow",
+          "min_tier": 4,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:tarnished_helmet",
+          "category": "helmet",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:speed_boots",
+          "category": "boots",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:paladin_chestplate",
+          "category": "chestplate",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:infernal_sorcerer_chestplate",
+          "category": "chestplate",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:mana_ring",
+          "category": "accessory",
+          "min_tier": 0,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:silver_ring",
+          "category": "accessory",
+          "min_tier": 1,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cooldown_ring",
+          "category": "accessory",
+          "min_tier": 2,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:cast_time_ring",
+          "category": "accessory",
+          "min_tier": 2,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:emerald_stoneplate_ring",
+          "category": "accessory",
+          "min_tier": 3,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:fireward_ring",
+          "category": "accessory",
+          "min_tier": 3,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:poisonward_ring",
+          "category": "accessory",
+          "min_tier": 3,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:frostward_ring",
+          "category": "accessory",
+          "min_tier": 3,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:heavy_chain_necklace",
+          "category": "accessory",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:concentration_amulet",
+          "category": "accessory",
+          "min_tier": 4,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:invisibility_ring",
+          "category": "accessory",
+          "min_tier": 4,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:lurker_ring",
+          "category": "accessory",
+          "min_tier": 4,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:expulsion_ring",
+          "category": "accessory",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:visibility_ring",
+          "category": "accessory",
+          "min_tier": 2,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_spellbooks:teleportation_amulet",
+          "category": "accessory",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "irons_jewelry",
+      "requires": [
+        "irons_jewelry"
+      ],
+      "items": [
+        {
+          "item": "irons_jewelry:ring",
+          "category": "accessory",
+          "min_tier": 0,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "irons_jewelry:necklace",
+          "category": "accessory",
+          "min_tier": 1,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "celestisynth",
+      "requires": [
+        "celestisynth"
+      ],
+      "items": [
+        {
+          "item": "celestisynth:solaris",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:crescentia",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:breezebreaker",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:poltergeist",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:aquaflora",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:rainfall_serenity",
+          "category": "bow",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:frostbound",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:keres",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:solar_crystal_helmet",
+          "category": "helmet",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:solar_crystal_chestplate",
+          "category": "chestplate",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:solar_crystal_leggings",
+          "category": "leggings",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:solar_crystal_boots",
+          "category": "boots",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:lunar_stone_helmet",
+          "category": "helmet",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:lunar_stone_chestplate",
+          "category": "chestplate",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:lunar_stone_leggings",
+          "category": "leggings",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "celestisynth:lunar_stone_boots",
+          "category": "boots",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "alexscaves",
+      "requires": [
+        "alexscaves"
+      ],
+      "items": [
+        {
+          "item": "alexscaves:limestone_spear",
+          "category": "weapon",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:galena_gauntlet",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:resistor_shield",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:sea_staff",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:desolate_dagger",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:frostmint_spear",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:sugar_staff",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:primordial_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:rainbounce_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:hazmat_mask",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:hazmat_chestplate",
+          "category": "chestplate",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:hazmat_leggings",
+          "category": "leggings",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:hazmat_boots",
+          "category": "boots",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:diving_helmet",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:diving_chestplate",
+          "category": "chestplate",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:diving_leggings",
+          "category": "leggings",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:diving_boots",
+          "category": "boots",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:gingerbread_helmet",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:gingerbread_chestplate",
+          "category": "chestplate",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:gingerbread_leggings",
+          "category": "leggings",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "alexscaves:gingerbread_boots",
+          "category": "boots",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_twilightforest",
+      "requires": [
+        "knavesneeds",
+        "twilightforest"
+      ],
+      "items": [
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/knightmetal/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/longsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/twinblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/rapier",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/katana",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/sai",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/spear",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/glaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/warglaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/cutlass",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/claymore",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/greathammer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/greataxe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/chakram",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/scythe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/fiery/halberd",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/ironwood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/longsword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/twinblade",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/rapier",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/katana",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/sai",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/spear",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/glaive",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/warglaive",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/cutlass",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/claymore",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/greathammer",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/greataxe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/chakram",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/scythe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:twilightforest/steeleaf/halberd",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_undergarden",
+      "requires": [
+        "knavesneeds",
+        "undergarden"
+      ],
+      "items": [
+        {
+          "item": "knavesneeds:undergarden/cloggrum/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/cloggrum/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/froststeel/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/utherium/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/longsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/twinblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/rapier",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/katana",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/sai",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/spear",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/glaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/warglaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/cutlass",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/claymore",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/greathammer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/greataxe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/chakram",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/scythe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:undergarden/forgotten/halberd",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_betternether",
+      "requires": [
+        "knavesneeds",
+        "betternether"
+      ],
+      "items": [
+        {
+          "item": "knavesneeds:betternether/cincinnasite/longsword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/twinblade",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/rapier",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/katana",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/sai",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/spear",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/glaive",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/warglaive",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/cutlass",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/claymore",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/greathammer",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/greataxe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/chakram",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/scythe",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/cincinnasite/halberd",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:betternether/nether_ruby/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_soulsweapons",
+      "requires": [
+        "knavesneeds",
+        "soulsweapons"
+      ],
+      "items": [
+        {
+          "item": "knavesneeds:soulsweapons/translucent/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:soulsweapons/translucent/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_amethyst_imbuement",
+      "requires": [
+        "knavesneeds",
+        "amethyst_imbuement"
+      ],
+      "items": [
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/ametrine/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/garnet/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/glowing/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:amethyst_imbuement/steel/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_deeperdarker",
+      "requires": [
+        "knavesneeds",
+        "deeperdarker"
+      ],
+      "items": [
+        {
+          "item": "knavesneeds:deeperdarker/warden/longsword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/twinblade",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/rapier",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/katana",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/sai",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/spear",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/glaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/warglaive",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/cutlass",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/claymore",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/greathammer",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/greataxe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/chakram",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/scythe",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/warden/halberd",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "knavesneeds:deeperdarker/resonarium/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "knavesneeds_blue_skies",
+      "requires": [
+        "knavesneeds",
+        "blue_skies"
+      ],
+      "items": [
+        {
+          "item": "blue_skies:pyrope/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:pyrope/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:aquite/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:diopside/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:charoite/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:horizonite/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:turquoise_stone/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/longsword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/twinblade",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/rapier",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/katana",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/sai",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/spear",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/glaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/warglaive",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/cutlass",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/claymore",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/greathammer",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/greataxe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/chakram",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/scythe",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_stone/halberd",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:bluebright_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:lunar_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:starlit_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:dusk_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:frostbright_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:maple_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/longsword",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/twinblade",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/rapier",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/katana",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/sai",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/glaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/warglaive",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/cutlass",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/claymore",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/greathammer",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/greataxe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/chakram",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/scythe",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "blue_skies:comet_wood/halberd",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "block_factorys_bosses",
+      "requires": [
+        "block_factorys_bosses"
+      ],
+      "items": [
+        {
+          "item": "block_factorys_bosses:dagger",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "block_factorys_bosses:large_sword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "block_factorys_bosses:pirate_saber",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "block_factorys_bosses:warrior_sword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "mowziesmobs",
+      "requires": [
+        "mowziesmobs"
+      ],
+      "items": [
+        {
+          "item": "mowziesmobs:spear",
+          "category": "weapon",
+          "min_tier": 1,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:naga_fang_dagger",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:umvuthana_mask_fury",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:umvuthana_mask_fear",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:umvuthana_mask_rage",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:umvuthana_mask_bliss",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:umvuthana_mask_misery",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "mowziesmobs:umvuthana_mask_faith",
+          "category": "helmet",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "cataclysm",
+      "requires": [
+        "cataclysm"
+      ],
+      "items": [
+        {
+          "item": "cataclysm:black_steel_sword",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:black_steel_axe",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:black_steel_pickaxe",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:black_steel_shovel",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:coral_spear",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:sturdy_boots",
+          "category": "boots",
+          "min_tier": 2,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:bone_reptile_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:bone_reptile_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:belt_of_beginner",
+          "category": "accessory",
+          "min_tier": 0,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:ring_of_grudged",
+          "category": "accessory",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "cataclysm:berserker_soul_amulet",
+          "category": "accessory",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters",
+      "requires": [
+        "legendary_monsters"
+      ],
+      "items": [
+        {
+          "item": "legendary_monsters:sharp_battle_axe",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:knights_sword",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:spiky_spear",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:spiky_shield",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:blastproof_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:enderitium_sword",
+          "category": "weapon",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:enderitium_axe",
+          "category": "tool",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:enderitium_pickaxe",
+          "category": "tool",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "legendary_monsters:enderitium_shovel",
+          "category": "tool",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

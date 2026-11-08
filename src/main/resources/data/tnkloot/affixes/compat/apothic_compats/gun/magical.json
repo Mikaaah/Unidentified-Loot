@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "apothic_compats"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_artifice"
+    }
+  ],
+  "type": "apothic_compats:magic_bullet",
+  "definition": {
+    "affix_type": "ability",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 25
+    }
+  },
+  "rarities": [
+    "tnkloot:rare",
+    "tnkloot:epic",
+    "tnkloot:legendary",
+    "tnkloot:mythic"
+  ]
+}

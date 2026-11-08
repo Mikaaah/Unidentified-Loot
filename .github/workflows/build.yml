@@ -1,4 +1,4 @@
-name: Build NeoForge mod
+name: Build TNK NeoForge release
 on:
   push:
   pull_request:
@@ -15,24 +15,30 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.14'
-      - name: Build progression companion
-        run: ./progression-bootstrap/gradlew -p progression-bootstrap build --stacktrace
+      - name: Fetch actual supported progression companion
+        run: python3 tools/prepare_progression.py
       - name: Build and unit tests
-        run: ./gradlew build --stacktrace -PtnkProgressionJar="$PWD/progression-bootstrap/build/libs/tnkprogression-0.1.0-beta.2.jar"
-      - name: Dedicated server affix and identifier integration checks
-        env:
-          JAVA_TOOL_OPTIONS: -Dtnkloot.smokeTest=true
+        run: ./gradlew build --stacktrace -PtnkProgressionJar="$PWD/build-deps/tnkprogression-1.2.0-private.1.jar"
+      - name: Dedicated server regression checks
+        shell: bash
         run: |
-          mkdir -p run
+          set -euo pipefail
+          mkdir -p run verification-logs
           printf 'eula=true\n' > run/eula.txt
-          timeout 300 ./gradlew runServer --stacktrace -PtnkProgressionJar="$PWD/progression-bootstrap/build/libs/tnkprogression-0.1.0-beta.2.jar" 2>&1 | tee smoke-test.log
-          grep -q TNKLOOT_SMOKE_OK smoke-test.log
+          for check in 'tnkReleaseSmoke:TNKLOOT_RELEASE_OK' 'tnkBetaSmoke:TNKLOOT_BETA_OK' 'tnkAdvancementSmoke:TNKLOOT_ADVANCEMENT_REWARDS_OK'; do
+            flag="${check%%:*}"
+            marker="${check#*:}"
+            timeout 300 ./gradlew runServer --stacktrace -P"$flag" -PtnkProgressionJar="$PWD/build-deps/tnkprogression-1.2.0-private.1.jar" 2>&1 | tee "verification-logs/$flag.log"
+            grep -q "$marker" "verification-logs/$flag.log"
+          done
+      - name: Verify release assets and packaging
+        run: python3 verification/verify_release.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: TNK-Loot-0.6.2-tnk-beta.1
+          name: TNK-Loot-1.0.0-neoforge-1.21.1
           path: |
             build/libs/*.jar
             build/reports/tests/
-            smoke-test.log
+            verification-logs/
             run/logs/latest.log

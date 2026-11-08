@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"tnkloot:block/mechanical_identifier"},"facing=east":{"model":"tnkloot:block/mechanical_identifier","y":90},"facing=south":{"model":"tnkloot:block/mechanical_identifier","y":180},"facing=west":{"model":"tnkloot:block/mechanical_identifier","y":270}}}

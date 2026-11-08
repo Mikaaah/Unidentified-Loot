@@ -1,0 +1,17 @@
+{
+  "name": "Six Rarities",
+  "category": "tnkloot:fieldwork",
+  "icon": "minecraft:amethyst_shard",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Six Rarities",
+      "text": "$(#777777)Common$() \u00b7 white$(br)$(#20852A)Uncommon$() \u00b7 green$(br)$(#C84396)Rare$() \u00b7 pink$(br)$(#8952B0)Epic$() \u00b7 purple$(br)$(#348DA4)Legendary$() \u00b7 light blue$(br)$(#D67B23)Mythic$() \u00b7 orange$(br2)Rarity is locked on the drop. Identifying reveals its equipment and rolls the supported affixes."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Power and Price",
+      "text": "Tier and rarity shape the available affixes and identification cost. Better rarity also adds a stronger reveal flourish.$(br2)Native accessories keep their own mechanics. Items with fixed native powers do not receive incompatible affixes or an unsupported rarity surcharge."
+    }
+  ]
+}

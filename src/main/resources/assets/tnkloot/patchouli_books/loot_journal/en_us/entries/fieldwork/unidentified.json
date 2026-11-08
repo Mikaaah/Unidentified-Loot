@@ -1,0 +1,17 @@
+{
+  "name": "Unclaimed Equipment",
+  "category": "tnkloot:fieldwork",
+  "icon": "tnkloot:unidentified_weapon",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Unclaimed Equipment",
+      "text": "Weapons, armor, bows, tools and accessories can arrive unidentified. Their category, tier and rarity tell you what sort of reward to expect.$(br2)Visit an $(l:workshop/identify)Identifier counter$(/l) to reveal the equipment. Keep some XP points ready."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "No Travel Rerolls",
+      "text": "The drop remembers its origin dimension. Carrying an Aether drop home keeps its Aether reward pool.$(br2)The $(l:records/preview)reward preview$(/l) shows the currently eligible equipment and each item's share of the pool. Inspecting it does not consume your drop."
+    }
+  ]
+}

@@ -16,106 +16,85 @@
       "id": "apprentice",
       "name": "Apprentice",
       "apotheosis_rarity": "tnkloot:uncommon",
-      "advancements": [
-        "minecraft:story/upgrade_tools"
-      ]
+      "advancements": []
     },
     {
       "rank": 2,
       "id": "adventurer",
       "name": "Adventurer",
       "apotheosis_rarity": "tnkloot:rare",
-      "advancements": [
-        "minecraft:story/smelt_iron"
-      ]
+      "advancements": []
     },
     {
       "rank": 3,
       "id": "explorer",
       "name": "Explorer",
       "apotheosis_rarity": "tnkloot:epic",
-      "advancements": [
-        "minecraft:story/mine_diamond"
-      ]
+      "advancements": []
     },
     {
       "rank": 4,
       "id": "veteran",
       "name": "Veteran",
       "apotheosis_rarity": "tnkloot:legendary",
-      "advancements": [
-        "minecraft:story/enter_the_nether"
-      ]
+      "advancements": []
     },
     {
       "rank": 5,
       "id": "champion",
       "name": "Champion",
       "apotheosis_rarity": "tnkloot:mythic",
-      "advancements": [
-        "minecraft:nether/obtain_blaze_rod"
-      ]
+      "advancements": []
     },
     {
       "rank": 6,
       "id": "hero",
       "name": "Hero",
       "apotheosis_rarity": "tnkloot:mythic",
-      "advancements": [
-        "minecraft:nether/summon_wither"
-      ]
+      "advancements": []
     },
     {
       "rank": 7,
       "id": "legendary",
       "name": "Legendary",
-      "apotheosis_rarity": "tnkloot:ancient",
-      "advancements": [
-        "minecraft:end/kill_dragon"
-      ]
+      "apotheosis_rarity": "tnkloot:mythic",
+      "advancements": []
     }
   ],
   "weapons": [
     {
       "item": "minecraft:wooden_sword",
       "min_tier": 0,
-      "max_tier": 1,
-      "weight": 5,
+      "max_tier": 0,
+      "weight": 1,
       "category": "weapon"
     },
     {
       "item": "minecraft:stone_sword",
       "min_tier": 0,
-      "max_tier": 2,
-      "weight": 5,
+      "max_tier": 1,
+      "weight": 1,
       "category": "weapon"
     },
     {
       "item": "minecraft:iron_sword",
       "min_tier": 2,
-      "max_tier": 4,
-      "weight": 5,
-      "category": "weapon"
-    },
-    {
-      "item": "minecraft:golden_sword",
-      "category": "weapon",
-      "min_tier": 1,
       "max_tier": 3,
-      "weight": 2
+      "weight": 1,
+      "category": "weapon"
     },
     {
       "item": "minecraft:diamond_sword",
       "min_tier": 3,
-      "max_tier": 6,
-      "weight": 3,
+      "max_tier": 5,
+      "weight": 1,
       "category": "weapon"
     },
     {
       "item": "minecraft:netherite_sword",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
-      "weight": 2,
+      "weight": 1,
       "category": "weapon"
     },
     {
@@ -143,27 +122,27 @@
       "item": "minecraft:chainmail_helmet",
       "category": "helmet",
       "min_tier": 1,
-      "max_tier": 3,
+      "max_tier": 2,
       "weight": 1
     },
     {
       "item": "minecraft:iron_helmet",
       "category": "helmet",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_helmet",
       "category": "helmet",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_helmet",
       "category": "helmet",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
@@ -178,27 +157,27 @@
       "item": "minecraft:chainmail_chestplate",
       "category": "chestplate",
       "min_tier": 1,
-      "max_tier": 3,
+      "max_tier": 2,
       "weight": 1
     },
     {
       "item": "minecraft:iron_chestplate",
       "category": "chestplate",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_chestplate",
       "category": "chestplate",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_chestplate",
       "category": "chestplate",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
@@ -213,27 +192,27 @@
       "item": "minecraft:chainmail_leggings",
       "category": "leggings",
       "min_tier": 1,
-      "max_tier": 3,
+      "max_tier": 2,
       "weight": 1
     },
     {
       "item": "minecraft:iron_leggings",
       "category": "leggings",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_leggings",
       "category": "leggings",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_leggings",
       "category": "leggings",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
@@ -248,27 +227,27 @@
       "item": "minecraft:chainmail_boots",
       "category": "boots",
       "min_tier": 1,
-      "max_tier": 3,
+      "max_tier": 2,
       "weight": 1
     },
     {
       "item": "minecraft:iron_boots",
       "category": "boots",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_boots",
       "category": "boots",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_boots",
       "category": "boots",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
@@ -276,104 +255,104 @@
       "item": "minecraft:wooden_pickaxe",
       "category": "tool",
       "min_tier": 0,
-      "max_tier": 1,
+      "max_tier": 0,
       "weight": 1
     },
     {
       "item": "minecraft:wooden_axe",
       "category": "tool",
       "min_tier": 0,
-      "max_tier": 1,
+      "max_tier": 0,
       "weight": 1
     },
     {
       "item": "minecraft:wooden_shovel",
       "category": "tool",
       "min_tier": 0,
-      "max_tier": 1,
+      "max_tier": 0,
       "weight": 1
     },
     {
       "item": "minecraft:stone_pickaxe",
       "category": "tool",
-      "min_tier": 1,
-      "max_tier": 2,
+      "min_tier": 0,
+      "max_tier": 1,
       "weight": 1
     },
     {
       "item": "minecraft:stone_axe",
       "category": "tool",
-      "min_tier": 1,
-      "max_tier": 2,
+      "min_tier": 0,
+      "max_tier": 1,
       "weight": 1
     },
     {
       "item": "minecraft:stone_shovel",
       "category": "tool",
-      "min_tier": 1,
-      "max_tier": 2,
+      "min_tier": 0,
+      "max_tier": 1,
       "weight": 1
     },
     {
       "item": "minecraft:iron_pickaxe",
       "category": "tool",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:iron_axe",
       "category": "tool",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:iron_shovel",
       "category": "tool",
       "min_tier": 2,
-      "max_tier": 4,
+      "max_tier": 3,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_pickaxe",
       "category": "tool",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_axe",
       "category": "tool",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:diamond_shovel",
       "category": "tool",
       "min_tier": 3,
-      "max_tier": 6,
+      "max_tier": 5,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_pickaxe",
       "category": "tool",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_axe",
       "category": "tool",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
     {
       "item": "minecraft:netherite_shovel",
       "category": "tool",
-      "min_tier": 6,
+      "min_tier": 5,
       "max_tier": 7,
       "weight": 1
     },
@@ -402,5 +381,6 @@
       "7": 25
     },
     "per_item": {}
-  }
+  },
+  "preset_revision": 2
 }

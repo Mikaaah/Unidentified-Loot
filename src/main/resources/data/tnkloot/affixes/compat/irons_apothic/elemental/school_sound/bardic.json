@@ -1,0 +1,57 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_apothic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tunes_n_tomes"
+    }
+  ],
+  "type": "irons_apothic:spell_level",
+  "definition": {
+    "affix_type": "basic_effect",
+    "weights": {
+      "weight": 25,
+      "quality": 0.1
+    },
+    "exclusive_set": []
+  },
+  "school": "tunes_n_tomes:melody",
+  "values": {
+    "tnkloot:rare": {
+      "level": {
+        "min": 1,
+        "steps": 1,
+        "step": 0
+      }
+    },
+    "tnkloot:epic": {
+      "level": {
+        "min": 1,
+        "steps": 1,
+        "step": 0
+      }
+    },
+    "tnkloot:legendary": {
+      "level": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      }
+    },
+    "tnkloot:mythic": {
+      "level": {
+        "min": 1,
+        "steps": 1,
+        "step": 1
+      }
+    }
+  },
+  "types": [
+    "apotheosis:melee_weapon",
+    "irons_apothic:staff",
+    "irons_apothic:spellbook"
+  ]
+}

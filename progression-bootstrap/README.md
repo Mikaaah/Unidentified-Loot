@@ -1,3 +1,5 @@
+> Historical bootstrap module. It is not the supported release companion and is not packaged or used by release CI. Install the real TNK Progression 1.2.0-private.1 or later; see the repository root README.
+
 # Towns & Kingdoms Progression — 0.1.0-beta.2
 
 Minecraft **1.21.1**, NeoForge **21.1.262+**, Java **21**. Original implementation; no Auto Leveling or Just Leveling code is bundled. This is an initial pack beta; tune the balance in a test world.

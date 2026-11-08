@@ -1,0 +1,57 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.attack_speed",
+  "categories": [
+    "apotheosis:boots",
+    "apotheosis:bow",
+    "apotheosis:breaker",
+    "apotheosis:chestplate",
+    "apotheosis:helmet",
+    "apotheosis:leggings",
+    "apotheosis:melee_weapon",
+    "apotheosis:shears",
+    "apotheosis:shield",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 0
+    }
+  },
+  "operation": "add_multiplied_base",
+  "values": {
+    "tnkloot:common": {
+      "min": 0.02,
+      "max": 0.08,
+      "step": 0.003
+    },
+    "tnkloot:uncommon": {
+      "min": 0.024,
+      "max": 0.096,
+      "step": 0.0036000000000000003
+    },
+    "tnkloot:rare": {
+      "min": 0.027999999999999997,
+      "max": 0.11199999999999999,
+      "step": 0.0042
+    },
+    "tnkloot:epic": {
+      "min": 0.032,
+      "max": 0.128,
+      "step": 0.0048000000000000004
+    },
+    "tnkloot:legendary": {
+      "min": 0.036000000000000004,
+      "max": 0.14400000000000002,
+      "step": 0.0054
+    },
+    "tnkloot:mythic": {
+      "min": 0.04,
+      "max": 0.16,
+      "step": 0.006
+    }
+  }
+}

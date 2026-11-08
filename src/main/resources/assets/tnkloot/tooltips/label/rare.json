@@ -1,0 +1,12 @@
+{
+  "priority": 1000,
+  "provider": {
+    "type": "obscure_tooltips:literal",
+    "text": "RARE"
+  },
+  "filter": {
+    "type": "obscure_tooltips:nbt",
+    "nbt": "{\"minecraft:custom_data\":{tnk_rarity:\"rare\"}}",
+    "match_exact": false
+  }
+}

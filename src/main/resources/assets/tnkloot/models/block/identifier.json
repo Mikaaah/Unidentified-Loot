@@ -1,1 +1,12 @@
-{"parent":"minecraft:block/cube_all","textures":{"all":"minecraft:block/smithing_table_top"}}
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "tnkloot:block/device_workbench_sides",
+    "down": "tnkloot:block/device_workbench_bottom",
+    "up": "tnkloot:block/device_workbench_top",
+    "north": "tnkloot:block/device_workbench_front",
+    "south": "tnkloot:block/device_workbench_sides",
+    "east": "tnkloot:block/device_workbench_sides",
+    "west": "tnkloot:block/device_workbench_sides"
+  }
+}

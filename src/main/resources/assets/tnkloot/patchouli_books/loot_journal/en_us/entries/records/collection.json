@@ -1,0 +1,17 @@
+{
+  "name": "Discovery Collection",
+  "category": "tnkloot:records",
+  "icon": "minecraft:writable_book",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Your Discoveries",
+      "text": "The collection records identified gear, its best rarity and tier, and how often you identified it. Boss prizes are tracked too.$(br2)Unknown gear stays a silhouette until discovered. Native variants sharing an item ID share an entry."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Open Your Collection",
+      "text": "$(c:/tnkloot collection)$(bold)Open discovery collection$(/c)$()$(br2)Browse your two-page collection book by equipment group, discovered, undiscovered or boss rewards.$(br2)Use its Back to journal button to return here. You can also open it with $(bold)/tnkloot collection$()."
+    }
+  ]
+}

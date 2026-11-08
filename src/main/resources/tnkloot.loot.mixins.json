@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.mikaaah.tnkloot.injection.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CommonHooksMixin",
+    "LootContextAccess",
+    "LootParamsMixin",
+    "LootParamsBuilderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

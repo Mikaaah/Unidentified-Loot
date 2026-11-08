@@ -1,0 +1,525 @@
+{
+  "pools": [
+    {
+      "id": "aether/slider",
+      "mod": "aether",
+      "entity": "aether:slider",
+      "name": "The Slider",
+      "tier": 2,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "aether:flaming_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_lance",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:hammer_of_kingbdogz",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:lightning_knife",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "aether:sentry_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "aether:cloud_staff",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:shield_of_repulsion",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:agility_cape",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "aether/valkyrie_queen",
+      "mod": "aether",
+      "entity": "aether:valkyrie_queen",
+      "name": "Valkyrie Queen",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "aether:lightning_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:holy_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:invisibility_cloak",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_gloves",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_pickaxe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_axe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_shovel",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_hoe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_cape",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "aether/sun_spirit",
+      "mod": "aether",
+      "entity": "aether:sun_spirit",
+      "name": "Sun Spirit",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "aether:pig_slayer",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:vampire_blade",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:ice_ring",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:ice_pendant",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_gloves",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/naga",
+      "mod": "twilightforest",
+      "entity": "twilightforest:naga",
+      "name": "Naga",
+      "tier": 2,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:naga_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:naga_leggings",
+          "category": "leggings",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/lich",
+      "mod": "twilightforest",
+      "entity": "twilightforest:lich",
+      "name": "Twilight Lich",
+      "tier": 3,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:twilight_scepter",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:lifedrain_scepter",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:zombie_scepter",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fortification_scepter",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/minoshroom",
+      "mod": "twilightforest",
+      "entity": "twilightforest:minoshroom",
+      "name": "Minoshroom",
+      "tier": 3,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:diamond_minotaur_axe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:mazebreaker_pickaxe",
+          "category": "tool",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/hydra",
+      "mod": "twilightforest",
+      "entity": "twilightforest:hydra",
+      "name": "Hydra",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:fiery_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_pickaxe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/knight_phantom",
+      "mod": "twilightforest",
+      "entity": "twilightforest:knight_phantom",
+      "name": "Knight Phantoms",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "twilightforest:phantom_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:phantom_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:knightmetal_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:knightmetal_axe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:knightmetal_pickaxe",
+          "category": "tool",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/ur_ghast",
+      "mod": "twilightforest",
+      "entity": "twilightforest:ur_ghast",
+      "name": "Ur-Ghast",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "twilightforest:fiery_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_pickaxe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/alpha_yeti",
+      "mod": "twilightforest",
+      "entity": "twilightforest:alpha_yeti",
+      "name": "Alpha Yeti",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:yeti_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:yeti_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:yeti_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:yeti_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/snow_queen",
+      "mod": "twilightforest",
+      "entity": "twilightforest:snow_queen",
+      "name": "Snow Queen",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:ice_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:ice_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:seeker_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:triple_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:ender_bow",
+          "category": "bow",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "deep_aether/eots_controller",
+      "mod": "deep_aether",
+      "entity": "deep_aether:eots_controller",
+      "name": "Eye of the Storm",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "deep_aether:stormforged_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_gloves",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:cloud_cape",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:aercloud_necklace",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/the_obliterator",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:the_obliterator",
+      "name": "The Obliterator",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "legendary_spellbooks:annihilators_protocol",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

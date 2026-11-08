@@ -1,10 +1,10 @@
 # TNK progression beta
 
-This branch is specifically for Towns & Kingdoms. It adds a required `tnkprogression >= 0.1.0-beta.1` dependency. Main is unchanged. Version: **0.6.2-tnk-beta.1**.
+This branch is specifically for Towns & Kingdoms. It adds a required `tnkprogression >= 0.1.0-beta.1` dependency. This restores the complete 0.17.0 feature set. Version: **0.18.0-tnk-beta.1**. See [the full feature port](FULL-BETA-PORT.md).
 
 ## Equipment probability
 
-Each direct player kill of a hostile mob implementing vanilla `Enemy` receives **one 2% equipment roll**. This is independent of tier weights. The death handler replaces configured equipment and affix-equipment drops from the vanilla/Apotheosis paths, while preserving gems, materials and unrelated loot. It adds at most one token. Missing equipment pools produce no token and a warning, not a reroll into a higher tier. Environment-only kills, summons and custom mobs without the `Enemy` marker are not included in this beta.
+Each direct player kill of an ordinary hostile mob implementing vanilla `Enemy` receives **one 2% equipment roll**. This is independent of tier weights. The death handler replaces configured equipment and affix-equipment drops from the vanilla/Apotheosis paths, while preserving gems, materials and unrelated loot. It adds at most one regular token. Explicit boss pools and Apotheosis invaders retain the full boss-reward conversion path; their separate settings and milestone rarity caps apply. Missing equipment pools produce no token and a warning, not a reroll into a higher tier. Environment-only kills, summons and custom mobs without the `Enemy` marker are not included in this beta.
 
 Chest tables have a separate 2% roll, using the lower of player level and milestone ceiling. Existing configured/affixed equipment entries are replaced by that roll, rather than receiving an additional guaranteed token. This deliberately changes chest weapon frequency. Other block/fishing/gameplay tables are ignored. Apotheosis remains the affix generator at identification; this beta owns the equipment drop frequency. Other mods appending equipment after LOWEST drop processing must be audited in the complete pack.
 
@@ -24,7 +24,7 @@ Chest tables have a separate 2% roll, using the lower of player level and milest
 
 Mob source level is clamped by the recipient's milestone ceiling before rolling. The actual mob remains at its full difficulty. Tiers: Novice, Apprentice, Adventurer, Explorer, Veteran, Champion, Hero, Legendary.
 
-Rarity is a second roll, independent of equipment tier: Common, Uncommon, Rare, Epic, Legendary, Mythic. Defaults: weights 6000,2500,1000,400,90,10, restricted/renormalized to the milestone's eligible rarities. The token stores tier, selected rarity, source level and deterministic roll seed at generation. Identifying later or trading a token cannot improve its rarity. Trading is allowed; progression gates constrain generation, not ownership/use. Legacy/admin tokens without a rarity stamp identify as Common. Existing GUI tier rarity editing no longer controls TNK drop rarity; use the beta config.
+Rarity is a second roll, independent of equipment tier: Common, Uncommon, Rare, Epic, Legendary, Mythic. Defaults: weights 6000,2500,1000,400,90,10, restricted/renormalized to the milestone's eligible rarities. The token stores tier, selected rarity, source level and deterministic roll seed at generation. Identifying later or trading a token cannot improve its rarity. Trading is allowed; progression gates constrain generation, not ownership/use. Legacy namespaced beta rarity stamps are migrated to the full display/affix format. Creative/admin samples use the restored rarity tooling. Existing GUI tier rarity editing no longer controls TNK drop rarity; use the beta config.
 
 ## Release checks
 

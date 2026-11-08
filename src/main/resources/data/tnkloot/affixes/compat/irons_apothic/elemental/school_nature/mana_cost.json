@@ -1,0 +1,54 @@
+{
+  "type": "irons_apothic:mana_cost",
+  "definition": {
+    "affix_type": "basic_effect",
+    "weights": {
+      "weight": 25,
+      "quality": 0.1
+    },
+    "exclusive_set": []
+  },
+  "school": "irons_spellbooks:nature",
+  "values": {
+    "tnkloot:common": {
+      "min": 0.05,
+      "steps": 3,
+      "step": 0.01
+    },
+    "tnkloot:uncommon": {
+      "min": 0.08,
+      "steps": 4,
+      "step": 0.01
+    },
+    "tnkloot:rare": {
+      "min": 0.12,
+      "steps": 4,
+      "step": 0.02
+    },
+    "tnkloot:epic": {
+      "min": 0.16,
+      "steps": 5,
+      "step": 0.02
+    },
+    "tnkloot:legendary": {
+      "min": 0.2,
+      "steps": 5,
+      "step": 0.03
+    },
+    "tnkloot:mythic": {
+      "min": 0.2,
+      "steps": 5,
+      "step": 0.03
+    }
+  },
+  "categories": [
+    "apotheosis:melee_weapon",
+    "irons_apothic:staff"
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_apothic"
+    }
+  ]
+}

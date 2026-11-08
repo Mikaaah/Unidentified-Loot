@@ -1,0 +1,57 @@
+{
+  "type": "apotheosis:attribute",
+  "attribute": "minecraft:generic.knockback_resistance",
+  "categories": [
+    "apotheosis:boots",
+    "apotheosis:bow",
+    "apotheosis:breaker",
+    "apotheosis:chestplate",
+    "apotheosis:helmet",
+    "apotheosis:leggings",
+    "apotheosis:melee_weapon",
+    "apotheosis:shears",
+    "apotheosis:shield",
+    "apotheosis:trident"
+  ],
+  "definition": {
+    "affix_type": "stat",
+    "exclusive_set": [],
+    "weights": {
+      "quality": 0.1,
+      "weight": 0
+    }
+  },
+  "operation": "add_value",
+  "values": {
+    "tnkloot:common": {
+      "min": 0.01,
+      "max": 0.04,
+      "step": 0.0015
+    },
+    "tnkloot:uncommon": {
+      "min": 0.012,
+      "max": 0.048,
+      "step": 0.0018000000000000002
+    },
+    "tnkloot:rare": {
+      "min": 0.013999999999999999,
+      "max": 0.055999999999999994,
+      "step": 0.0021
+    },
+    "tnkloot:epic": {
+      "min": 0.016,
+      "max": 0.064,
+      "step": 0.0024000000000000002
+    },
+    "tnkloot:legendary": {
+      "min": 0.018000000000000002,
+      "max": 0.07200000000000001,
+      "step": 0.0027
+    },
+    "tnkloot:mythic": {
+      "min": 0.02,
+      "max": 0.08,
+      "step": 0.003
+    }
+  }
+}

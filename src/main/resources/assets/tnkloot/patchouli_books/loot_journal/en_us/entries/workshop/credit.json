@@ -1,0 +1,17 @@
+{
+  "name": "Identification Credit",
+  "category": "tnkloot:workshop",
+  "icon": "minecraft:amethyst_shard",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "A Second Chance",
+      "text": "Salvage credit is stored per player and survives death. One credit pays one XP point by default.$(br2)The Identifier spends credit first, then charges the rest in XP points. Item currency remains a pack option."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Know the Return",
+      "text": "The return depends on tier and rarity, capped against identification price. Salvage is a recovery of some value, rather than a profit loop.$(br2)If your credit balance is full, spend credit before salvaging. Your anvil shows its current balance and rejects a batch that would exceed the limit."
+    }
+  ]
+}

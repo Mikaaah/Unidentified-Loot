@@ -1,0 +1,17 @@
+{
+  "name": "Dimension Treasures",
+  "category": "tnkloot:fieldwork",
+  "icon": "minecraft:ender_eye",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Beyond the Overworld",
+      "text": "Aether and Deep Aether gear belongs to the Aether; Twilight gear belongs to its forest. BetterNether and BetterEnd gear belongs to the Nether and End.$(br2)Global gear can appear alongside local gear. Pack settings decide the pools."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "A Reason to Explore",
+      "text": "Configured dimension chests and player-killed hostile mobs can award bonus unidentified equipment. Your progression tier still limits the reward.$(br2)Material-specific addon equipment follows its matching dimension. An empty or disabled reward pool never creates a usable prize out of a missing item."
+    }
+  ]
+}

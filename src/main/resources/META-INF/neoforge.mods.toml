@@ -4,11 +4,11 @@ license="All Rights Reserved"
 [[mods]]
 modId="tnkloot"
 version="${version}"
-displayName="T&K Loot and Identification"
+displayName="Unidentified Loot - TNK Edition"
 authors="Mikaaah"
-displayURL="https://github.com/Mikaaah/TNK-Loot-Identification"
-issueTrackerURL="https://github.com/Mikaaah/TNK-Loot-Identification/issues"
-description='''Tiered unidentified weapons, bows, armor and tools with emerald identification and Apotheosis affixes for Minecraft 1.21.1.'''
+displayURL="https://github.com/Mikaaah/Unidentified-Loot"
+issueTrackerURL="https://github.com/Mikaaah/Unidentified-Loot/issues"
+description='''Tiered unidentified equipment, boss rewards, XP identification and salvage, collections, and optional Create Ponder tutorials. TNK Progression integration for Minecraft 1.21.1.'''
 [[dependencies.tnkloot]]
 modId="neoforge"
 type="required"
@@ -47,20 +47,30 @@ ordering="AFTER"
 side="BOTH"
 [[dependencies.tnkloot]]
 modId="apothic_spawners"
-type="required"
+type="optional"
 versionRange="[1.4.0,)"
 ordering="AFTER"
 side="BOTH"
 [[dependencies.tnkloot]]
 modId="apothic_enchanting"
-type="required"
+type="optional"
 versionRange="[1.6.2,)"
+ordering="AFTER"
+side="BOTH"
+
+[[mixins]]
+config="tnkloot.loot.mixins.json"
+
+[[dependencies.tnkloot]]
+modId="create"
+type="optional"
+versionRange="[6.0.0,)"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.tnkloot]]
 modId="tnkprogression"
 type="required"
-versionRange="[0.1.0-beta.1,)"
+versionRange="[1.2.0-private.1,)"
 ordering="AFTER"
 side="BOTH"

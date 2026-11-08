@@ -1,0 +1,61 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_apothic"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "monsterspellbooks"
+    }
+  ],
+  "type": "irons_apothic:spell_trigger",
+  "definition": {
+    "affix_type": "ability",
+    "weights": {
+      "weight": 25,
+      "quality": 0.1
+    },
+    "exclusive_set": []
+  },
+  "spell": "monsterspellbooks:vile_slash",
+  "trigger": "MELEE_HIT",
+  "target": "TARGET",
+  "values": {
+    "tnkloot:rare": {
+      "level": {
+        "min": 1,
+        "steps": 2,
+        "step": 1
+      },
+      "cooldown": 240
+    },
+    "tnkloot:epic": {
+      "level": {
+        "min": 1,
+        "steps": 3,
+        "step": 1
+      },
+      "cooldown": 180
+    },
+    "tnkloot:legendary": {
+      "level": {
+        "min": 2,
+        "steps": 3,
+        "step": 1
+      },
+      "cooldown": 140
+    },
+    "tnkloot:mythic": {
+      "level": {
+        "min": 2,
+        "steps": 3,
+        "step": 1
+      },
+      "cooldown": 140
+    }
+  },
+  "types": [
+    "apotheosis:melee_weapon"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Boss Trophies",
+  "category": "tnkloot:fieldwork",
+  "icon": "minecraft:nether_star",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Earned Treasures",
+      "text": "A universal boss crate draws from that boss's combined equipment pool. Materials and ordinary trophies are retained separately.$(br2)Aether dungeon rewards use earned treasure chests. Twilight and supported Cataclysm bosses have their own pools."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Signature Affixes",
+      "text": "Compatible boss equipment can carry one of six signature themes: Emberbrand, Frostbound, Stormheart, Venomfang, Voidmarked or Stoneguard.$(br2)Their combat effects complement the normal affixes. Native rewards that cannot support them retain their own powers."
+    }
+  ]
+}

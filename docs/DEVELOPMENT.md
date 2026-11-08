@@ -1,15 +1,9 @@
 # Contributor reference
 
-## Development
+Use Java 21 and the pinned NeoForge 21.1.262 build. The [root README](../README.md) contains the supported companion and build commands; [the release audit](TNK-RELEASE-1-AUDIT.md) records the tested dependency batches and remaining pack blockers.
 
-Use Java 21:
+`tools/prepare_build_dependencies.py` fetches checksum-verified Beta 1.0 compile/runtime inputs. `tools/prepare_ponder.py` fetches Create 6.0.10 and extracts its bundled Ponder 1.0.82 API. None of these dependency classes are bundled. CI downloads the real TNK Progression 1.2.0-private.1 companion rather than building the obsolete historical bootstrap project.
 
-```sh
-./gradlew build
-```
+The build produces `build/libs/tnkloot-1.0.0-tnk-neoforge-1.21.1.jar` and a separate sources JAR. Use `verification/verify_release.py` to check all 88 original Beta artwork PNGs, the model dependency graph, mixins, optional affix data, licences and dependency exclusion.
 
-Windows: `gradlew.bat build`. Output: `build/libs/tnkloot-0.6.1-alpha.jar`. The `-sources.jar` is for development, not installation. Tests cover config validation/atomic reloads, category pools, identification prices, weighted selection and progression persistence. GitHub Actions runs the build, unit tests and a dedicated-server integration test that generates every configured tier/category, verifies seven-item payment and safe close, and checks the NPC lifecycle.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [CHANGELOG.md](CHANGELOG.md). All rights reserved, matching the original project metadata.
-
-See [Apotheosis presets](https://github.com/Mikaaah/Unidentified-Loot/wiki/Apotheosis-Presets) for the affix ladder and datapack customization. Existing `tiers.json` files are preserved; new worlds receive the improved material pools. Apply the [example](examples/tiers.example.json) manually if you want those pool changes in an existing pack.
+Runtime smoke checks are opt-in and require disposable worlds. Inspect their positive `TNKLOOT_*_OK` markers: a successful Gradle task alone does not prove that Minecraft or an integration test succeeded. The real-render Ponder harness is enabled only with `-PponderVisualCheck` and is excluded from the release JAR.

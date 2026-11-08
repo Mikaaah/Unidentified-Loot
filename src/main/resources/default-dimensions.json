@@ -1,0 +1,9 @@
+{
+ "enabled": true,
+ "routes": [
+  {"dimension":"aether:the_aether","include_global_equipment":true,"bonus_chest_chance":0.12,"bonus_hostile_mob_chance":0.02,"item_namespaces":["aether","deep_aether"],"item_prefixes":[]},
+  {"dimension":"twilightforest:twilight_forest","include_global_equipment":true,"bonus_chest_chance":0.12,"bonus_hostile_mob_chance":0.02,"item_namespaces":["twilightforest"],"item_prefixes":["knavesneeds:ironwood_","knavesneeds:steeleaf_","knavesneeds:fiery_","knavesneeds:knightmetal_"]},
+  {"dimension":"minecraft:the_nether","include_global_equipment":true,"bonus_chest_chance":0.08,"bonus_hostile_mob_chance":0.01,"item_namespaces":["betternether"],"item_prefixes":["knavesneeds:nether_ruby_","knavesneeds:cincinnasite_"]},
+  {"dimension":"minecraft:the_end","include_global_equipment":true,"bonus_chest_chance":0.08,"bonus_hostile_mob_chance":0.01,"item_namespaces":["betterend"],"item_prefixes":["knavesneeds:thallasium_","knavesneeds:terminite_","knavesneeds:aeternium_"]}
+ ]
+}

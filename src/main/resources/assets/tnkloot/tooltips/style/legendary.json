@@ -1,0 +1,9 @@
+{
+  "panel": "tnkloot:legendary",
+  "frame": "obscure_tooltips:default",
+  "icon": "obscure_tooltips:default",
+  "slot": "obscure_tooltips:default",
+  "effects": [
+    "tnkloot:legendary_shimmer"
+  ]
+}

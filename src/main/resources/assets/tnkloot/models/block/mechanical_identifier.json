@@ -1,0 +1,802 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "particle": "create:block/copper_casing",
+    "copper": "create:block/copper_casing",
+    "metal": "create:block/andesite_casing",
+    "top": "create:block/depot_top",
+    "bottom": "create:block/copper_underside",
+    "lens": "create:block/smart_observer_front",
+    "pipe": "create:block/pipes"
+  },
+  "elements": [
+    {
+      "name": "cast base",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "copper plinth",
+      "from": [
+        1,
+        2,
+        1
+      ],
+      "to": [
+        15,
+        4,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "inset chamber",
+      "from": [
+        2,
+        4,
+        3
+      ],
+      "to": [
+        14,
+        12,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#metal"
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "back casing",
+      "from": [
+        2,
+        4,
+        12
+      ],
+      "to": [
+        14,
+        14,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "front copper pillar",
+      "from": [
+        1,
+        4,
+        2
+      ],
+      "to": [
+        3,
+        13,
+        4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "front copper pillar",
+      "from": [
+        12,
+        4,
+        2
+      ],
+      "to": [
+        14,
+        13,
+        4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "upper shoulder",
+      "from": [
+        1,
+        12,
+        2
+      ],
+      "to": [
+        14,
+        14,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "raised scanning tray",
+      "from": [
+        3,
+        14,
+        4
+      ],
+      "to": [
+        12,
+        15,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bottom"
+        },
+        "south": {
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#bottom"
+        },
+        "west": {
+          "texture": "#bottom"
+        },
+        "up": {
+          "texture": "#top",
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ]
+        },
+        "down": {
+          "texture": "#bottom"
+        }
+      }
+    },
+    {
+      "name": "left tray rail",
+      "from": [
+        2,
+        14,
+        3
+      ],
+      "to": [
+        3,
+        16,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "right tray rail",
+      "from": [
+        12,
+        14,
+        3
+      ],
+      "to": [
+        13,
+        16,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "rear tray rail",
+      "from": [
+        3,
+        14,
+        12
+      ],
+      "to": [
+        12,
+        16,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "scanner bezel",
+      "from": [
+        3,
+        6,
+        1.5
+      ],
+      "to": [
+        12,
+        11.5,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bottom"
+        },
+        "south": {
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#bottom"
+        },
+        "west": {
+          "texture": "#bottom"
+        },
+        "up": {
+          "texture": "#bottom"
+        },
+        "down": {
+          "texture": "#bottom"
+        }
+      }
+    },
+    {
+      "name": "scanner lens",
+      "from": [
+        4,
+        7,
+        1.4
+      ],
+      "to": [
+        11,
+        10.5,
+        1.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#lens",
+          "uv": [
+            3,
+            4,
+            13,
+            12
+          ]
+        },
+        "south": {
+          "texture": "#metal"
+        },
+        "east": {
+          "texture": "#metal"
+        },
+        "west": {
+          "texture": "#metal"
+        },
+        "up": {
+          "texture": "#metal"
+        },
+        "down": {
+          "texture": "#metal"
+        }
+      }
+    },
+    {
+      "name": "output lip",
+      "from": [
+        3,
+        4,
+        0.5
+      ],
+      "to": [
+        12,
+        5,
+        3
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bottom"
+        },
+        "south": {
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#bottom"
+        },
+        "west": {
+          "texture": "#bottom"
+        },
+        "up": {
+          "texture": "#top",
+          "uv": [
+            2,
+            7,
+            14,
+            11
+          ]
+        },
+        "down": {
+          "texture": "#bottom"
+        }
+      }
+    },
+    {
+      "name": "socket upper flange",
+      "from": [
+        14,
+        11,
+        3
+      ],
+      "to": [
+        16,
+        13,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe",
+          "uv": [
+            11,
+            11,
+            16,
+            12
+          ]
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket lower flange",
+      "from": [
+        14,
+        3,
+        3
+      ],
+      "to": [
+        16,
+        5,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe",
+          "uv": [
+            11,
+            15,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket front flange",
+      "from": [
+        14,
+        5,
+        3
+      ],
+      "to": [
+        16,
+        11,
+        5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe",
+          "uv": [
+            15,
+            12,
+            16,
+            15
+          ]
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket back flange",
+      "from": [
+        14,
+        5,
+        11
+      ],
+      "to": [
+        16,
+        11,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe",
+          "uv": [
+            11,
+            12,
+            12,
+            15
+          ]
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket upper neck",
+      "from": [
+        12,
+        11,
+        4
+      ],
+      "to": [
+        14,
+        12,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe"
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket lower neck",
+      "from": [
+        12,
+        4,
+        4
+      ],
+      "to": [
+        14,
+        5,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe"
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket front neck",
+      "from": [
+        12,
+        5,
+        4
+      ],
+      "to": [
+        14,
+        11,
+        5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe"
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    },
+    {
+      "name": "socket back neck",
+      "from": [
+        12,
+        5,
+        11
+      ],
+      "to": [
+        14,
+        11,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#pipe"
+        },
+        "south": {
+          "texture": "#pipe"
+        },
+        "east": {
+          "texture": "#pipe"
+        },
+        "west": {
+          "texture": "#pipe"
+        },
+        "up": {
+          "texture": "#pipe"
+        },
+        "down": {
+          "texture": "#pipe"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        25,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        " ": 3,
+        "\u00a0": 3
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "tnkloot:font/menu.png",
+      "height": 8,
+      "ascent": 7,
+      "chars": [
+        "!\"#$%&'()*+,-./0",
+        "123456789:;<=>?@",
+        "ABCDEFGHIJKLMNOP",
+        "QRSTUVWXYZ[\\]^_`",
+        "abcdefghijklmnop",
+        "qrstuvwxyz{|}~\u00d7\u00f7",
+        "\u20ac\u00a3\u2192\u2190\u2191\u2193\u2665\u2713\u2715\u2022\u2026\u2013\u2014\u2019\u2018\u201c",
+        "\u201d\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+      ]
+    },
+    {
+      "type": "reference",
+      "id": "minecraft:include/default"
+    },
+    {
+      "type": "reference",
+      "id": "minecraft:include/unifont"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "The Identifier Counter",
+  "category": "tnkloot:workshop",
+  "icon": "tnkloot:identifier",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Identifier Counter",
+      "text": "Right-click the block or its Identifier to open the counter. Place up to seven unidentified drops in the tray.$(br2)Check the total, then confirm. Identification reveals the prepared batch. Collect the results when the rolling animation ends."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Leaving the Counter",
+      "text": "Unpaid gear is returned if you close the counter. A paid batch is recovered as prepared results if you leave before its reveal finishes.$(br2)The $(bold)Salvage$() button opens the matching anvil. Navigation is blocked during a paid rolling animation; wait for the reveal to finish."
+    }
+  ]
+}

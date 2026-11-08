@@ -1,0 +1,17 @@
+{
+  "name": "The Salvage Anvil",
+  "category": "tnkloot:workshop",
+  "icon": "minecraft:anvil",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Salvage Anvil",
+      "text": "At the Identifier, choose $(bold)Salvage$(). Place or shift-click up to seven identified items onto the anvil.$(br2)The anvil shows your credit return and XP fee. Unidentified items and gear with no salvage value are rejected. Remove anything you want to keep."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Review, Then Strike",
+      "text": "Click $(bold)Review$(), check the gear, XP fee and credit return, then click $(bold)Salvage$(). This destroys the gear and pays the fee.$(br2)Changing inputs cancels review. Closing or returning to Identify gives back unconsumed gear. Reviewing is free."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": "0.18.1-tnk-beta.1",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.262",
+  "java": "21.0.9",
+  "unit_tests": 19,
+  "unit_failures": 0,
+  "dedicated_server": "TNKLOOT_ADVANCEMENT_REWARDS_OK",
+  "fixtures": "Vanilla banner, player head and diamond sword; ADVANCEMENT_REWARD and reused chest ID contexts",
+  "full_modpack_tested": false,
+  "asset_validation": "214 unchanged baseline resources, 68 models, 48 exact supplied rarity PNGs and journal texture",
+  "jar_sha256": "194dfaf434a27d78297e3056e466b2e61f6353cb6fa6f8f7b7c3489edb7ebc7f"
+}

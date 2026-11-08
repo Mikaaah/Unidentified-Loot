@@ -1,0 +1,9 @@
+{
+  "priority": 1000,
+  "style": "tnkloot:uncommon",
+  "filter": {
+    "type": "obscure_tooltips:nbt",
+    "nbt": "{\"minecraft:custom_data\":{tnk_rarity:\"uncommon\"}}",
+    "match_exact": false
+  }
+}
