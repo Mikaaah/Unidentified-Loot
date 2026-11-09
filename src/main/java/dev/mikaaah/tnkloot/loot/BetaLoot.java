@@ -34,15 +34,17 @@ public final class BetaLoot {
   if(DimensionLoot.rewardPool(ctx).isPresent()||loot.stream().anyMatch(BetaLoot::special))return false;
   var entity=ctx.getParamOrNull(LootContextParams.THIS_ENTITY);
   if(entity instanceof Mob&&entity instanceof Enemy){loot.removeIf(BetaLoot::equipment);return true;}
-  var table=ctx.getQueriedLootTableId();if(table==null||!table.getPath().startsWith("chests/"))return false;
+  var params=((dev.mikaaah.tnkloot.injection.mixin.LootContextAccess)ctx).tnkloot$params();
+  var table=ctx.getQueriedLootTableId();
+  if(!((dev.mikaaah.tnkloot.injection.LootParamsSource)params).tnkloot$isChest()&&(table==null||!table.getPath().startsWith("chests/")))return false;
   if(loot.stream().anyMatch(s->UnidentifiedWeaponItem.data(s).getBoolean("tnk_progression_sealed")))return true;
   var player=player(ctx);
   loot.removeIf(BetaLoot::equipment);
-  if(player!=null&&ctx.getRandom().nextDouble()<TnkBetaConfig.current.chestEquipmentChance){
-   var token=TnkLootRolls.roll(player,TnkLevelBridge.level(player),"tnk_chest");if(!token.isEmpty())loot.add(token);
+  if(ctx.getRandom().nextDouble()<TnkBetaConfig.current.chestEquipmentChance){
+   var token=player==null?TnkLootRolls.rollStarter(ctx.getLevel(),ctx.getRandom(),"tnk_chest"):TnkLootRolls.roll(player,TnkLevelBridge.level(player),"tnk_chest");if(!token.isEmpty())loot.add(token);
   }
   FeatureHooks.dungeon(loot,ctx);
-  for(var token:loot)if(token.getItem() instanceof UnidentifiedWeaponItem){DimensionLoot.bindOrigin(token,ctx.getLevel());if(player!=null)TnkLootRolls.cap(token,player,TnkLevelBridge.level(player));}
+  for(var token:loot)if(token.getItem() instanceof UnidentifiedWeaponItem){DimensionLoot.bindOrigin(token,ctx.getLevel());if(player!=null)TnkLootRolls.cap(token,player,TnkLevelBridge.level(player));else TnkLootRolls.sealStarter(token);}
   return true;
  }
  public static boolean drops(LivingDropsEvent event){

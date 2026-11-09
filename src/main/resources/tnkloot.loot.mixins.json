@@ -16,7 +16,11 @@
     "ApothAugmentingMixin",
     "ApothWorldTierMixin",
     "ApothReforgingMixin",
-    "ApothInvaderMixin"
+    "ApothInvaderMixin",
+    "ApothAffixLootRegistryMixin",
+    "ApothAffixIngredientMixin",
+    "ApothAffixTradeMixin",
+    "ApothAffixLootModifierMixin"
   ],
   "injectors": {
     "defaultRequire": 1

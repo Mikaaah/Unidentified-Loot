@@ -22,6 +22,19 @@ public final class TnkLootRolls {
   ItemStack token=UnidentifiedWeaponItem.create(categories.get(p.getRandom().nextInt(categories.size())),tier,"",source);
   DimensionLoot.bindOrigin(token,p.level());seal(token,p,effective);return token;
  }
+ /** Automation has no character progression to borrow; its result is fixed at level one. */
+ public static ItemStack rollStarter(net.minecraft.server.level.ServerLevel level,net.minecraft.util.RandomSource random,String source){
+  int tier=LevelTierRoll.roll(1,random.nextInt(100));String origin=level.dimension().location().toString();
+  var categories=Arrays.stream(TnkConfig.Category.values()).filter(c->!DimensionLoot.pool(tier,c,origin).isEmpty()).toList();
+  if(categories.isEmpty())return ItemStack.EMPTY;
+  var token=UnidentifiedWeaponItem.create(categories.get(random.nextInt(categories.size())),tier,"",source);
+  DimensionLoot.bindOrigin(token,level);sealStarter(token);return token;
+ }
+ public static void sealStarter(ItemStack token){
+  if(!(token.getItem() instanceof UnidentifiedWeaponItem)||UnidentifiedWeaponItem.data(token).getBoolean("tnk_progression_sealed"))return;
+  RaritySupport.force(token,"common");var tag=UnidentifiedWeaponItem.data(token);tag.putInt("tnk_source_level",1);tag.putBoolean("tnk_progression_sealed",true);
+  token.set(DataComponents.CUSTOM_DATA,CustomData.of(tag));
+ }
  public static void seal(ItemStack token,ServerPlayer p,int source){
   int max=Math.max(0,Math.min(5,TnkLevelBridge.rarityCap(p)));long total=0;int[] weights=TnkBetaConfig.current.rarityWeights;
   for(int i=0;i<=max;i++)total+=weights[i];long ticket=total>0?new java.util.Random(p.getRandom().nextLong()).nextLong(total):0;int chosen=0;

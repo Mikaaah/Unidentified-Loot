@@ -1,0 +1,7 @@
+{
+  "type": "apotheosis:salvaging",
+  "input": { "type": "apotheosis:affix", "rarity": "tnkloot:legendary" },
+  "outputs": [
+    { "min_count": 1, "max_count": 4, "stack": { "id": "minecraft:echo_shard", "count": 1 } }
+  ]
+}

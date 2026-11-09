@@ -66,6 +66,12 @@ public final class FinalLoot {
   // replacement, beta rolls, bonus accessories, boss routing or tier capping.
   var params=((dev.mikaaah.tnkloot.injection.mixin.LootContextAccess)ctx).tnkloot$params();
   if(((LootParamsSource)params).tnkloot$isAdvancementReward())return;
+  if(DimensionLoot.rewardPool(ctx).isEmpty()) {
+   var generatedContext=dev.mikaaah.tnkloot.apotheosis.NativeLootPools.context(ctx);
+   loot.removeIf(stack->stack.getOrDefault(Apoth.Components.FROM_CHEST,false)&&!own(stack)
+    &&UnidentifiedWeaponItem.data(stack).getBoolean("tnk_external_generated")
+    &&!dev.mikaaah.tnkloot.apotheosis.NativeLootPools.allowed(stack,generatedContext));
+  }
   if(BetaLoot.table(loot,ctx))return;
   var entity=ctx.getParamOrNull(LootContextParams.THIS_ENTITY);if(entity instanceof Player&&ctx.hasParam(LootContextParams.DAMAGE_SOURCE))return;
   ServerPlayer player=ctx.getParamOrNull(LootContextParams.LAST_DAMAGE_PLAYER) instanceof ServerPlayer p?p:entity instanceof ServerPlayer p?p:ctx.getParamOrNull(LootContextParams.ATTACKING_ENTITY) instanceof ServerPlayer p?p:null;

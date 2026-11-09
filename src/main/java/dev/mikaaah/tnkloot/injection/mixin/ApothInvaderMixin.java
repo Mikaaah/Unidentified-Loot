@@ -7,8 +7,18 @@ import java.util.*;
 import net.minecraft.resources.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import dev.shadowsoffire.apotheosis.tiers.GenContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.RegistryAccess;
 @Mixin(value=Invader.class,remap=false)
 public abstract class ApothInvaderMixin {
+    @Inject(method="modifyBossItem",at=@At("HEAD"),cancellable=true,remap=false)
+    private static void tnkloot$prizePool(ItemStack stack,Component bossName,GenContext context,LootRarity rarity,int enchantmentLevel,RegistryAccess registries,boolean cursed,CallbackInfoReturnable<ItemStack> result) {
+        var replacement=dev.mikaaah.tnkloot.apotheosis.NativeLootPools.invaderBase(stack,context);
+        if(replacement!=stack)result.setReturnValue(replacement.isEmpty()?ItemStack.EMPTY:Invader.modifyBossItem(replacement,bossName,context,rarity,enchantmentLevel,registries,cursed));
+    }
     @ModifyVariable(method="<init>",at=@At("HEAD"),argsOnly=true,remap=false)
     private static Map<LootRarity,BossStats> tnkloot$sixBossGroups(Map<LootRarity,BossStats> values) {
         var mythic=RarityRegistry.INSTANCE.getValue(ResourceLocation.parse("tnkloot:mythic"));

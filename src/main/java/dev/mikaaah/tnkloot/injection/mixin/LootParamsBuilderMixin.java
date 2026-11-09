@@ -16,5 +16,6 @@ public abstract class LootParamsBuilderMixin {
             CallbackInfoReturnable<LootParams> result) {
         ((LootParamsSource) result.getReturnValue()).tnkloot$setAdvancementReward(
                 type == LootContextParamSets.ADVANCEMENT_REWARD);
+        ((LootParamsSource) result.getReturnValue()).tnkloot$setChest(type == LootContextParamSets.CHEST);
     }
 }

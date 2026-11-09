@@ -4,4 +4,6 @@ package dev.mikaaah.tnkloot.injection;
 public interface LootParamsSource {
     boolean tnkloot$isAdvancementReward();
     void tnkloot$setAdvancementReward(boolean value);
+    boolean tnkloot$isChest();
+    void tnkloot$setChest(boolean value);
 }

@@ -33,12 +33,19 @@ jobs:
           done
       - name: Verify unified Apotheosis integration
         run: grep -q TNKLOOT_UNIFIED_APOTHEOSIS_OK verification-logs/tnkReleaseSmoke.log
+      - name: Audit native and modded loot paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/prepare_loot_audit_runtime.py
+          timeout 300 ./gradlew runServer --stacktrace -PtnkLootPoolSmoke -PtnkProgressionJar="$PWD/build-deps/tnkprogression-1.2.0-private.1.jar" -PextraRuntimeDirectory="$PWD/build-deps/loot-audit-runtime" 2>&1 | tee verification-logs/tnkLootPoolSmoke.log
+          grep -q TNKLOOT_LOOT_POOLS_OK verification-logs/tnkLootPoolSmoke.log
       - name: Verify release assets and packaging
         run: python3 verification/verify_release.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: TNK-Loot-1.0.1-neoforge-1.21.1
+          name: TNK-Loot-1.0.2-neoforge-1.21.1
           path: |
             build/libs/*.jar
             build/reports/tests/

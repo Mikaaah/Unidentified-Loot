@@ -4,7 +4,7 @@ plugins {
     id 'idea'
 }
 
-version = '1.0.1-tnk-neoforge-1.21.1'
+version = '1.0.2-tnk-neoforge-1.21.1'
 group = 'dev.mikaaah.tnkloot'
 base { archivesName = 'tnkloot' }
 
@@ -118,6 +118,9 @@ if (providers.gradleProperty('tnkAdvancementSmoke').isPresent()) {
 }
 if (providers.gradleProperty('tnkBetaSmoke').isPresent()) {
     neoForge.runs.server { systemProperty 'tnkloot.betaSmokeTest', 'true' }
+}
+if (providers.gradleProperty('tnkLootPoolSmoke').isPresent()) {
+    neoForge.runs.server { systemProperty 'tnkloot.lootPoolSmokeTest', 'true' }
 }
 if (providers.gradleProperty('tnkMachineSmoke').isPresent()) {
     neoForge.runs.server { systemProperty 'tnkloot.machineSmokeTest', 'true' }

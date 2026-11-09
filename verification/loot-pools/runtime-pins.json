@@ -1,0 +1,26 @@
+[
+  {
+    "name": "aether",
+    "project_id": 255308,
+    "file_id": 7043502,
+    "sha256": "b19386301560a017a458e9790a7b59999e270f93010def0b61e7cbe4c8630dbf"
+  },
+  {
+    "name": "twilightforest",
+    "project_id": 227639,
+    "file_id": 7797302,
+    "sha256": "493da16d10210f9f53a3c33b3d8fcb4ae9b14016ee420d753c894562bd9aba35"
+  },
+  {
+    "name": "apothic_compats",
+    "project_id": 1188699,
+    "file_id": 9244917,
+    "sha256": "21007a1749b50a60686d9c00c34ec9f62ab8987dc4fb4cc57b5fa60073ed635a"
+  },
+  {
+    "name": "lootr",
+    "project_id": 361276,
+    "file_id": 8968561,
+    "sha256": "5c74de4709d1c13b25880fdd241a89d5d9f331346d20edc76f80ccd4d99dc66c"
+  }
+]

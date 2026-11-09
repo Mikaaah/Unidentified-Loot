@@ -4,4 +4,6 @@ import net.minecraft.world.entity.player.Player;
 public interface ContextOwner {
     Player tnkloot$player();
     void tnkloot$player(Player player);
+    int tnkloot$sourceLevel();
+    void tnkloot$sourceLevel(int level);
 }

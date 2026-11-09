@@ -11,6 +11,8 @@ public final class LootProtection {
     private LootProtection() {}
     public static boolean keepNative(ItemStack stack) {
         if (stack.isEmpty() || FinalLoot.own(stack)) return false;
+        var tag=dev.mikaaah.tnkloot.loot.UnidentifiedWeaponItem.data(stack);
+        if(tag.getBoolean("tnk_random_pool")&&tag.getBoolean("tnk_external_generated"))return false;
         if (stack.has(DataComponents.CUSTOM_NAME) && !stack.getOrDefault(Apoth.Components.FROM_BOSS, false) && !AffixHelper.hasAffixes(stack)) return true;
         for (var entry : stack.getComponentsPatch().entrySet()) {
             var id = BuiltInRegistries.DATA_COMPONENT_TYPE.getKey(entry.getKey());
