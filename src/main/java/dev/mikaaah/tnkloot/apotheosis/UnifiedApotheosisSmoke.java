@@ -68,7 +68,8 @@ public final class UnifiedApotheosisSmoke {
             }
         }
         for(var rarity:rarities) {
-            var definition=InvaderRegistry.INSTANCE.getValues().stream().filter(value->value.stats().containsKey(rarity)).findFirst().orElseThrow(()->new AssertionError("No invader definition for "+rarity));
+            if(RarityRegistry.INSTANCE.getKey(rarity).getPath().equals("common"))continue; // Native invaders begin at Uncommon.
+            var definition=InvaderRegistry.INSTANCE.getValues().stream().filter(value->value.entity()==net.minecraft.world.entity.EntityType.ZOMBIE && value.stats().containsKey(rarity)).findFirst().orElseThrow(()->new AssertionError("No invader definition for "+rarity));
             var boss=definition.createBoss(level,new BlockPos(0,180,0),context,rarity);
             var prize=java.util.stream.StreamSupport.stream(boss.getAllSlots().spliterator(),false).filter(stack->stack.getOrDefault(Apoth.Components.FROM_BOSS,false)).findFirst().orElseThrow(()->new AssertionError("Native invader generated no marked reward"));
             bounded(prize);
