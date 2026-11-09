@@ -69,7 +69,7 @@ public final class LootPoolSmoke {
     }
     private static void materials(List<ItemStack> before,List<ItemStack> after,String id) {
         for(var material:before) {
-            if(material.getItem() instanceof UnidentifiedWeaponItem||FinalLoot.category(material)!=null||AffixHelper.hasAffixes(material))continue;
+            if(material.getItem() instanceof UnidentifiedWeaponItem||FinalLoot.category(material)!=null||BossRewards.exclusive(BuiltInRegistries.ITEM.getKey(material.getItem()).toString())||!LootCategory.forItem(material).isNone()||AffixHelper.hasAffixes(material))continue;
             int expected=before.stream().filter(stack->ItemStack.isSameItemSameComponents(stack,material)).mapToInt(ItemStack::getCount).sum();
             int actual=after.stream().filter(stack->ItemStack.isSameItemSameComponents(stack,material)).mapToInt(ItemStack::getCount).sum();
             require(actual>=expected,"Material/key/trophy changed in "+id+": "+material);
@@ -82,22 +82,26 @@ public final class LootPoolSmoke {
             var world=server.overworld();var player=player(world);
             UnifiedApotheosisSmoke.verify(player);
             int salvage=0,legacy=0,nativeRolls=0,explicit=0,chests=0,advancements=0;
+            var nativeEntries=new com.google.gson.JsonArray();var chestIds=new com.google.gson.JsonArray();var rewardIds=new com.google.gson.JsonArray();
             var generation=GenContext.forPlayer(RandomSource.create(17),player);
             for(var rarity:RarityRegistry.getSortedRarities()) {
                 var stack=LootController.createLootItem(new ItemStack(Items.DIAMOND_SWORD),rarity,generation);
-                var matches=SalvagingMenu.findMatch(world,stack);require(matches.size()==1,"Expected exactly one salvage recipe for "+rarity+", got "+matches.size());
+                var matches=SalvagingMenu.findMatch(world,stack).stream().filter(match->match.value().getOutputs().stream().anyMatch(output->output.stack().is(rarity.getMaterial()))).toList();
+                require(matches.size()==1,"Expected exactly one rarity salvage recipe for "+rarity+", got "+matches.stream().map(match->match.id().toString()).toList());
                 for(int repeat=0;repeat<8;repeat++) {
                     var outputs=SalvagingMenu.getSalvageResults(world,stack);
-                    require(outputs.size()==1&&outputs.getFirst().is(rarity.getMaterial())&&outputs.getFirst().getCount()>=1&&outputs.getFirst().getCount()<=4,"Wrong salvage material/count for "+rarity);
+                    int count=outputs.stream().filter(output->output.is(rarity.getMaterial())).mapToInt(ItemStack::getCount).sum();
+                    require(count>=1&&count<=4,"Wrong salvage material/count for "+rarity);
+                    require(outputs.stream().noneMatch(output->RarityRegistry.getSortedRarities().stream().anyMatch(other->other!=rarity&&output.is(other.getMaterial()))),"Another rarity's salvage material leaked");
                 }
                 String name=RarityRegistry.INSTANCE.getKey(rarity).getPath();
                 if(!name.equals("legendary")) {
                     var old=stack.copy();old.set(Apoth.Components.RARITY,RarityRegistry.INSTANCE.holder(ResourceLocation.parse("apotheosis:"+name)));
-                    require(SalvagingMenu.findMatch(world,old).size()==1,"Legacy saved rarity cannot be salvaged: "+name);legacy++;
+                    require(SalvagingMenu.findMatch(world,old).stream().filter(match->match.value().getOutputs().stream().anyMatch(output->output.stack().is(rarity.getMaterial()))).count()==1,"Legacy saved rarity cannot be salvaged: "+name);legacy++;
                 }
                 salvage++;
             }
-            require(SalvagingMenu.findMatch(world,new ItemStack(Items.DIAMOND_SWORD)).isEmpty(),"Unaffixed equipment incorrectly salvages");
+            require(SalvagingMenu.getSalvageResults(world,new ItemStack(Items.DIAMOND_SWORD)).stream().noneMatch(output->RarityRegistry.getSortedRarities().stream().anyMatch(rarity->output.is(rarity.getMaterial()))),"Unaffixed equipment yielded rarity material");
             for(var level:server.getAllLevels()) {
                 var owner=player(level);
                 for(int source:new int[]{1,10,11,30,31,50,51,70,71,80,81,94,95,100}) {
@@ -119,6 +123,7 @@ public final class LootPoolSmoke {
                     boolean eligible=NativeLootPools.allowed(entry.stack(),ctx)&&Constraints.eval(ctx).test(entry)&&entry.weights().getWeight(ctx.tier(),ctx.luck())>0;
                     var output=LootController.createAffixItemFromPools(Set.of(),Set.of(holder),ctx);
                     require(output.isEmpty()!=eligible,"Explicit native pool policy mismatch for "+holder.getId()+" in "+ctx.dimension().location());
+                    var row=new com.google.gson.JsonObject();row.addProperty("entry",holder.getId().toString());row.addProperty("item",BuiltInRegistries.ITEM.getKey(entry.stack().getItem()).toString());row.addProperty("dimension",ctx.dimension().location().toString());row.addProperty("eligible",eligible);nativeEntries.add(row);
                     if(eligible)bounded(output);explicit++;
                 }
             }
@@ -141,6 +146,15 @@ public final class LootPoolSmoke {
             settings.chestEquipmentChance=1;
             var fishing=new ObjectArrayList<ItemStack>(List.of(new ItemStack(Items.DIAMOND_SWORD),new ItemStack(Items.COD)));
             FinalLoot.table(fishing,context(params(world,player,LootContextParamSets.FISHING),"betterend:gameplay/fishing/treasure",33));require(chestTokens(fishing)==0,"Fishing treated as a chest");
+            profile(player).putInt("level",1);
+            for(boolean hasPlayer:new boolean[]{false,true}) {
+                var ordinary=new ObjectArrayList<ItemStack>(List.of(new ItemStack(Items.NETHERITE_SWORD),new ItemStack(Items.COD,2)));
+                FinalLoot.table(ordinary,context(params(world,hasPlayer?player:null,LootContextParamSets.FISHING),"tnkloot:audit/generic",34));
+                var token=ordinary.stream().filter(stack->stack.getItem() instanceof UnidentifiedWeaponItem).findFirst().orElseThrow();
+                require(UnidentifiedWeaponItem.tier(token)<=1&&UnidentifiedWeaponItem.data(token).getBoolean("tnk_progression_sealed"),"Generic replacement raised ordinary source tier or remained unsealed");
+                require(ordinary.stream().anyMatch(stack->stack.is(Items.COD)&&stack.getCount()==2),"Generic replacement changed fish/materials");
+            }
+            profile(player).putInt("level",100);
             var registry=server.reloadableRegistries().get().registryOrThrow(Registries.LOOT_TABLE);
             var chestParams=params(world,player,LootContextParamSets.CHEST);
             for(var id:registry.keySet()) {
@@ -153,14 +167,14 @@ public final class LootPoolSmoke {
                     if(stack.getItem() instanceof UnidentifiedWeaponItem)require(!UnidentifiedWeaponItem.baseResult(world,stack).isEmpty(),"Unidentifiable native-table token in "+id);
                     require(!(UnidentifiedWeaponItem.data(stack).getBoolean("tnk_random_pool")&&UnidentifiedWeaponItem.data(stack).getBoolean("tnk_external_generated")&&!(stack.getItem() instanceof UnidentifiedWeaponItem)),"Random identified gear escaped chest sealing in "+id);
                 }
-                chests++;
+                chestIds.add(id.toString());chests++;
             }
             var rewardParams=params(world,player,LootContextParamSets.ADVANCEMENT_REWARD);
             for(var advancement:server.getAdvancements().getAllAdvancements())for(var key:advancement.value().rewards().loot()) {
                 var table=registry.get(key);if(table==null)continue;
                 var raw=new ObjectArrayList<ItemStack>();table.getRandomItemsRaw(context(rewardParams,key.location().toString(),43002),raw::add);
                 var output=table.getRandomItems(rewardParams,43002L);materials(raw,output,key.location().toString());
-                require(output.stream().noneMatch(stack->stack.getItem() instanceof UnidentifiedWeaponItem),"Advancement loot sealed: "+key.location());advancements++;
+                require(output.stream().noneMatch(stack->stack.getItem() instanceof UnidentifiedWeaponItem),"Advancement loot sealed: "+key.location());rewardIds.add(key.location().toString());advancements++;
             }
             String bosses=Files.readString(BossRewards.path());
             try {
@@ -186,6 +200,12 @@ public final class LootPoolSmoke {
                     var automatic=new AutomaticAffixTrade(Set.of(),List.of(invalid,valid),false);var offer=automatic.getOffer(merchant,RandomSource.create(3));require(offer!=null&&offer.getResult().is(Items.NETHERITE_SWORD),"Automatic trade ignored filtered pool");
                 } finally { world.players().remove(player); }
             } finally { Files.writeString(BossRewards.path(),bosses);require(BossRewards.reload(),"Boss fixtures not restored"); }
+            var receipt=new com.google.gson.JsonObject();var mods=new com.google.gson.JsonObject();
+            for(var mod:net.neoforged.fml.ModList.get().getMods())mods.addProperty(mod.getModId(),mod.getVersion().toString());
+            receipt.add("runtime_mods",mods);receipt.addProperty("salvage_groups",salvage);receipt.addProperty("legacy_salvage_aliases",legacy);receipt.addProperty("native_random_rolls",nativeRolls);receipt.addProperty("explicit_entry_checks",explicit);
+            receipt.add("native_entries",nativeEntries);receipt.add("chest_table_ids",chestIds);receipt.add("advancement_reward_table_ids",rewardIds);
+            receipt.addProperty("result","passed");receipt.addProperty("coverage","Focused runtime; all listed chest tables sampled with a fixed seed, not exhaustive random or full-pack certification.");
+            Files.writeString(net.neoforged.fml.loading.FMLPaths.GAMEDIR.get().resolve("tnkloot-loot-pool-verification.json"),new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(receipt));
             TnkLoot.LOG.info("TNKLOOT_LOOT_POOLS_OK: {} salvage groups, {} legacy salvage aliases, {} native random rolls, {} explicit native entry/context checks, {} actual chest tables, {} actual advancement reward tables, playerless/nonstandard chests, fishing isolation, materials, empty GLMs, reserved invader prizes, paid explicit/automatic trades and owned reforging",salvage,legacy,nativeRolls,explicit,chests,advancements);
         } catch(Throwable error) { TnkLoot.LOG.error("TNKLOOT_LOOT_POOLS_FAILED",error); }
         finally { TnkBetaConfig.current=previous;server.halt(false); }

@@ -26,11 +26,13 @@ The Full KubeJS input was version 76, SHA-256 f39d9e567697028f06e06f3002e2a74614
 | --- | --- |
 | Native salvage uses rarity-holder identity; UL aliases only changed the bound value. Legendary had no salvage recipe. | Compare canonical rarities; all six materials have a native salvage route, including Echo Shards. Legacy saved IDs remain accepted. |
 | Chest equipment was removed with no replacement opportunity when the player was absent. | Use the same frequency and seal a level-1/Common reward for automation. |
+| Generic ordinary replacement raised a token to the input base's minimum tier and left ownerless tokens unsealed. | Bound ordinary replacement by the source tier and seal ownerless ordinary loot at level one. Deliberate fixed-tier boss prizes retain their rules. |
 | `chests/` naming missed actual chest evaluations such as Twilight caches. | Carry actual CHEST origin alongside ADVANCEMENT_REWARD. Reward protection takes precedence. |
 | Native item selection bypassed UL configuration. There were 58 resource definitions, covering 40 unique entry IDs, for TNK boss-reserved prizes. | Default and explicit native selection use UL eligibility. Named entry pools retain their native weights/constraints after filtering. |
 | Explicit modifiers/trades could have no valid weighted entry, and trader offers bypassed the final loot-table hook. | Empty named pools return no gear safely. Both trader types filter their named choices and retain native pricing. |
 | Native invader gear sets could provide excluded prizes. | Retain an eligible exact prize; choose a valid UL base for an excluded prize before native enchanting/affixing. |
 | Random magic/accessory payloads could resemble protected fixed rewards. | Mark random pool entries so ordinary chest sealing catches them while fixed native payload protection remains intact. |
+| Aether dart shooters inherit ProjectileWeaponItem and were missed by the old bow/crossbow class check. | Include the shared projectile-weapon base class in the ranged equipment group. |
 
 Standard `NestedLootTable` uses raw generation and NeoForge applies global modifiers at the root. No extra vanilla nested-table hook was added. Ancient Reforging definitions included in Apothic Compats are conditionally inactive without that mod; their resource presence does not activate a seventh rarity.
 

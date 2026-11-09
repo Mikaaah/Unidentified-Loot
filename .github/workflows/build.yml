@@ -50,4 +50,5 @@ jobs:
             build/libs/*.jar
             build/reports/tests/
             verification-logs/
+            run/tnkloot-loot-pool-verification.json
             run/logs/latest.log

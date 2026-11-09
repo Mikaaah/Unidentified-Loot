@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 /** Explicit datapack trades must not bypass the default random-pool policy. */
 @Mixin(value={AffixTrade.class,AutomaticAffixTrade.class},remap=false)
 public abstract class ApothAffixTradeMixin {
-    @Shadow @Final protected List<DynamicHolder<AffixLootEntry>> entries;
+    @Shadow(remap=false) @Final protected List<DynamicHolder<AffixLootEntry>> entries;
 
     @Unique private static boolean eligible(AffixLootEntry entry,GenContext context) {
         return NativeLootPools.allowed(entry.stack(),context)&&Constraints.eval(context).test(entry)

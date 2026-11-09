@@ -15,7 +15,7 @@ public final class BaseCompat {
   if(item instanceof ArmorItem a)return switch(a.getType()){case HELMET->TnkConfig.Category.HELMET;case CHESTPLATE->TnkConfig.Category.CHESTPLATE;case LEGGINGS->TnkConfig.Category.LEGGINGS;case BOOTS->TnkConfig.Category.BOOTS;default->null;};
   if(item instanceof BlockItem)return null;
   if(item instanceof Equipable e){var slot=e.getEquipmentSlot();if(slot==net.minecraft.world.entity.EquipmentSlot.HEAD)return TnkConfig.Category.HELMET;if(slot==net.minecraft.world.entity.EquipmentSlot.CHEST)return TnkConfig.Category.CHESTPLATE;if(slot==net.minecraft.world.entity.EquipmentSlot.LEGS)return TnkConfig.Category.LEGGINGS;if(slot==net.minecraft.world.entity.EquipmentSlot.FEET)return TnkConfig.Category.BOOTS;}
-  if(item instanceof BowItem||item instanceof CrossbowItem)return TnkConfig.Category.BOW;
+  if(item instanceof ProjectileWeaponItem)return TnkConfig.Category.BOW;
   if(item instanceof SwordItem||item instanceof TridentItem)return TnkConfig.Category.WEAPON;
   if(item instanceof DiggerItem||item instanceof FishingRodItem||item instanceof ShearsItem||item instanceof ShieldItem)return TnkConfig.Category.TOOL;
   String id=BuiltInRegistries.ITEM.getKey(item).toString();if(id.equals("irons_jewelry:ring")||id.equals("irons_jewelry:necklace"))return TnkConfig.Category.ACCESSORY;

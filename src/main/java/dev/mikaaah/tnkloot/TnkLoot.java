@@ -87,7 +87,7 @@ public final class TnkLoot {
       TnkBetaConfig.load();
       dev.mikaaah.tnkloot.apotheosis.ApotheosisIntegration.register();
       NeoForge.EVENT_BUS.addListener(BetaIntegration::run);
-      NeoForge.EVENT_BUS.addListener(dev.mikaaah.tnkloot.apotheosis.LootPoolSmoke::run);
+      NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.LOWEST,dev.mikaaah.tnkloot.apotheosis.LootPoolSmoke::run);
       NeoForge.EVENT_BUS.addListener(CompatPresets::started);
       NeoForge.EVENT_BUS.addListener(IdentifierSmokeTest::run);
       // TNK Progression owns level and milestone unlocks in this edition.

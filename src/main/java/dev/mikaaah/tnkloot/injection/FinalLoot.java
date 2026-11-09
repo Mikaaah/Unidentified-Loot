@@ -53,12 +53,12 @@ public final class FinalLoot {
   if(owners.size()==1)return BossRewards.token(owners.getFirst(),TnkConfig.Category.WEAPON,level,ItemStack.EMPTY);
   var category=category(original);if(category==null)return ItemStack.EMPTY;
   var def=items().get(id);int rank=player==null?0:ProgressionService.getTier(player);int[] band=def==null?BaseCompat.band(id,original.getItem(),category):new int[]{def.minTier(),def.maxTier()};
-  int wanted=Math.max(band[0],Math.min(rank,band[1]));String origin=DimensionRules.infer(id);if(origin.isBlank())origin=level.dimension().location().toString();
+  int wanted=Math.min(rank,band[1]);String origin=DimensionRules.infer(id);if(origin.isBlank())origin=level.dimension().location().toString();
   int tier=DimensionLoot.eligibleTier(wanted,category,origin);if(tier<0)return ItemStack.EMPTY;
   boolean invader=original.getOrDefault(Apoth.Components.FROM_BOSS,false);
   var token=UnidentifiedWeaponItem.create(category,tier,id,invader?"boss_reward":source);var tag=UnidentifiedWeaponItem.data(token);tag.putString("origin_dimension",origin);
   if(invader){tag.putString("boss_name","Apotheosis Invader");tag.putBoolean("apotheosis_invader",true);}
-  token.set(DataComponents.CUSTOM_DATA,CustomData.of(tag));return RaritySupport.ensure(token);
+  token.set(DataComponents.CUSTOM_DATA,CustomData.of(tag));RaritySupport.ensure(token);if(player==null&&!invader)TnkLootRolls.sealStarter(token);return token;
  }
  public static void table(ObjectArrayList<ItemStack> loot,LootContext ctx){
   if(!enabled())return;
