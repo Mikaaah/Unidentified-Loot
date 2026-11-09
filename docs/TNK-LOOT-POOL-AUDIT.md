@@ -33,6 +33,7 @@ The Full KubeJS input was version 76, SHA-256 f39d9e567697028f06e06f3002e2a74614
 | Native invader gear sets could provide excluded prizes. | Retain an eligible exact prize; choose a valid UL base for an excluded prize before native enchanting/affixing. |
 | Random magic/accessory payloads could resemble protected fixed rewards. | Mark random pool entries so ordinary chest sealing catches them while fixed native payload protection remains intact. |
 | Native affix conversion could make a fixed custom-named prize appear interchangeable. | Remember the fixed payload before conversion so the exact earned reward stays intact; named random entries still seal. |
+| The fallback item policy predated three disabled IE saw items in the latest pack catalogue. | Include those exclusions when no live catalogue is present; an installed pack catalogue remains authoritative. |
 | Aether dart shooters inherit ProjectileWeaponItem and were missed by the old bow/crossbow class check. | Include the shared projectile-weapon base class in the ranged equipment group. |
 
 Standard `NestedLootTable` uses raw generation and NeoForge applies global modifiers at the root. No extra vanilla nested-table hook was added. Ancient Reforging definitions included in Apothic Compats are conditionally inactive without that mod; their resource presence does not activate a seventh rarity.
@@ -44,3 +45,5 @@ The End Remastered script remains unchanged: all 16 entity modifiers retain the 
 `LootPoolSmoke` runs in a real dedicated server with the exact pinned Apotheosis, Placebo, Aether, Twilight Forest, Apothic Compats and Lootr builds. It checks all six native salvage routes and legacy aliases, progression boundaries in loaded dimensions, every registered explicit affix item entry per dimension, generated chest/reward tables, preservation of materials and trophies, playerless/nonstandard chest contexts, fishing isolation, empty modifiers, reserved invader prizes and paid trader offers. CI requires its positive completion marker as well as the existing unit/server/asset checks.
 
 Use the final CI receipt for actual counts and success/failure. No full-pack or graphical playtest is inferred from a successful focused server run. Previously recorded combined-pack startup blockers remain outstanding.
+
+Exploration-map generation allocates saved-data IDs and can select a different unreferenced structure on a second roll. The regression therefore compares exact material/components through TNK's final pass on copies of the same generated stacks, then checks material preservation through the complete modifier pipeline. Independently generated filled maps are compared by item/count in that second check.

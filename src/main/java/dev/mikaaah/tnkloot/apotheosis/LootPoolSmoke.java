@@ -68,11 +68,15 @@ public final class LootPoolSmoke {
             require(affix.level()<=UnifiedApotheosis.maximum(stack)+0.00001f,"Native affix exceeded UL band");
         }
     }
-    private static void materials(List<ItemStack> before,List<ItemStack> after,String id) {
+    private static void materials(List<ItemStack> before,List<ItemStack> after,String id,boolean independentRolls) {
         for(var material:before) {
             if(material.getItem() instanceof UnidentifiedWeaponItem||FinalLoot.category(material)!=null||BossRewards.exclusive(BuiltInRegistries.ITEM.getKey(material.getItem()).toString())||!LootCategory.forItem(material).isNone()||AffixHelper.hasAffixes(material))continue;
-            int expected=before.stream().filter(stack->ItemStack.isSameItemSameComponents(stack,material)).mapToInt(ItemStack::getCount).sum();
-            int actual=after.stream().filter(stack->ItemStack.isSameItemSameComponents(stack,material)).mapToInt(ItemStack::getCount).sum();
+            // Exploration maps allocate saved-data IDs and can locate a different
+            // unreferenced structure on a second roll, even with the same loot seed.
+            boolean generatedMap=independentRolls&&material.is(Items.FILLED_MAP);
+            java.util.function.Predicate<ItemStack> same=stack->generatedMap?stack.is(material.getItem()):ItemStack.isSameItemSameComponents(stack,material);
+            int expected=before.stream().filter(same).mapToInt(ItemStack::getCount).sum();
+            int actual=after.stream().filter(same).mapToInt(ItemStack::getCount).sum();
             require(actual>=expected,"Material/key/trophy changed in "+id+": "+material);
         }
     }
@@ -171,7 +175,8 @@ public final class LootPoolSmoke {
                 var table=registry.get(id);if(table.getParamSet()!=LootContextParamSets.CHEST)continue;
                 var raw=new ObjectArrayList<ItemStack>();
                 table.getRandomItemsRaw(context(chestParams,id.toString(),43001),raw::add);
-                var output=table.getRandomItems(chestParams,43001L);materials(raw,output,id.toString());
+                var coreOnly=new ObjectArrayList<ItemStack>(raw.stream().map(ItemStack::copy).toList());FinalLoot.table(coreOnly,context(chestParams,id.toString(),43001));materials(raw,coreOnly,id.toString(),false);
+                var output=table.getRandomItems(chestParams,43001L);materials(raw,output,id.toString(),true);
                 require(chestTokens(output)<=1,"Duplicate normal chest rolls in "+id);
                 for(var stack:output) {
                     if(stack.getItem() instanceof UnidentifiedWeaponItem)require(!UnidentifiedWeaponItem.baseResult(world,stack).isEmpty(),"Unidentifiable native-table token in "+id);
@@ -183,7 +188,8 @@ public final class LootPoolSmoke {
             for(var advancement:server.getAdvancements().getAllAdvancements())for(var key:advancement.value().rewards().loot()) {
                 var table=registry.get(key);if(table==null)continue;
                 var raw=new ObjectArrayList<ItemStack>();table.getRandomItemsRaw(context(rewardParams,key.location().toString(),43002),raw::add);
-                var output=table.getRandomItems(rewardParams,43002L);materials(raw,output,key.location().toString());
+                var coreOnly=new ObjectArrayList<ItemStack>(raw.stream().map(ItemStack::copy).toList());FinalLoot.table(coreOnly,context(rewardParams,key.location().toString(),43002));materials(raw,coreOnly,key.location().toString(),false);
+                var output=table.getRandomItems(rewardParams,43002L);materials(raw,output,key.location().toString(),true);
                 require(output.stream().noneMatch(stack->stack.getItem() instanceof UnidentifiedWeaponItem),"Advancement loot sealed: "+key.location());rewardIds.add(key.location().toString());advancements++;
             }
             String bosses=Files.readString(BossRewards.path());

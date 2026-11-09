@@ -1,5 +1,8 @@
 {
   "fullyDisabledItems": [
+    "immersiveengineering:buzzsaw",
+    "immersiveengineering:sawblade",
+    "immersiveengineering:toolupgrade_buzzsaw_spareblades",
     "rubberworks:rubber",
     "rubberworks:rubber_sheet",
     "rubberworks:rubber_block",
