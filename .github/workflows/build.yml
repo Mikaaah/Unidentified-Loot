@@ -31,12 +31,14 @@ jobs:
             timeout 300 ./gradlew runServer --stacktrace -P"$flag" -PtnkProgressionJar="$PWD/build-deps/tnkprogression-1.2.0-private.1.jar" 2>&1 | tee "verification-logs/$flag.log"
             grep -q "$marker" "verification-logs/$flag.log"
           done
+      - name: Verify unified Apotheosis integration
+        run: grep -q TNKLOOT_UNIFIED_APOTHEOSIS_OK verification-logs/tnkReleaseSmoke.log
       - name: Verify release assets and packaging
         run: python3 verification/verify_release.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: TNK-Loot-1.0.0-neoforge-1.21.1
+          name: TNK-Loot-1.0.1-neoforge-1.21.1
           path: |
             build/libs/*.jar
             build/reports/tests/

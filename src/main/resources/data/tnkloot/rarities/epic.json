@@ -1,7 +1,7 @@
 {
   "type": "apotheosis:rarity",
   "color": "#AA55FF",
-  "material": "minecraft:amethyst_shard",
+  "material": "apotheosis:arcane_sands",
   "sort_index": 650,
   "rules": [
     {
@@ -33,19 +33,37 @@
   ],
   "weights": {
     "haven": {
-      "weight": 0
+      "weight": 5
     },
     "frontier": {
-      "weight": 0
+      "weight": 5
     },
     "ascent": {
-      "weight": 0
+      "weight": 5
     },
     "summit": {
-      "weight": 0
+      "weight": 5
     },
     "pinnacle": {
-      "weight": 0
+      "weight": 5
+    }
+  },
+  "invader_sound": "apotheosis:invader_epic",
+  "render_data": {
+    "beam_height": 3.0,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.065,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "particle": {
+      "enabled": true
+    },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.5,
+      "frames": 20,
+      "size": 0.4,
+      "texture": "apotheosis:textures/rarity/shadow_t3.png"
     }
   }
 }

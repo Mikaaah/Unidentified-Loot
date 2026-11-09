@@ -1,7 +1,7 @@
 {
   "type": "apotheosis:rarity",
   "color": "#55DDFF",
-  "material": "minecraft:diamond",
+  "material": "minecraft:echo_shard",
   "sort_index": 750,
   "rules": [
     {
@@ -37,19 +37,37 @@
   ],
   "weights": {
     "haven": {
-      "weight": 0
+      "weight": 1
     },
     "frontier": {
-      "weight": 0
+      "weight": 1
     },
     "ascent": {
-      "weight": 0
+      "weight": 1
     },
     "summit": {
-      "weight": 0
+      "weight": 1
     },
     "pinnacle": {
-      "weight": 0
+      "weight": 1
+    }
+  },
+  "invader_sound": "apotheosis:invader_mythic",
+  "render_data": {
+    "beam_height": 3.5,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.065,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "particle": {
+      "enabled": true
+    },
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.5,
+      "frames": 7,
+      "size": 0.4,
+      "texture": "apotheosis:textures/rarity/shadow_t4.png"
     }
   }
 }

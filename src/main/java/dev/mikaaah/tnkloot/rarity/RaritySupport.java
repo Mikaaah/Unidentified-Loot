@@ -27,7 +27,7 @@ public final class RaritySupport {
         dev.mikaaah.tnkloot.features.FeatureHooks.register();
     }
     public static boolean reload() { return RarityPolicy.reload(TnkConfig.path().resolveSibling("rarities.json")); }
-    public static boolean reloadAll() { return dev.mikaaah.tnkloot.workshop.ExperienceCosts.reload() && reload() && TnkConfig.reload() && dev.mikaaah.tnkloot.features.FeatureConfig.reload() && dev.mikaaah.tnkloot.dimension.DimensionSupport.reload(); }
+    public static boolean reloadAll() { return dev.mikaaah.tnkloot.apotheosis.ApotheosisIntegration.reload() && dev.mikaaah.tnkloot.workshop.ExperienceCosts.reload() && reload() && TnkConfig.reload() && dev.mikaaah.tnkloot.features.FeatureConfig.reload() && dev.mikaaah.tnkloot.dimension.DimensionSupport.reload(); }
     private static boolean token(ItemStack stack) { return stack.getItem() instanceof UnidentifiedWeaponItem; }
     private static void save(ItemStack stack, CompoundTag tag) { stack.set(DataComponents.CUSTOM_DATA,net.minecraft.world.item.component.CustomData.of(tag)); }
     private static void snapshot(CompoundTag tag, RarityPolicy.Quality q) {
@@ -84,6 +84,9 @@ public final class RaritySupport {
         if (!token(stack)) return changed;
         boolean missing=!UnidentifiedWeaponItem.data(stack).contains(ID);
         ensure(stack);return changed||missing;
+    }
+    public static void stamp(ItemStack stack,RarityPolicy.Quality q,int tier) {
+        CompoundTag tag=UnidentifiedWeaponItem.data(stack); snapshot(tag,q);tag.putInt("tnk_tier",tier);save(stack,tag);vanillaRarity(stack,q);
     }
     public static ItemStack base(ItemStack result,ItemStack token) {
         if (result.isEmpty()) return result;

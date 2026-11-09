@@ -1,7 +1,7 @@
 {
   "type": "apotheosis:rarity",
   "color": "#FF77CC",
-  "material": "minecraft:copper_ingot",
+  "material": "apotheosis:luminous_crystal_shard",
   "sort_index": 550,
   "rules": [
     {
@@ -29,19 +29,34 @@
   ],
   "weights": {
     "haven": {
-      "weight": 0
+      "weight": 14
     },
     "frontier": {
-      "weight": 0
+      "weight": 14
     },
     "ascent": {
-      "weight": 0
+      "weight": 14
     },
     "summit": {
-      "weight": 0
+      "weight": 14
     },
     "pinnacle": {
-      "weight": 0
+      "weight": 14
+    }
+  },
+  "invader_sound": "apotheosis:invader_rare",
+  "render_data": {
+    "beam_height": 2.5,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.0,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "shadow": {
+      "alpha": 255,
+      "frame_time": 1.5,
+      "frames": 20,
+      "size": 0.35,
+      "texture": "apotheosis:textures/rarity/shadow_t2.png"
     }
   }
 }

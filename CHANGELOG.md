@@ -1,3 +1,13 @@
+## 1.0.1 TNK Edition — Unified equipment rarities
+
+- Use UL's six rarity groups and tier-bounded affixes throughout Apotheosis loot generation and reforging.
+- Keep crafted items intact when reforged; preserve native item components, enchantments, names and damage.
+- Add compatible reforging and salvaging materials for all six groups, including Legendary.
+- Keep native invader prizes as exact-item sealed rewards and bound their post-generation attribute boost.
+- Prevent augmenting and malice from raising UL affixes past the configured equipment tier limit.
+- Automatically activate Pinnacle and bypass the separate Apotheosis tier unlock screen while retaining TNK Progression rarity caps.
+- Preserve old rarity IDs as compatibility aliases and retain existing GUI/Ponder artwork.
+
 ## 1.0.0-tnk-neoforge-1.21.1 — Release 1 candidate
 
 - Align the complete 0.19.15 feature set and all original artwork with the 0.18.1 advancement-origin fix.

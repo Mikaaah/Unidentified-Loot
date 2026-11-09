@@ -4,7 +4,7 @@ plugins {
     id 'idea'
 }
 
-version = '1.0.0-tnk-neoforge-1.21.1'
+version = '1.0.1-tnk-neoforge-1.21.1'
 group = 'dev.mikaaah.tnkloot'
 base { archivesName = 'tnkloot' }
 

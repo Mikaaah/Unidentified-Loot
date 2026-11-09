@@ -6,3 +6,7 @@ The TNK rarity adapters in `data/tnkloot/affixes/compat` adapt affix JSON defini
 - Apothic Compats (mod ID `apothic_compats`), by ianm1647 — MIT, as declared in the original JAR. Source project: https://www.curseforge.com/minecraft/mc-mods/apothic-compats. The source JAR and its licence are recorded by `tools/build_tnk_compat_affixes.py` from the pinned Beta 1.0 inputs.
 
 Changes: namespaced copies restricted to TNK rarities, six-rarity value mappings, explicit optional-mod conditions, and remapped exclusivity links. Native third-party affixes and their original rarity distributions remain supplied by those mods. No third-party code or artwork is bundled by these adapters. See the individual dependency JARs for the full original copyright and licence notices; these are copied into `third-party-licenses` when generating the release adapters.
+
+## Apotheosis compatibility data
+
+The native rarity and reforging recipe overrides adapt JSON definitions from Apotheosis 8.9.0 by Shadows_of_Fire / Stormraven Studios, LLC, under the MIT licence. Source: https://github.com/Shadows-of-Fire/Apotheosis. Changes disable native rarity selection, route five legacy rarity IDs into the six UL groups, retain native rarity material/recipe compatibility, and add Legendary reforging. No Apotheosis classes or artwork are bundled. See `third-party-licenses/apotheosis-LICENSE`.

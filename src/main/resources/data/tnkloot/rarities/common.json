@@ -1,7 +1,7 @@
 {
   "type": "apotheosis:rarity",
   "color": "#FFFFFF",
-  "material": "minecraft:paper",
+  "material": "apotheosis:mysterious_scrap_metal",
   "sort_index": 350,
   "rules": [
     {
@@ -16,19 +16,27 @@
   ],
   "weights": {
     "haven": {
-      "weight": 0
+      "weight": 54
     },
     "frontier": {
-      "weight": 0
+      "weight": 54
     },
     "ascent": {
-      "weight": 0
+      "weight": 54
     },
     "summit": {
-      "weight": 0
+      "weight": 54
     },
     "pinnacle": {
-      "weight": 0
+      "weight": 54
     }
+  },
+  "invader_sound": "minecraft:intentionally_empty",
+  "render_data": {
+    "beam_height": 0.0,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.065,
+    "glow_texture": "apotheosis:textures/rarity/glow.png"
   }
 }

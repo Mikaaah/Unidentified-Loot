@@ -40,11 +40,14 @@ public final class ApotheosisCompat {
          .filter(r -> wanted.equals(RarityRegistry.INSTANCE.getKey(r)))
          .findFirst()
          .orElseThrow(() -> new IllegalStateException("Unknown Apotheosis rarity " + wanted));
-      LootCategory category = LootCategory.forItem(stack);
+      return applyContext(stack, rank, LootCategory.forItem(stack), rarity, GenContext.forPlayer(RandomSource.create(seed ^ 23729983353474900L), player), seed);
+   }
+
+   public static ItemStack applyContext(ItemStack stack,int rank,LootCategory category,LootRarity rarity,GenContext context,long seed) {
+      ResourceLocation wanted = RarityRegistry.INSTANCE.getKey(rarity);
       if (category.isNone()) {
          return RaritySupport.finish(stack, rank, seed);
       } else {
-         GenContext context = GenContext.forPlayer(RandomSource.create(seed ^ 23729983353474900L), player);
          stack.set(Components.AFFIXES, ItemAffixes.EMPTY);
          AffixHelper.setRarity(stack, rarity);
 

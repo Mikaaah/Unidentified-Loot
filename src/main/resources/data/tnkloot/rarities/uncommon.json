@@ -1,7 +1,7 @@
 {
   "type": "apotheosis:rarity",
   "color": "#55FF55",
-  "material": "minecraft:flint",
+  "material": "apotheosis:timeworn_fabric",
   "sort_index": 450,
   "rules": [
     {
@@ -20,19 +20,34 @@
   ],
   "weights": {
     "haven": {
-      "weight": 0
+      "weight": 25
     },
     "frontier": {
-      "weight": 0
+      "weight": 25
     },
     "ascent": {
-      "weight": 0
+      "weight": 25
     },
     "summit": {
-      "weight": 0
+      "weight": 25
     },
     "pinnacle": {
-      "weight": 0
+      "weight": 25
+    }
+  },
+  "invader_sound": "apotheosis:invader_uncommon",
+  "render_data": {
+    "beam_height": 0.0,
+    "beam_radius": 0.035,
+    "beam_texture": "apotheosis:textures/rarity/beam.png",
+    "glow_radius": 0.065,
+    "glow_texture": "apotheosis:textures/rarity/glow.png",
+    "shadow": {
+      "alpha": 175,
+      "frame_time": 1.5,
+      "frames": 20,
+      "size": 0.35,
+      "texture": "apotheosis:textures/rarity/shadow_t1.png"
     }
   }
 }

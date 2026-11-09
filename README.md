@@ -13,6 +13,8 @@
 
 **Minecraft 1.21.1 · NeoForge 21.1.262 · Java 21 · 1.0.0 TNK release candidate**
 
+**1.0.1 update:** crafted equipment can be reforged with the same UL rarity groups and attribute limits used by loot and invader prizes. Pinnacle is activated automatically. See [equipment and Apotheosis integration](docs/APOTHEOSIS-UNIFICATION.md).
+
 This edition uses the real TNK Progression API for source levels, milestone ceilings, rarity caps and mob levels. It retains the Beta 1.0 / 0.19.15 Identifier, seven-slot identification and salvage, previews, collection, custom artwork, boss editor, dimension rewards and optional Create Mechanical Identifier/Ponder integration.
 
 The equipment and boss integration checks pass in focused dependency batches. **The complete Beta 1.0 pack is not certified:** Knaves' Needs optional-integration startup and a separate dimension registry-freeze failure block that test. See [the release audit](docs/TNK-RELEASE-1-AUDIT.md) for the evidence and exact limits.

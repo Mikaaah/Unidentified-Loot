@@ -7,7 +7,16 @@
     "CommonHooksMixin",
     "LootContextAccess",
     "LootParamsMixin",
-    "LootParamsBuilderMixin"
+    "LootParamsBuilderMixin",
+    "ApothContextMixin",
+    "ApothLootControllerMixin",
+    "ApothRarityRegistryMixin",
+    "ApothLegacyRarityMixin",
+    "ApothAffixHelperMixin",
+    "ApothAugmentingMixin",
+    "ApothWorldTierMixin",
+    "ApothReforgingMixin",
+    "ApothInvaderMixin"
   ],
   "injectors": {
     "defaultRequire": 1

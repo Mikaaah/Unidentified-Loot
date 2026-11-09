@@ -33,7 +33,7 @@ public final class FinalLoot {
  public static void register(){NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST,FinalLoot::drops);NeoForge.EVENT_BUS.addListener(InjectionIntegration::run);NeoForge.EVENT_BUS.addListener(AdvancementRewardIntegration::run);}
  private static Map<String,TnkConfig.Weapon> items(){var s=TnkConfig.get();var c=cache;if(c==null||c.settings()!=s){var map=new HashMap<String,TnkConfig.Weapon>();for(var w:s.weapons())map.merge(w.id(),w,(a,b)->!a.enabled()&&b.enabled()?b:a);cache=c=new Lookup(s,Map.copyOf(map));}return c.items();}
  public static boolean enabled(){return TnkConfig.get().enableIdentification()&&TnkConfig.get().replaceWeaponLoot();}
- public static boolean own(ItemStack s){return s.getItem() instanceof UnidentifiedWeaponItem||UnidentifiedWeaponItem.data(s).contains("tnk_rarity");}
+ public static boolean own(ItemStack s){return s.getItem() instanceof UnidentifiedWeaponItem||(UnidentifiedWeaponItem.data(s).contains("tnk_rarity")&&!UnidentifiedWeaponItem.data(s).getBoolean("tnk_external_generated"));}
  public static TnkConfig.Category category(ItemStack s){
   if(!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(s.getItem()).toString()))return null;
   var defined=items().get(BuiltInRegistries.ITEM.getKey(s.getItem()).toString());if(defined!=null)return defined.category();
@@ -44,7 +44,9 @@ public final class FinalLoot {
  }
  /** An empty replacement means the original drop remains, including its components. */
  public static ItemStack replacement(ItemStack original,ServerLevel level,ServerPlayer player,String source){
-  if(!enabled()||original.isEmpty()||own(original)||!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(original.getItem()).toString())||LootProtection.keepNative(original))return ItemStack.EMPTY;
+  if(!enabled()||original.isEmpty()||!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(original.getItem()).toString()))return ItemStack.EMPTY;
+  if(dev.mikaaah.tnkloot.apotheosis.InvaderRewards.raw(original))return dev.mikaaah.tnkloot.apotheosis.InvaderRewards.token(original,level,player);
+  if(own(original)||LootProtection.keepNative(original))return ItemStack.EMPTY;
   String id=BuiltInRegistries.ITEM.getKey(original.getItem()).toString();
   // Unique native boss prizes still produce the corresponding universal crate.
   var owners=owners(id);

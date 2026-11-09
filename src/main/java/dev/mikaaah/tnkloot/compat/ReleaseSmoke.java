@@ -34,6 +34,7 @@ public final class ReleaseSmoke {
             var player = new FakePlayer(level, new GameProfile(UUID.randomUUID(), "TNKRelease"));
             var profile = (CompoundTag) Class.forName("dev.mikaaah.tnkprogression.ProgressionAPI").getMethod("profile", ServerPlayer.class).invoke(null, player);
             profile.putInt("level", 100); profile.putInt("ceiling", 100);
+            dev.mikaaah.tnkloot.apotheosis.UnifiedApotheosisSmoke.verify(player);
             int identifications = 0, rewards = 0, equipment = 0;
             var policyFile = net.neoforged.fml.loading.FMLPaths.GAMEDIR.get().resolve("kubejs/pack_catalog.json");
             byte[] priorPolicy = java.nio.file.Files.exists(policyFile) ? java.nio.file.Files.readAllBytes(policyFile) : null;

@@ -23,12 +23,17 @@ public final class DimensionLoot {
  public static List<TnkConfig.Weapon> pool(int tier,TnkConfig.Category category,String origin){return TnkConfig.tierWeapons(tier).stream().filter(w->w.category()==category&&tier>=w.minTier()&&tier<=w.maxTier()&&WeaponSelector.available(w)&&!BossRewards.exclusive(w.id())&&DimensionRules.allowed(w.id(),origin)).toList();}
  public static ItemStack baseResult(Level level,ItemStack token){
   if(!(token.getItem() instanceof UnidentifiedWeaponItem item))return ItemStack.EMPTY;bindOrigin(token,level);ItemStack result;
-  if(item.boss())result=BossRewards.baseResult(level,token);
+  if(UnidentifiedWeaponItem.data(token).contains("tnk_exact_result",10))result=dev.mikaaah.tnkloot.apotheosis.InvaderRewards.base(level,token);
+  else if(item.boss())result=BossRewards.baseResult(level,token);
   else{var entries=pool(UnidentifiedWeaponItem.tier(token),item.category(),origin(token)).stream().map(w->new WeightedPool.Entry<Item>(BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.parse(w.id())),w.weight())).toList();var random=new Random(UnidentifiedWeaponItem.data(token).getLong("roll_seed"));result=new WeightedPool<Item>(entries).roll(random::nextLong).map(ItemStack::new).orElse(ItemStack.EMPTY);}
   return RaritySupport.base(result,token);
  }
  public static List<FeatureMenus.Option> options(ItemStack token){
   if(!(token.getItem() instanceof UnidentifiedWeaponItem item))return List.of();var tag=UnidentifiedWeaponItem.data(token);
+  if(tag.contains("tnk_exact_result",10)) {
+   String id=tag.getCompound("tnk_exact_result").getString("id");
+   return id.isBlank()?List.of():List.of(new FeatureMenus.Option(id,1,"Apotheosis Invader · exact reward"));
+  }
   if(item.boss()){
    var pool=BossRewards.find(tag.getString("boss_pool"));if(pool.isEmpty())return List.of();
    if(tag.contains("boss_result")){String id=tag.getCompound("boss_result").getString("id");return id.isBlank()||!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(id)?List.of():List.of(new FeatureMenus.Option(id,1,pool.get().name()));}
