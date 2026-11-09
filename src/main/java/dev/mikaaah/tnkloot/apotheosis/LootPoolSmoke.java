@@ -89,6 +89,11 @@ public final class LootPoolSmoke {
             int salvage=0,legacy=0,nativeRolls=0,explicit=0,chests=0,advancements=0;
             var nativeEntries=new com.google.gson.JsonArray();var chestIds=new com.google.gson.JsonArray();var rewardIds=new com.google.gson.JsonArray();
             var generation=GenContext.forPlayer(RandomSource.create(17),player);
+            for(var definition:TnkConfig.get().weapons()) {
+                var id=ResourceLocation.parse(definition.id());
+                if(id.getNamespace().equals("apothic_compats")&&BuiltInRegistries.ITEM.containsKey(id)&&LootCategory.forItem(new ItemStack(BuiltInRegistries.ITEM.get(id))).isNone())
+                    require(!WeaponSelector.available(definition),"Inert optional Curios trinket entered UL pools: "+id);
+            }
             for(var rarity:RarityRegistry.getSortedRarities()) {
                 var stack=LootController.createLootItem(new ItemStack(Items.DIAMOND_SWORD),rarity,generation);
                 var matches=SalvagingMenu.findMatch(world,stack).stream().filter(match->match.value().getOutputs().stream().anyMatch(output->output.stack().is(rarity.getMaterial()))).toList();
