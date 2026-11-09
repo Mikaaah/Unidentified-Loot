@@ -24,6 +24,7 @@ public final class UnifiedApotheosis {
     private UnifiedApotheosis() {}
     private static final Set<String> LEGACY=Set.of("common","uncommon","rare","epic","mythic");
     public static ResourceLocation alias(ResourceLocation id) {
+        if(id!=null && id.toString().equals("tnkloot:ancient"))return ResourceLocation.parse("tnkloot:mythic");
         return id!=null && id.getNamespace().equals("apotheosis") && LEGACY.contains(id.getPath()) ? ResourceLocation.fromNamespaceAndPath("tnkloot",id.getPath()) : id;
     }
     public static LootRarity canonical(LootRarity rarity) {
@@ -39,7 +40,7 @@ public final class UnifiedApotheosis {
     public static int rank(ItemStack stack, Player owner, GenContext context) {
         var tag=UnidentifiedWeaponItem.data(stack);
         if(tag.contains("tnk_tier")) return Math.clamp(tag.getInt("tnk_tier"),0,7);
-        int wanted=owner instanceof ServerPlayer sp ? dev.mikaaah.tnkloot.progression.ProgressionService.getTier(sp) : switch(context.tier()) { case HAVEN->1; case FRONTIER->2; case ASCENT->4; case SUMMIT->6; case PINNACLE->7; };
+        int wanted=owner instanceof ServerPlayer sp ? dev.mikaaah.tnkloot.progression.ProgressionService.getTier(sp) : owner!=null ? LevelTierRoll.roll(Math.min(ApotheosisClientState.level,ApotheosisClientState.ceiling),99) : switch(context.tier()) { case HAVEN->1; case FRONTIER->2; case ASCENT->4; case SUMMIT->6; case PINNACLE->7; };
         String id=BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
         var defined=TnkConfig.get().weapons().stream().filter(w->w.id().equals(id)).findFirst();
         if(defined.isPresent()) return Math.min(wanted,defined.get().maxTier());
@@ -51,7 +52,7 @@ public final class UnifiedApotheosis {
         Player player=((ContextOwner)(Object)context).tnkloot$player();
         long seed=context.rand().nextLong(); int tier=rank(stack,player,context);
         var q=quality(requested);
-        if(player instanceof ServerPlayer sp) q=RarityPolicy.get().quality(TnkLootRolls.RARITIES[Math.min(index(q.id()),TnkLevelBridge.rarityCap(sp))]);
+        if(player!=null) { int cap=player instanceof ServerPlayer sp?TnkLevelBridge.rarityCap(sp):ApotheosisClientState.rarityCap;q=RarityPolicy.get().quality(TnkLootRolls.RARITIES[Math.min(index(q.id()),cap)]); }
         var rarity=RarityRegistry.INSTANCE.getValue(ResourceLocation.parse(q.apotheosis()));
         if(rarity==null) throw new IllegalStateException("Missing UL rarity "+q.apotheosis());
         RaritySupport.stamp(stack,q,tier);
@@ -64,7 +65,7 @@ public final class UnifiedApotheosis {
     }
     public static int index(String id) { return List.of(TnkLootRolls.RARITIES).indexOf(id.replace("tnkloot:","")); }
     public static boolean canReforge(Player player,LootRarity rarity) {
-        return !(player instanceof ServerPlayer sp) || index(quality(rarity).id())<=TnkLevelBridge.rarityCap(sp);
+        return index(quality(rarity).id())<=(player instanceof ServerPlayer sp?TnkLevelBridge.rarityCap(sp):ApotheosisClientState.rarityCap);
     }
     public static float maximum(ItemStack stack) {
         var tag=UnidentifiedWeaponItem.data(stack);

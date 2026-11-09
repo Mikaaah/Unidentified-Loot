@@ -52,6 +52,7 @@ public final class RaritySupport {
         CompoundTag tag=UnidentifiedWeaponItem.data(stack);
         if (tag.getBoolean("creative_template")) return stack;
         // The earlier TNK beta saved namespaced IDs instead of the policy's short IDs.
+        if (tag.getString(ID).equals("ancient")) { snapshot(tag,RarityPolicy.get().quality("mythic"));save(stack,tag); }
         if (tag.getString(ID).startsWith("tnkloot:")) {
             snapshot(tag,RarityPolicy.get().quality(tag.getString(ID).substring(8)));save(stack,tag);
         }

@@ -13,7 +13,9 @@ public final class TnkMenuNetwork {
    }
 
    public static void register(RegisterPayloadHandlersEvent event) {
-      event.registrar("2")
+      event.registrar("3").playToClient(ApotheosisState.TYPE,ApotheosisState.CODEC,
+         (message,context)->context.enqueueWork(()->dev.mikaaah.tnkloot.apotheosis.ApotheosisClientState.update(message.level(),message.ceiling(),message.rarityCap(),message.pinnacle())));
+      event.registrar("3")
          .playToServer(
             TnkMenuNetwork.Chance.TYPE,
             TnkMenuNetwork.Chance.CODEC,
@@ -44,4 +46,12 @@ public final class TnkMenuNetwork {
          return TYPE;
       }
    }
+   public static record ApotheosisState(int level,int ceiling,int rarityCap,boolean pinnacle) implements CustomPacketPayload {
+      public static final Type<ApotheosisState> TYPE=new Type<>(ResourceLocation.fromNamespaceAndPath("tnkloot","apotheosis_state"));
+      public static final StreamCodec<RegistryFriendlyByteBuf,ApotheosisState> CODEC=StreamCodec.of((buffer,state)->{
+         buffer.writeVarInt(state.level());buffer.writeVarInt(state.ceiling());buffer.writeVarInt(state.rarityCap());buffer.writeBoolean(state.pinnacle());
+      },buffer->new ApotheosisState(buffer.readVarInt(),buffer.readVarInt(),buffer.readVarInt(),buffer.readBoolean()));
+      public Type<ApotheosisState> type() { return TYPE; }
+   }
+
 }

@@ -20,6 +20,17 @@ public final class ApotheosisIntegration {
     private static volatile boolean pinnacle = true;
     private static Boolean manualBeforeForce;
     public static boolean forcePinnacle() { return pinnacle; }
+    public static void clientPolicy(boolean force) { pinnacle=force; }
+    private static void syncState(ServerPlayer player,boolean force) {
+        if(player.connection==null)return;
+        int level=dev.mikaaah.tnkloot.loot.TnkLevelBridge.level(player),ceiling=dev.mikaaah.tnkloot.loot.TnkLevelBridge.ceiling(player),cap=dev.mikaaah.tnkloot.loot.TnkLevelBridge.rarityCap(player);
+        int packed=level|(ceiling<<8)|(cap<<16)|(pinnacle?1<<20:0);
+        var data=player.getPersistentData();
+        if(force || data.getInt("tnkloot_apotheosis_sync")!=packed) {
+            data.putInt("tnkloot_apotheosis_sync",packed);
+            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(player,new dev.mikaaah.tnkloot.menu.TnkMenuNetwork.ApotheosisState(level,ceiling,cap,pinnacle));
+        }
+    }
     public static boolean reload() {
         try {
             Path path=FMLPaths.CONFIGDIR.get().resolve("tnkloot/apotheosis-integration.json");
@@ -50,15 +61,16 @@ public final class ApotheosisIntegration {
         NeoForge.EVENT_BUS.addListener(ApotheosisIntegration::tick);
     }
     private static void join(EntityJoinLevelEvent event) {
-        if(event.getEntity() instanceof ServerPlayer player) { configureTierSelection(); force(player); }
+        if(event.getEntity() instanceof ServerPlayer player) { configureTierSelection(); force(player);syncState(player,true); }
     }
-    private static void sync(OnDatapackSyncEvent event) { configureTierSelection(); }
+    private static void sync(OnDatapackSyncEvent event) { configureTierSelection();event.getRelevantPlayers().forEach(player->syncState(player,true)); }
     private static void started(ServerStartedEvent event) {
         configureTierSelection(); event.getServer().getPlayerList().getPlayers().forEach(ApotheosisIntegration::force);
     }
     private static void tick(PlayerTickEvent.Post event) {
         if(event.getEntity() instanceof ServerPlayer player && player.tickCount%40==0) {
             if(pinnacle && WorldTier.getTier(player)!=WorldTier.PINNACLE) force(player);
+            syncState(player,false);
             for(int slot=0;slot<player.getInventory().getContainerSize();slot++) {
                 var stack=player.getInventory().getItem(slot);var tag=UnidentifiedWeaponItem.data(stack);
                 if(!(stack.getItem() instanceof UnidentifiedWeaponItem) && tag.getBoolean("tnk_external_generated")) {

@@ -8,6 +8,6 @@ import org.spongepowered.asm.mixin.injection.*;
 public abstract class ApothRarityRegistryMixin {
     @Redirect(method="onReload",at=@At(value="INVOKE",target="Ljava/util/Collection;iterator()Ljava/util/Iterator;"),remap=false)
     private Iterator<LootRarity> tnkloot$canonicalGroups(Collection<LootRarity> rarities) {
-        return rarities.stream().filter(rarity->RarityRegistry.INSTANCE.getKey(rarity).getNamespace().equals("tnkloot")).iterator();
+        return rarities.stream().filter(rarity->RarityRegistry.INSTANCE.getKey(rarity).getNamespace().equals("tnkloot") && java.util.List.of(dev.mikaaah.tnkloot.loot.TnkLootRolls.RARITIES).contains(RarityRegistry.INSTANCE.getKey(rarity).getPath())).iterator();
     }
 }

@@ -9,7 +9,7 @@ public final class RarityPolicy {
     public record Quality(String id, String name, int color, long weight, long bossWeight, double cost, String apotheosis, double floor) {}
     public record Band(double min, double max) {}
     public record Settings(List<Quality> qualities, Map<Integer,Map<String,Long>> weights, List<Band> bands) {
-        public Quality quality(String id) { String key=id.startsWith("tnkloot:")?id.substring(8):id; return qualities.stream().filter(q -> q.id().equals(key)).findFirst().orElseThrow(() -> new IllegalArgumentException("Unknown rarity " + id)); }
+        public Quality quality(String id) { String normalized=id.startsWith("tnkloot:")?id.substring(8):id; String key=normalized.equals("ancient")?"mythic":normalized; return qualities.stream().filter(q -> q.id().equals(key)).findFirst().orElseThrow(() -> new IllegalArgumentException("Unknown rarity " + id)); }
         public Quality roll(int tier, boolean boss, long seed) {
             Map<String,Long> overrides = weights.getOrDefault(tier, Map.of());
             long total = 0;

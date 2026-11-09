@@ -79,7 +79,7 @@ class TnkConfigTest {
     }
 
     @Test void customApotheosisRaritiesArePresentAndProgressionOrdered() throws Exception {
-        String[] ladder = {"common", "uncommon", "rare", "epic", "legendary", "mythic", "ancient"};
+        String[] ladder = {"common", "uncommon", "rare", "epic", "legendary", "mythic"};
         for (int i = 0; i < ladder.length; i++) {
             var stream = getClass().getResourceAsStream("/data/tnkloot/rarities/" + ladder[i] + ".json");
             assertNotNull(stream, ladder[i]);
@@ -88,7 +88,14 @@ class TnkConfigTest {
                 assertEquals("apotheosis:rarity", json.get("type").getAsString());
                 assertFalse(json.getAsJsonArray("rules").isEmpty());
                 assertTrue(json.getAsJsonObject("weights").entrySet().stream()
-                    .allMatch(e -> e.getValue().getAsJsonObject().get("weight").getAsInt() == 0));
+                    .allMatch(e -> e.getValue().getAsJsonObject().get("weight").getAsInt() > 0));
+            }
+        }
+        for (String legacy : new String[]{"common","uncommon","rare","epic","mythic"}) {
+            try (var stream = getClass().getResourceAsStream("/data/apotheosis/rarities/" + legacy + ".json")) {
+                assertNotNull(stream, legacy);
+                var json = JsonParser.parseString(new String(stream.readAllBytes())).getAsJsonObject();
+                assertTrue(json.getAsJsonObject("weights").entrySet().stream().allMatch(e -> e.getValue().getAsJsonObject().get("weight").getAsInt() == 0));
             }
         }
         var cfg = TnkConfig.parse(defaults());
