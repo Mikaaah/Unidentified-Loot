@@ -15,7 +15,7 @@ public abstract class ApothLegacyRarityMixin {
     @Shadow protected CodecProvider value;
     @Inject(method="bind",at=@At("HEAD"),cancellable=true,remap=false)
     private void tnkloot$legacyAlias(CallbackInfo callback) {
-        if(registry==RarityRegistry.INSTANCE) {
+        if(registry==RarityRegistry.INSTANCE && id.getNamespace().equals("apotheosis")) {
             var mapped=UnifiedApotheosis.alias(id);
             if(!mapped.equals(id)) {
                 var rarity=RarityRegistry.INSTANCE.getValue(mapped);
