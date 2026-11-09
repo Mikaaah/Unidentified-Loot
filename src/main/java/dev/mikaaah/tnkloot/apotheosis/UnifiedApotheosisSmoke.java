@@ -67,8 +67,8 @@ public final class UnifiedApotheosisSmoke {
                 crafting++;
             }
         }
-        var definition=InvaderRegistry.INSTANCE.getValues().stream().filter(value->value.stats().size()==6).findFirst().orElseThrow(()->new AssertionError("No six-rarity invader definition"));
         for(var rarity:rarities) {
+            var definition=InvaderRegistry.INSTANCE.getValues().stream().filter(value->value.stats().containsKey(rarity)).findFirst().orElseThrow(()->new AssertionError("No invader definition for "+rarity));
             var boss=definition.createBoss(level,new BlockPos(0,180,0),context,rarity);
             var prize=java.util.stream.StreamSupport.stream(boss.getAllSlots().spliterator(),false).filter(stack->stack.getOrDefault(Apoth.Components.FROM_BOSS,false)).findFirst().orElseThrow(()->new AssertionError("Native invader generated no marked reward"));
             bounded(prize);
