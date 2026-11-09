@@ -69,7 +69,7 @@ public final class FinalLoot {
   if(DimensionLoot.rewardPool(ctx).isEmpty()) {
    var generatedContext=dev.mikaaah.tnkloot.apotheosis.NativeLootPools.context(ctx);
    loot.removeIf(stack->stack.getOrDefault(Apoth.Components.FROM_CHEST,false)&&!own(stack)
-    &&UnidentifiedWeaponItem.data(stack).getBoolean("tnk_external_generated")
+    &&UnidentifiedWeaponItem.data(stack).getBoolean("tnk_external_generated")&&UnidentifiedWeaponItem.data(stack).getBoolean("tnk_random_pool")
     &&!dev.mikaaah.tnkloot.apotheosis.NativeLootPools.allowed(stack,generatedContext));
   }
   if(BetaLoot.table(loot,ctx))return;

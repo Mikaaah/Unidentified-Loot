@@ -49,6 +49,7 @@ public final class UnifiedApotheosis {
     }
     public static ItemStack generate(ItemStack stack,LootCategory category,LootRarity requested,GenContext context) {
         if(stack.isEmpty() || category.isNone()) return stack;
+        boolean fixedPayload=!UnidentifiedWeaponItem.data(stack).getBoolean("tnk_random_pool")&&dev.mikaaah.tnkloot.injection.LootProtection.keepNative(stack);
         Player player=((ContextOwner)(Object)context).tnkloot$player();
         long seed=context.rand().nextLong(); int tier=rank(stack,player,context);
         var q=quality(requested);
@@ -57,6 +58,7 @@ public final class UnifiedApotheosis {
         if(rarity==null) throw new IllegalStateException("Missing UL rarity "+q.apotheosis());
         RaritySupport.stamp(stack,q,tier);
         var tag=UnidentifiedWeaponItem.data(stack); tag.putBoolean("tnk_external_generated",true);
+        if(fixedPayload)tag.putBoolean("tnk_fixed_native_payload",true);
         if(player instanceof ServerPlayer sp) tag.putInt("tnk_source_level",TnkLootRolls.effective(sp,TnkLevelBridge.level(sp)));
         stack.set(DataComponents.CUSTOM_DATA,CustomData.of(tag));
         // Keep the exact item, enchantments, native components and socketed gems.

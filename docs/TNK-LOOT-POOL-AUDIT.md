@@ -32,6 +32,7 @@ The Full KubeJS input was version 76, SHA-256 f39d9e567697028f06e06f3002e2a74614
 | Explicit modifiers/trades could have no valid weighted entry, and trader offers bypassed the final loot-table hook. | Empty named pools return no gear safely. Both trader types filter their named choices and retain native pricing. |
 | Native invader gear sets could provide excluded prizes. | Retain an eligible exact prize; choose a valid UL base for an excluded prize before native enchanting/affixing. |
 | Random magic/accessory payloads could resemble protected fixed rewards. | Mark random pool entries so ordinary chest sealing catches them while fixed native payload protection remains intact. |
+| Native affix conversion could make a fixed custom-named prize appear interchangeable. | Remember the fixed payload before conversion so the exact earned reward stays intact; named random entries still seal. |
 | Aether dart shooters inherit ProjectileWeaponItem and were missed by the old bow/crossbow class check. | Include the shared projectile-weapon base class in the ranged equipment group. |
 
 Standard `NestedLootTable` uses raw generation and NeoForge applies global modifiers at the root. No extra vanilla nested-table hook was added. Ancient Reforging definitions included in Apothic Compats are conditionally inactive without that mod; their resource presence does not activate a seventh rarity.

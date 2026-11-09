@@ -12,6 +12,7 @@ import dev.shadowsoffire.apotheosis.affix.salvaging.SalvagingMenu;
 import dev.shadowsoffire.apotheosis.affix.trades.*;
 import dev.shadowsoffire.apotheosis.loot.*;
 import dev.shadowsoffire.apotheosis.loot.modifiers.AffixLootModifier;
+import dev.shadowsoffire.apotheosis.loot.modifiers.AffixConvertLootModifier;
 import dev.shadowsoffire.apotheosis.mobs.types.Invader;
 import dev.shadowsoffire.apotheosis.tiers.*;
 import dev.shadowsoffire.apotheosis.util.LootPatternMatcher;
@@ -144,6 +145,15 @@ public final class LootPoolSmoke {
                 require(chestTokens(loot)==0&&loot.stream().noneMatch(stack->stack.is(Items.IRON_SWORD)),"Zero chest frequency ignored");
             }
             settings.chestEquipmentChance=1;
+            var fixed=new ItemStack(Items.DIAMOND_SWORD);fixed.set(DataComponents.CUSTOM_NAME,Component.literal("Earned fixed sword"));
+            var convert=new AffixConvertLootModifier(new LootItemCondition[0],List.of(new AffixConvertLootModifier.AffixConversionEntry(LootPatternMatcher.of(".*"),1,Set.of())));
+            var conversionContext=context(params(world,player,LootContextParamSets.CHEST),"tnkloot:audit/fixed_reward",330);
+            var converted=convert.apply(new ObjectArrayList<ItemStack>(List.of(fixed.copy())),conversionContext);bounded(converted.getFirst());FinalLoot.table(converted,conversionContext);
+            require(converted.stream().anyMatch(stack->stack.is(Items.DIAMOND_SWORD)&&Objects.equals(stack.get(DataComponents.CUSTOM_NAME),fixed.get(DataComponents.CUSTOM_NAME))),"Native affix conversion erased a fixed named reward");
+            var randomFixed=fixed.copy();var randomData=UnidentifiedWeaponItem.data(randomFixed);randomData.putBoolean("tnk_random_pool",true);randomFixed.set(DataComponents.CUSTOM_DATA,net.minecraft.world.item.component.CustomData.of(randomData));
+            var randomContext=context(params(world,player,LootContextParamSets.CHEST),"tnkloot:audit/random_named_reward",331);
+            var randomNamed=convert.apply(new ObjectArrayList<ItemStack>(List.of(randomFixed)),randomContext);FinalLoot.table(randomNamed,randomContext);
+            require(randomNamed.stream().noneMatch(stack->stack.is(Items.DIAMOND_SWORD)),"Named random pool entry bypassed chest sealing");
             var fishing=new ObjectArrayList<ItemStack>(List.of(new ItemStack(Items.DIAMOND_SWORD),new ItemStack(Items.COD)));
             FinalLoot.table(fishing,context(params(world,player,LootContextParamSets.FISHING),"betterend:gameplay/fishing/treasure",33));require(chestTokens(fishing)==0,"Fishing treated as a chest");
             profile(player).putInt("level",1);
@@ -204,7 +214,7 @@ public final class LootPoolSmoke {
             for(var mod:net.neoforged.fml.ModList.get().getMods())mods.addProperty(mod.getModId(),mod.getVersion().toString());
             receipt.add("runtime_mods",mods);receipt.addProperty("salvage_groups",salvage);receipt.addProperty("legacy_salvage_aliases",legacy);receipt.addProperty("native_random_rolls",nativeRolls);receipt.addProperty("explicit_entry_checks",explicit);
             receipt.add("native_entries",nativeEntries);receipt.add("chest_table_ids",chestIds);receipt.add("advancement_reward_table_ids",rewardIds);
-            receipt.addProperty("result","passed");receipt.addProperty("coverage","Focused runtime; all listed chest tables sampled with a fixed seed, not exhaustive random or full-pack certification.");
+            receipt.addProperty("fixed_named_native_payloads",true);receipt.addProperty("result","passed");receipt.addProperty("coverage","Focused runtime; all listed chest tables sampled with a fixed seed, not exhaustive random or full-pack certification.");
             Files.writeString(net.neoforged.fml.loading.FMLPaths.GAMEDIR.get().resolve("tnkloot-loot-pool-verification.json"),new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(receipt));
             TnkLoot.LOG.info("TNKLOOT_LOOT_POOLS_OK: {} salvage groups, {} legacy salvage aliases, {} native random rolls, {} explicit native entry/context checks, {} actual chest tables, {} actual advancement reward tables, playerless/nonstandard chests, fishing isolation, materials, empty GLMs, reserved invader prizes, paid explicit/automatic trades and owned reforging",salvage,legacy,nativeRolls,explicit,chests,advancements);
         } catch(Throwable error) { TnkLoot.LOG.error("TNKLOOT_LOOT_POOLS_FAILED",error); }
