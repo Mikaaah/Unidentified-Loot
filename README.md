@@ -4,20 +4,22 @@
 
 <p align="center"><strong>Bring home a mystery. Identify your finds, discover powerful equipment, and build around the result.</strong></p>
 
-<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">Downloads</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Player guide</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.0/CHANGELOG.md">Changelog</a> · <a href="https://discord.gg/CRYk3uDPVt">Discord</a></p>
+<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">Downloads</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Player guide</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.2/CHANGELOG.md">Changelog</a> · <a href="https://discord.gg/CRYk3uDPVt">Discord</a></p>
 
 <p align="center"><img src="https://img.shields.io/badge/Minecraft-1.21.1-5b8731?style=flat-square" alt="Minecraft 1.21.1"> <img src="https://img.shields.io/badge/NeoForge-d77828?style=flat-square" alt="NeoForge"> <a href="https://mikaaah.github.io/TownsAndKingdoms/projects/"><img src="https://img.shields.io/badge/Towns_%26_Kingdoms-Modding_Hub-7f384a?style=flat-square" alt="Towns & Kingdoms Modding Hub"></a></p>
 
 
+**Current TNK guide: 1.0.2.** [Current source](https://github.com/Mikaaah/Unidentified-Loot/tree/release/tnk-1.0.2) · [Standalone 0.6.1-alpha source](https://github.com/Mikaaah/Unidentified-Loot/tree/main). Each edition needs its matching companion and configuration.
+
 ## A mystery worth bringing home
 
-**Minecraft 1.21.1 · NeoForge 21.1.262 · Java 21 · 1.0.0 TNK release candidate**
+**Minecraft 1.21.1 · NeoForge 21.1.262 · Java 21 · 1.0.2 TNK edition**
 
-**1.0.1 update:** crafted equipment can be reforged with the same UL rarity groups and attribute limits used by loot and invader prizes. Pinnacle is activated automatically. See [equipment and Apotheosis integration](docs/APOTHEOSIS-UNIFICATION.md).
+**Equipment integration:** crafted equipment can be reforged with the same UL rarity groups and attribute limits used by loot and invader prizes. Pinnacle is activated automatically. See [equipment and Apotheosis integration](docs/APOTHEOSIS-UNIFICATION.md).
 
 This edition uses the real TNK Progression API for source levels, milestone ceilings, rarity caps and mob levels. It retains the Beta 1.0 / 0.19.15 Identifier, seven-slot identification and salvage, previews, collection, custom artwork, boss editor, dimension rewards and optional Create Mechanical Identifier/Ponder integration.
 
-The equipment and boss integration checks pass in focused dependency batches. **The complete Beta 1.0 pack is not certified:** Knaves' Needs optional-integration startup and a separate dimension registry-freeze failure block that test. See [the release audit](docs/TNK-RELEASE-1-AUDIT.md) for the evidence and exact limits.
+The equipment and boss integration checks pass in focused dependency batches. **The complete Beta 1.0 pack is not certified:** Knaves' Needs optional-integration startup and a separate dimension registry-freeze failure block that test. See [the release audit](https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.2/docs/TNK-RELEASE-1-AUDIT.md) for the evidence and exact limits.
 
 | Component | Supported / checked |
 | --- | --- |

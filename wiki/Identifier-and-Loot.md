@@ -1,3 +1,7 @@
+> **Standalone 0.6.1-alpha reference.** For TNK's Progression-based levels, XP costs, salvage and six-rarity integration, use the [TNK edition guide](https://github.com/Mikaaah/Unidentified-Loot/wiki/TNK-Edition).
+
+[← Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Project](https://github.com/Mikaaah/Unidentified-Loot) · [Get help](https://github.com/Mikaaah/Unidentified-Loot/issues)
+
 # Identifier and Loot
 
 Each category token records its Guild tier and a stable roll seed when awarded. Bring tokens to a Guild Identifier. Its one-row inventory accepts up to seven items, shows the total cost, and reveals each result with a short item roll and note-block sounds after confirmation. Results retain the original registered item's behavior and moveset integrations. This mod does not change item crafting or who can equip an item.

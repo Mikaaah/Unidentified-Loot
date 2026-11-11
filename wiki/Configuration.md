@@ -1,3 +1,7 @@
+> **Standalone 0.6.1-alpha reference.** For TNK's Progression-based levels, XP costs, salvage and six-rarity integration, use the [TNK edition guide](https://github.com/Mikaaah/Unidentified-Loot/wiki/TNK-Edition).
+
+[← Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Project](https://github.com/Mikaaah/Unidentified-Loot) · [Get help](https://github.com/Mikaaah/Unidentified-Loot/issues)
+
 # Configuration
 
 Edit `config/tnkloot/tiers.json` on the server. A copy of the defaults is in [the example file](https://github.com/Mikaaah/Unidentified-Loot/blob/main/examples/tiers.example.json). `/tnkloot reload` applies edits without restarting. Invalid settings reject the **whole reload** and retain the last good in-memory settings; the edited file is left untouched. On a first launch with invalid config and no previous good settings, identification stays disabled until corrected.

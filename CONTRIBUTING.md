@@ -5,4 +5,4 @@ For bugs, include Minecraft/NeoForge/mod versions, reproduction steps, expected 
 
 Keep saved tier ranks and the `tnkloot` item ID compatible unless the change includes a documented migration. Do not claim in-game or multiplayer validation based only on unit tests.
 
-Build instructions and technical checks are in [the contributor reference](docs/DEVELOPMENT.md).
+See the [contributor reference](docs/DEVELOPMENT.md) for scope, compatibility and reporting guidance.

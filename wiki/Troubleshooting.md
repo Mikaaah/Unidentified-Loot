@@ -1,3 +1,7 @@
+> **Choose the correct edition first.** [TNK 1.0.2](https://github.com/Mikaaah/Unidentified-Loot/wiki/TNK-Edition) uses Progression and XP; the standalone source below uses Guild tiers.
+
+[← Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Project](https://github.com/Mikaaah/Unidentified-Loot) · [Get help](https://github.com/Mikaaah/Unidentified-Loot/issues)
+
 # Troubleshooting
 
 ## Identification is unavailable
