@@ -1,29 +1,22 @@
-<p align="center"><img src="https://github.com/Mikaaah/Unidentified-Loot/raw/refs/heads/main/docs/assets/banner.png" alt="Unidentified Loot" width="100%"></p>
+# Unidentified Loot
 
-<h1 align="center">Unidentified Loot</h1>
+Bring home sealed equipment, preview your rewards, identify a batch and build around the result.
 
-<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">CurseForge</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Wiki</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/blob/main/CHANGELOG.md">Changelog</a></p>
+## Choose your edition
 
-<p align="center"><img alt="Minecraft 1.21.1" src="https://img.shields.io/badge/Minecraft-1.21.1-568736?style=flat-square"> <img alt="NeoForge" src="https://img.shields.io/badge/Loader-NeoForge-d77828?style=flat-square"></p>
+| Edition | Guide | Source |
+| --- | --- | --- |
+| **TNK 1.0.2** | [TNK equipment and identification](TNK-Edition) | [Current TNK source](https://github.com/Mikaaah/Unidentified-Loot/tree/release/tnk-1.0.2) |
+| Standalone 0.6.1-alpha | [Getting started](Getting-Started) | [Standalone source](https://github.com/Mikaaah/Unidentified-Loot/tree/main) |
 
-Unidentified equipment, a seven-slot Guild Identifier and configurable progression with real Apotheosis affixes.
+TNK uses the real Progression companion for levels and rarity ceilings, with XP costs, salvage, discoveries, boss rewards and optional Create automation. Standalone uses its own configurable Guild tiers and advancement milestones. Keep the matching edition's dependencies, costs and configuration together.
 
-Collect tokens, review the identification price and reveal equipment while retaining its original item behavior.
+| TNK guide | Contents |
+| --- | --- |
+| [TNK edition](TNK-Edition) | Installation, Identifier, salvage, collection and automation |
+| [Equipment and Apotheosis](Equipment-and-Apotheosis) | Six rarities, exact-item reforging, invader prizes and Pinnacle |
+| [Support](Troubleshooting) | Version selection and reporting |
 
-- [Getting started](https://github.com/Mikaaah/Unidentified-Loot/wiki/Getting-Started)
-- [Identifier and loot](https://github.com/Mikaaah/Unidentified-Loot/wiki/Identifier-and-Loot)
-- [Progression and teams](https://github.com/Mikaaah/Unidentified-Loot/wiki/Progression-and-Teams)
-- [Commands and editor](https://github.com/Mikaaah/Unidentified-Loot/wiki/Commands-and-Admin-Editor)
-- [Configuration](https://github.com/Mikaaah/Unidentified-Loot/wiki/Configuration)
-- [Apotheosis presets](https://github.com/Mikaaah/Unidentified-Loot/wiki/Apotheosis-Presets)
-- [FTB Quests](https://github.com/Mikaaah/Unidentified-Loot/wiki/FTB-Quests-Integration)
-- [Troubleshooting](https://github.com/Mikaaah/Unidentified-Loot/wiki/Troubleshooting)
-- [Changelog](https://github.com/Mikaaah/Unidentified-Loot/wiki/Changelog)
+[Downloads](https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod) · [Current TNK changelog](https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.2/CHANGELOG.md)
 
-These guides describe the checked-in 0.6.1-alpha source. Use the changelog accompanying your installed JAR when comparing versions.
-
-[← Wiki home](https://github.com/Mikaaah/Unidentified-Loot/wiki/Home)
-
-## TNK development edition
-
-[1.0.0 TNK release candidate guide](https://github.com/Mikaaah/Unidentified-Loot/tree/release/tnk-1.0.0) — keep its matching dependencies and configuration together.
+[Guide home](https://github.com/Mikaaah/Unidentified-Loot/wiki) · [Report an issue](https://github.com/Mikaaah/Unidentified-Loot/issues) · [Discord](https://discord.gg/CRYk3uDPVt)
