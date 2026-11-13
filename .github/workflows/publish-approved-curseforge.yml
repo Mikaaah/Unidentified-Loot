@@ -1,17 +1,17 @@
-name: Publish approved Unidentified Loot 1.1.2
+name: Publish approved Unidentified Loot 1.1.3
 on:
   push:
-    branches: [publish/curseforge-1.1.2]
+    branches: [publish/curseforge-1.1.3]
     paths:
-      - '.github/publish/1.1.2/request.json'
+      - '.github/publish/1.1.3/request.json'
 concurrency:
-  group: curseforge-unidentified-loot-1753149-1.1.2
+  group: curseforge-unidentified-loot-1753149-1.1.3
   cancel-in-progress: false
 permissions:
   contents: read
 jobs:
   publish:
-    if: github.repository == 'Mikaaah/Unidentified-Loot' && github.ref == 'refs/heads/publish/curseforge-1.1.2'
+    if: github.repository == 'Mikaaah/Unidentified-Loot' && github.ref == 'refs/heads/publish/curseforge-1.1.3'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -27,5 +27,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Unidentified-Loot-1.1.2-CurseForge-receipt
+          name: Unidentified-Loot-1.1.3-CurseForge-receipt
           path: curseforge-upload-receipt.json

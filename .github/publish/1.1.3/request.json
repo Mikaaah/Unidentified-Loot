@@ -1,0 +1,41 @@
+{
+  "project_id": 1753149,
+  "version": "1.1.3",
+  "filename": "tnkloot-1.1.3-tnk-neoforge-1.21.1.jar",
+  "sha256": "f0c27294258697d1330831819070af52e3f9058f7b10040de9af2fa85bca5c53",
+  "release_type": "release",
+  "game_versions": [
+    "1.21.1",
+    "NeoForge",
+    "Client",
+    "Server"
+  ],
+  "relations": [
+    {
+      "slug": "apotheosis",
+      "projectID": 313970,
+      "type": "requiredDependency"
+    },
+    {
+      "slug": "placebo",
+      "projectID": 283644,
+      "type": "requiredDependency"
+    },
+    {
+      "slug": "patchouli",
+      "projectID": 306770,
+      "type": "requiredDependency"
+    },
+    {
+      "slug": "apothic-attributes",
+      "projectID": 898963,
+      "type": "requiredDependency"
+    },
+    {
+      "slug": "towns-kingdoms-progression",
+      "projectID": 1789363,
+      "type": "requiredDependency"
+    }
+  ],
+  "publication_attempt": 1
+}

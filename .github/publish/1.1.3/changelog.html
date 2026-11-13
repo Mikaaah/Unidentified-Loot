@@ -1,0 +1,71 @@
+<div style="font-family:'Segoe UI',Tahoma,Verdana,Arial,sans-serif;font-size:16px;line-height:1.65">
+<p style="text-align:center"><img src="https://i.imgur.com/JGT2lvz.png" alt="Changelog" width="728" height="125" style="display:block;width:100%;height:auto;margin:auto"></p>
+<h2 style="font-family:'Arial Black',Impact,Arial,sans-serif;font-size:27px;color:#729aa1;text-align:center"><strong>UNIDENTIFIED LOOT — 1.1.3</strong></h2>
+<p style="color:#729aa1;text-align:center"><strong>Minecraft 1.21.1 · NeoForge · Java 21 · TNK Edition</strong></p>
+<p><strong>Dungeon rewards, expanded equipment pools and safer identification.</strong> Build themed loot pools, choose the equipment each dungeon can award, and keep earned rewards intact through identification, reforging and monthly rotations.</p>
+
+<h2 style="font-family:'Trebuchet MS',Verdana,Arial,sans-serif;font-size:23px;font-weight:800;color:#c09473">Rewards that belong to the dungeon</h2>
+<ul>
+<li>Dungeons can now choose <strong>specific weapons, armour and accessories</strong> instead of sending every equipment reward through a global item pool.</li>
+<li>Equipment can arrive <strong>identified or unidentified</strong>. Unidentified dungeon rewards save the complete rolled item when the chest opens, so identification reveals that same equipment and its original stats.</li>
+<li>Added reusable equipment presets for <strong>guaranteed enchantments, attribute bonuses, fixed affixes and optional random affixes</strong>. Bonuses can use fixed values or ranges, and random affixes can be restricted to a themed selection.</li>
+<li>Preserved native armour, damage modifiers, enchantments and item components when applying dungeon bonuses.</li>
+<li>Reforging dungeon equipment preserves its <strong>rarity and guaranteed bonuses</strong>, while rerolling the random affix portion from its saved tier and pool. Reforging materials must match the item's rarity.</li>
+<li>Added optional <strong>spell-power and maximum-mana affixes</strong> for curated Iron's Spells armour rewards, without adding them to ordinary random equipment rolls.</li>
+<li>Earned dungeon tokens and already-rolled payouts keep their saved results after monthly reward-table or preset changes.</li>
+</ul>
+
+<h2 style="font-family:'Trebuchet MS',Verdana,Arial,sans-serif;font-size:23px;font-weight:800;color:#c09473">Spiral Abyss integration</h2>
+<ul>
+<li>Added optional integration for the original <strong>Spiral Abyss 2.0.5</strong> JAR, with <strong>one editable reward file per floor</strong> covering equipment, materials, food, potions and rare prizes.</li>
+<li>Floor previews now show <strong>actual item variants, guaranteed bonuses, rarity odds and per-roll chances</strong>. Different versions of the same item remain separate, and potion previews retain their real potion effects.</li>
+<li>The rare-reward journal uses the same custom reward definitions as the floor overview.</li>
+<li>On configured custom floors, <strong>nine-star golden chests</strong> make one overall rare-reward check, followed by weighted prize selection. At most <strong>one identified rare prize</strong> is awarded across the eligible party, with the announcement retained on pickup.</li>
+<li>Rare rewards support either a shared chest chance or scaling by eligible player count. Previews explain solo odds and the selected party-scaling rule.</li>
+<li>Copper, iron and gold retain <strong>one, two and three normal rolls per eligible player</strong>. Existing floor challenges, experience, independent item bonuses, claims and arena mob-drop suppression are preserved.</li>
+<li>Included a separate, opt-in <strong>six-floor example datapack</strong> with Arcane, Aether, Aquatic, Twilight, Infernal and End themes, shared presets and an editing guide. Its values are examples for pack authors to balance.</li>
+</ul>
+
+<h2 style="font-family:'Trebuchet MS',Verdana,Arial,sans-serif;font-size:23px;font-weight:800;color:#c09473">Expanded equipment compatibility</h2>
+<p>Added <strong>63 equipment rules</strong> with explicit categories and tier ranges. Native item stats remain intact.</p>
+<ul>
+<li><strong>Vanilla Backport:</strong> copper equipment and copper spears use tiers <strong>1–2</strong>, matching chainmail's loot band. Other spears follow their material's existing band; golden equipment remains excluded.</li>
+<li><strong>Deeper and Darker:</strong> resonarium and warden armour use tiers <strong>6–7</strong>, above netherite's starting band, with equipment routed through <strong>Otherside</strong> pools.</li>
+<li><strong>The Beyond:</strong> brittle tools and swords use tiers <strong>4–6</strong>; anchor leggings and pathfinder boots use <strong>5–7</strong>, with End equipment routing.</li>
+<li><strong>Enderscape:</strong> drift leggings use tiers <strong>5–7</strong> and rubble shields use <strong>3–5</strong>. End routing and native item-state preservation are supported.</li>
+<li><strong>Immersive Engineering:</strong> steel and Faraday armour use tiers <strong>3–4</strong>, above iron. Ordinary steel tools and swords use <strong>2–3</strong>.</li>
+<li><strong>Applied Energistics 2:</strong> certus-quartz, nether-quartz and fluix tools and swords use tiers <strong>2–3</strong>, matching iron's loot band.</li>
+<li><strong>Archaion:</strong> the <strong>Echo Mace</strong> is exclusive to <strong>Last of Deepslate's tier-6 boss reward</strong>. Native Echo Charges and smithing-template drops are retained.</li>
+<li>Filled missing Apotheosis categories for approved equipment, including added tools and the Echo Mace, so those items can receive affixes.</li>
+</ul>
+
+<h2 style="font-family:'Trebuchet MS',Verdana,Arial,sans-serif;font-size:23px;font-weight:800;color:#c09473">Native equipment and loot safeguards</h2>
+<ul>
+<li>Removed <strong>blank Iron's Jewelry rings and necklaces</strong> from TNK identification and random Apotheosis pools. Properly generated jewellery retains its native pattern and material data.</li>
+<li>Removed obsolete <strong>Epic Fight: Nightfall</strong> presets and stale equipment entries from migrated configurations.</li>
+<li>Kept <strong>Vinery, Brewery and HerbalBrews clothing; Hybrid Aquatic equipment; Jaden's Nether Expansion and Wildernature equipment; and Supplementaries slingshots/quivers</strong> out of generated TNK equipment pools. Native crafting, item use and stored contents remain available.</li>
+<li>Deeper and Darker's staff and soul elytra, The Beyond's Ring Remembrance, powered/modular utility equipment and Archaion's Echo's Grace retain native handling instead of entering ordinary TNK equipment rolls.</li>
+<li>Corrected NPC identification for saved dungeon rewards that have no matching global item pool. Saved results retain their original equipment and stats.</li>
+<li>Ordinary resource rewards retain normal stacking, and explicitly sealed rewards are preserved during normal chest processing and hostile loot filtering.</li>
+</ul>
+
+<h2 style="font-family:'Trebuchet MS',Verdana,Arial,sans-serif;font-size:23px;font-weight:800;color:#c09473">Pack configuration and previews</h2>
+<ul>
+<li>Added <code>tnkloot:dungeon_reward</code> for editable weighted reward definitions, plus <code>tnkloot:seal_reward</code> for vanilla loot tables with an explicit equipment tier, source level and rarity. Sealing supports actual selected equipment, optional presets and identified delivery, while retaining the earlier generic-token behaviour.</li>
+<li>Custom dungeon rewards use their authored floor strength; identification does not reroll them against a later owner's progression cap.</li>
+<li>Added Enderscape/The Beyond equipment routing and an Otherside route. Removed stale BetterEnd/BetterNether namespace references when those mods are absent, while retaining custom route settings.</li>
+<li>Configuration migration creates backups and preserves <strong>existing weights, disabled-item choices and custom dimension settings</strong>. Approved tier changes apply once, leaving later manual edits intact.</li>
+<li>Invalid dungeon definitions are rejected before replacing the working reward catalog.</li>
+<li>Added normal-reward percentages and clearer bonus/party information to Spiral previews, with compact text and room for the tooltip frame at larger GUI scales.</li>
+<li>Retained the approved <strong>blue/copper CleanLook interface, brown equipment slots, artwork, fonts, models and Ponder resources</strong>.</li>
+</ul>
+
+<h2 style="font-family:'Trebuchet MS',Verdana,Arial,sans-serif;font-size:23px;font-weight:800;color:#c09473">Installation notes</h2>
+<ul>
+<li><strong>Update both client and server to 1.1.3.</strong> Requires <strong>TNK Progression 1.1.0+</strong> and the existing required companion mods. Optional integrations remain optional.</li>
+<li>For custom Spiral floors, install the separate example datapack in <code>world/datapacks</code>. Use the original Spiral Abyss 2.0.5 JAR. Restart after replacing Loot; apply later datapack edits with <code>/reload</code> between attempts, as Spiral cancels active attempts on reload.</li>
+<li><strong>Enderscape server setup:</strong> the tested Enderscape 1.0.9 also needs YACL installed on the server. Its config classes load there despite its client-only dependency metadata. This does not add a hard YACL dependency to Unidentified Loot.</li>
+<li>The jewellery safeguard prevents new blank rewards; it does not automatically repair already-broken jewellery in inventories.</li>
+</ul>
+<p><strong>Validation:</strong> 27 automated tests passed, alongside focused checks using the actual optional mods, all 63 approved equipment entries, native End item-state preservation and 900 golden-chest payouts. The complete 307-mod pack has not been run together.</p>
+</div>
