@@ -32,7 +32,11 @@ assert {'ApothAffixIngredientMixin','ApothAffixLootModifierMixin','ApothAffixLoo
 legendary=json.loads(data['data/tnkloot/recipe/salvaging/affix_item/legendary.json'])
 assert legendary['input']['rarity']=='tnkloot:legendary' and legendary['outputs'][0]['stack']['id']=='minecraft:echo_shard'
 assert not any(n.startswith(('net/minecraft/','net/neoforged/','com/simibubi/','net/createmod/','dev/mikaaah/tnkprogression/')) for n in data)
-assert not any('PonderClientCheck' in n or 'ClientVisualCheck' in n for n in data)
+assert not any('PonderClientCheck' in n or 'ClientVisualCheck' in n or '/verification/' in n for n in data)
+assert not any(n.startswith(('data/tnk_spiral/','data/spiral_abyss/','com/pla/spiral_abyss/')) for n in data)
+spiral=json.loads(data['tnkloot.spiral.mixins.json'])
+assert len(spiral['mixins'])==3 and len(spiral['client'])==1 and spiral['plugin'].endswith('SpiralMixinPlugin')
+assert sum(n.startswith('data/tnkloot/affixes/dungeon/') and n.endswith('.json') for n in data)==2
 assert sum(n.startswith('data/tnkloot/affixes/compat/') and n.endswith('.json') for n in data)==342
 assert 'META-INF/licenses/irons_apothic-LICENSE' in data and 'THIRD_PARTY_NOTICES.md' in data
 print(f'RELEASE_ASSETS_OK: {len(reference)-len(gui_reference)} unchanged reference images; {len(gui_reference)} corrected GUI textures; {models} valid models, {textures} exact rarity icons, four origin mixins, thirteen Apotheosis integration mixins, Legendary salvage, 342 optional affixes, no bundled APIs/test client')

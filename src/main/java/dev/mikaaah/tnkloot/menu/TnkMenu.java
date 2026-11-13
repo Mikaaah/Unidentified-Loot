@@ -5,6 +5,7 @@ import dev.mikaaah.tnkloot.compat.BossRewards;
 import dev.mikaaah.tnkloot.config.TnkConfig;
 import dev.mikaaah.tnkloot.dimension.DimensionLoot;
 import dev.mikaaah.tnkloot.dimension.NativeDisplays;
+import dev.mikaaah.tnkloot.dungeon.DungeonEquipment;
 import dev.mikaaah.tnkloot.features.FeatureHooks;
 import dev.mikaaah.tnkloot.loot.ApotheosisCompat;
 import dev.mikaaah.tnkloot.loot.IdentifierBlock;
@@ -434,7 +435,9 @@ public final class TnkMenu extends AbstractContainerMenu {
                      .distinct()
                      .<ItemStack>map(ItemStack::new)
                      .toList();
-                  if (item.boss()) {
+                  if (DungeonEquipment.sealed(token)) {
+                     options = List.of(DungeonEquipment.hint(player.level(), token));
+                  } else if (item.boss()) {
                      options = BossRewards.find(UnidentifiedWeaponItem.data(token).getString("boss_pool"))
                         .map(p -> BossRewards.options(p, item.category()))
                         .orElse(List.of());

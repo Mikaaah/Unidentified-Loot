@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.mikaaah.tnkloot.dungeon.mixin",
+  "plugin": "dev.mikaaah.tnkloot.dungeon.mixin.SpiralMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["SpiralRewardsMixin", "SpiralPreviewsMixin", "SpiralJournalMixin"],
+  "client": ["SpiralPreviewPanelMixin"],
+  "injectors": {"defaultRequire": 1}
+}

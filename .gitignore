@@ -15,3 +15,7 @@ run-kubejs-beta1-reference/
 ponder-release-check/
 
 /run-compat/
+
+run-dungeon-client/
+
+run-no-spiral/

@@ -833,5 +833,9 @@
   "tnkloot.ponder.mechanical_identifying.text_3": "Supply supported Liquid XP at the right-side port. The right side follows the machine's facing; the tank holds 4,000 mB by default.",
   "tnkloot.ponder.mechanical_identifying.text_4": "Your fluid network must pump XP into this port. Each item costs its normal identification fee converted to fluid and takes 40 ticks by default.",
   "tnkloot.ponder.mechanical_identifying.text_5": "Extract revealed equipment underneath. This hopper faces the output depot; sealed rarity, tier and boss rewards are preserved.",
-  "tnkloot.ponder.mechanical_identifying.text_6": "Right-click to inspect the machine. Missing XP or full outputs pause processing while keeping your items safe."
+  "tnkloot.ponder.mechanical_identifying.text_6": "Right-click to inspect the machine. Missing XP or full outputs pause processing while keeping your items safe.",
+  "affix.tnkloot:dungeon/armor/spell_power": "Arcane",
+  "affix.tnkloot:dungeon/armor/spell_power.suffix": "of Spellpower",
+  "affix.tnkloot:dungeon/armor/max_mana": "Mana-rich",
+  "affix.tnkloot:dungeon/armor/max_mana.suffix": "of the Reservoir"
 }

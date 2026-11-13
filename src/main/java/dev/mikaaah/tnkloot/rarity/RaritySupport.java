@@ -105,6 +105,7 @@ public final class RaritySupport {
         return ResourceLocation.parse(tag.getString(APO));
     }
     public static ItemStack finish(ItemStack stack,int tier,long seed) {
+        if(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.authored(stack))return stack;
         CompoundTag tag=UnidentifiedWeaponItem.data(stack);
         RarityPolicy.Quality q=quality(tag);
         vanillaRarity(stack,q);

@@ -60,6 +60,8 @@ side="BOTH"
 
 [[mixins]]
 config="tnkloot.loot.mixins.json"
+[[mixins]]
+config="tnkloot.spiral.mixins.json"
 
 [[dependencies.tnkloot]]
 modId="create"

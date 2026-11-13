@@ -56,6 +56,7 @@ public final class UnifiedApotheosis {
         if(player!=null) { int cap=player instanceof ServerPlayer sp?TnkLevelBridge.rarityCap(sp):ApotheosisClientState.rarityCap;q=RarityPolicy.get().quality(TnkLootRolls.RARITIES[Math.min(index(q.id()),cap)]); }
         var rarity=RarityRegistry.INSTANCE.getValue(ResourceLocation.parse(q.apotheosis()));
         if(rarity==null) throw new IllegalStateException("Missing UL rarity "+q.apotheosis());
+        if(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.authored(stack))return dev.mikaaah.tnkloot.dungeon.DungeonEquipment.reforge(stack,rarity,context);
         RaritySupport.stamp(stack,q,tier);
         var tag=UnidentifiedWeaponItem.data(stack); tag.putBoolean("tnk_external_generated",true);
         if(fixedPayload)tag.putBoolean("tnk_fixed_native_payload",true);
@@ -75,6 +76,7 @@ public final class UnifiedApotheosis {
         return (float)RarityPolicy.get().bands().get(Math.clamp(tag.getInt("tnk_tier"),0,RarityPolicy.get().bands().size()-1)).max();
     }
     public static ItemAffixes bounded(ItemStack stack,ItemAffixes affixes) {
+        if(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.authored(stack))return dev.mikaaah.tnkloot.dungeon.DungeonEquipment.bounded(stack,affixes);
         var tag=UnidentifiedWeaponItem.data(stack);
         if(!tag.contains("tnk_rarity")) return affixes;
         var builder=affixes.toBuilder();float max=maximum(stack);

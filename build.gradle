@@ -82,6 +82,23 @@ if (providers.gradleProperty('clientVisualCheck').isPresent()) {
     }
 }
 
+// Render the real optional Spiral screen against the generated example data.
+if (providers.gradleProperty('dungeonVisualCheck').isPresent()) {
+    sourceSets.main.java.srcDir('verification/dungeonclient')
+    tasks.named('processResources') {
+        from(zipTree(providers.gradleProperty('dungeonExamplePack').get())) {
+            include 'data/**'
+        }
+    }
+    neoForge.runs.client {
+        gameDirectory = file('run-dungeon-client')
+        programArgument '--width'
+        programArgument '1280'
+        programArgument '--height'
+        programArgument '900'
+    }
+}
+
 // Keep optional API jars out of the mod; fetch the pinned unmodified build inputs.
 tasks.register('preparePonder', Exec) {
     commandLine 'python3', 'tools/prepare_ponder.py'
@@ -134,11 +151,12 @@ if (providers.gradleProperty('tnkMachineSmoke').isPresent()) {
 if (providers.gradleProperty('tnkCompatSmoke').isPresent()) {
     sourceSets.main.java.srcDir('verification/compat')
     neoForge.runs.server {
-        gameDirectory = file('run-compat')
+        gameDirectory = file(providers.gradleProperty('tnkCompatDirectory').getOrElse('run-compat'))
         systemProperty 'tnkloot.compatSmokeTest', 'true'
     }
 }
-tasks.named('jar') { exclude 'dev/mikaaah/tnkloot/verification/PackCompatSmoke*.class' }
+tasks.named('jar') { exclude 'dev/mikaaah/tnkloot/verification/**' }
+tasks.named('jar') { exclude 'data/tnk_spiral/**', 'data/spiral_abyss/**' }
 
 tasks.named('processResources') {
     from('third-party-licenses') { into 'META-INF/licenses' }

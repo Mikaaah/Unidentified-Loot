@@ -1,10 +1,16 @@
-# 1.1.3 TNK — Native jewellery safeguards and datapack rewards
+# 1.1.3 TNK — Editable dungeon rewards and native jewellery safeguards
+
+- Select exact equipment per dungeon instead of redirecting it into a global identification pool. Save the complete rolled item on unidentified rewards; later owners and monthly rotations preserve it.
+- Add one editable reward definition per Spiral floor with weighted materials, food, real potion variants, equipment and golden prizes. Derive floor and journal previews, variant identities and normal/rare percentages from those definitions.
+- Make golden-only rare loot one overall proc followed by weighted selection of at most one identified prize across the party. Support explicit shared/per-player chance scaling and preserve Spiral's pickup announcement and saved payout markers.
+- Add reusable presets with native components, names, guaranteed enchantments, added attribute bonuses/ranges, fixed affixes and optional restricted random affixes. Preserve base equipment modifiers. Reforging retains rarity and guarantees, with the original plan saved on each item.
+- Add two opt-in Iron's Spells armour affixes for curated magic pools; zero global weight keeps existing random equipment balance intact.
 
 - Remove Iron's Jewelry ring/necklace blanks from TNK identification and random Apotheosis pools, including existing imported rules. Keep native pattern/material jewellery intact.
 - Remove the obsolete Nightfall preset and stale Nightfall pool entries. Save affected equipment config before cleanup.
 - Add `tnkloot:seal_reward`, a conditional loot function accepting tier 0–7, source level 1–100, and one of the six TNK rarities. Each roll receives a fresh seed and a sealed reward payload.
 - Preserve explicit sealed tokens during hostile loot-table filtering as well as normal chest processing.
-- Supply a separate, opt-in six-floor Spiral Abyss 2.0.5 example datapack. Its balance values are editable and do not enforce individual player progression caps.
+- Supply a separate, opt-in six-floor Spiral Abyss 2.0.5 example datapack with Arcane, Aether, Aquatic, Twilight, Infernal and End themes. Its values are examples and do not enforce individual player progression caps.
 - Audit the new 307-entry pack manifest. Document remaining equipment pool and dimension-route gaps separately.
 - Preserve the approved 1.1.2 GUI and existing optional dependency model.
 

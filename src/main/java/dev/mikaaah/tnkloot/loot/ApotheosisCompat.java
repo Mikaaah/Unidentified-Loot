@@ -32,6 +32,7 @@ public final class ApotheosisCompat {
    }
 
    public static ItemStack apply(ItemStack stack, int rank, Player player, long seed) {
+      if (dev.mikaaah.tnkloot.dungeon.DungeonEquipment.authored(stack)) return stack;
       stack = NativeQuality.prepare(stack, rank, player, seed);
       TnkConfig.get().tierForRank(rank).apotheosisRarity();
       ResourceLocation wanted = RaritySupport.resolve(stack, rank, seed);

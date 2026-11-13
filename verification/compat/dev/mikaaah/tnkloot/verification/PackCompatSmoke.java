@@ -121,7 +121,9 @@ public final class PackCompatSmoke {
                 results.addProperty("native_jewels_preserved", nativeJewels);
             }
 
-            if (ModList.get().isLoaded("spiral_abyss")) {
+            if (ModList.get().isLoaded("spiral_abyss") && !dev.mikaaah.tnkloot.dungeon.DungeonData.catalog().tables().isEmpty()) {
+                results.add("dungeon_rewards", DungeonRewardSmoke.verify(server));
+            } else if (ModList.get().isLoaded("spiral_abyss")) {
                 var catalog = Class.forName("com.pla.spiral_abyss.encounter.data.FloorCatalog").getMethod("snapshot").invoke(null);
                 var floors = (Map<?, ?>) catalog.getClass().getMethod("floors").invoke(catalog);
                 var rewardsType = Class.forName("com.pla.spiral_abyss.encounter.data.FloorDefinition$Rewards");

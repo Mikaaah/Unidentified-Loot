@@ -64,6 +64,9 @@ public final class TnkLoot {
    public static final Supplier<net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<dev.mikaaah.tnkloot.loot.SealRewardFunction>> SEAL_REWARD = LOOT_FUNCTIONS.register(
       "seal_reward", () -> new net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<>(dev.mikaaah.tnkloot.loot.SealRewardFunction.CODEC)
    );
+   public static final Supplier<net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<dev.mikaaah.tnkloot.dungeon.DungeonRewardFunction>> DUNGEON_REWARD = LOOT_FUNCTIONS.register(
+      "dungeon_reward", () -> new net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<>(dev.mikaaah.tnkloot.dungeon.DungeonRewardFunction.CODEC)
+   );
    public static final Map<TnkConfig.Category, DeferredItem<UnidentifiedWeaponItem>> TOKENS = new EnumMap<>(TnkConfig.Category.class);
    public static final Map<TnkConfig.Category, DeferredItem<UnidentifiedWeaponItem>> BOSS_TOKENS = new EnumMap<>(TnkConfig.Category.class);
    public static final DeferredItem<UnidentifiedWeaponItem> UNIDENTIFIED_WEAPON;
@@ -94,6 +97,7 @@ public final class TnkLoot {
       NeoForge.EVENT_BUS.addListener(BetaIntegration::run);
       NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.LOWEST,dev.mikaaah.tnkloot.apotheosis.LootPoolSmoke::run);
       NeoForge.EVENT_BUS.addListener(CompatPresets::started);
+      NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.LOWEST, dev.mikaaah.tnkloot.dungeon.DungeonData::reloadListener);
       NeoForge.EVENT_BUS.addListener(IdentifierSmokeTest::run);
       // TNK Progression owns level and milestone unlocks in this edition.
       NeoForge.EVENT_BUS.addListener(TnkCommands::register);

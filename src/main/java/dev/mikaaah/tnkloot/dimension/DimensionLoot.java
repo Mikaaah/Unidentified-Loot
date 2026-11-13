@@ -23,13 +23,18 @@ public final class DimensionLoot {
  public static List<TnkConfig.Weapon> pool(int tier,TnkConfig.Category category,String origin){return TnkConfig.tierWeapons(tier).stream().filter(w->w.category()==category&&tier>=w.minTier()&&tier<=w.maxTier()&&WeaponSelector.available(w)&&!BossRewards.exclusive(w.id())&&DimensionRules.allowed(w.id(),origin)).toList();}
  public static ItemStack baseResult(Level level,ItemStack token){
   if(!(token.getItem() instanceof UnidentifiedWeaponItem item))return ItemStack.EMPTY;bindOrigin(token,level);ItemStack result;
-  if(UnidentifiedWeaponItem.data(token).contains("tnk_exact_result",10))result=dev.mikaaah.tnkloot.apotheosis.InvaderRewards.base(level,token);
+  if(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.sealed(token))return dev.mikaaah.tnkloot.dungeon.DungeonEquipment.result(level,token);
+  else if(UnidentifiedWeaponItem.data(token).contains("tnk_exact_result",10))result=dev.mikaaah.tnkloot.apotheosis.InvaderRewards.base(level,token);
   else if(item.boss())result=BossRewards.baseResult(level,token);
   else{var entries=pool(UnidentifiedWeaponItem.tier(token),item.category(),origin(token)).stream().map(w->new WeightedPool.Entry<Item>(BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.parse(w.id())),w.weight())).toList();var random=new Random(UnidentifiedWeaponItem.data(token).getLong("roll_seed"));result=new WeightedPool<Item>(entries).roll(random::nextLong).map(ItemStack::new).orElse(ItemStack.EMPTY);}
   return RaritySupport.base(result,token);
  }
  public static List<FeatureMenus.Option> options(ItemStack token){
   if(!(token.getItem() instanceof UnidentifiedWeaponItem item))return List.of();var tag=UnidentifiedWeaponItem.data(token);
+  if(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.sealed(token)) {
+   String id=tag.getCompound(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.RESULT).getString("id");
+   return id.isBlank()||!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(id)?List.of():List.of(new FeatureMenus.Option(id,1,"Dungeon reward · saved exact equipment"));
+  }
   if(tag.contains("tnk_exact_result",10)) {
    String id=tag.getCompound("tnk_exact_result").getString("id");
    return id.isBlank()?List.of():List.of(new FeatureMenus.Option(id,1,"Apotheosis Invader · exact reward"));
@@ -42,7 +47,7 @@ public final class DimensionLoot {
   return pool(UnidentifiedWeaponItem.tier(token),item.category(),origin(token)).stream().map(w->new FeatureMenus.Option(w.id(),w.weight(),origin(token)+" · Tier "+UnidentifiedWeaponItem.tier(token))).toList();
  }
  @SuppressWarnings({"rawtypes","unchecked"}) public static Object setPreview(List previews,int index,Object ignored,TnkMenu menu,ServerPlayer player){
-  var token=menu.getSlot(index).getItem();bindOrigin(token,player.level());var list=options(token).stream().map(o->NativeDisplays.prepare(new ItemStack(BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.parse(o.id()))),player,UnidentifiedWeaponItem.tier(token),UnidentifiedWeaponItem.data(token).getLong("roll_seed"))).toList();
+  var token=menu.getSlot(index).getItem();bindOrigin(token,player.level());var list=dev.mikaaah.tnkloot.dungeon.DungeonEquipment.sealed(token)?List.of(dev.mikaaah.tnkloot.dungeon.DungeonEquipment.hint(player.level(),token)):options(token).stream().map(o->NativeDisplays.prepare(new ItemStack(BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.parse(o.id()))),player,UnidentifiedWeaponItem.tier(token),UnidentifiedWeaponItem.data(token).getLong("roll_seed"))).toList();
   if(list.isEmpty())throw new IllegalStateException("No equipment in the origin dimension pool");return previews.set(index,list);
  }
  public static int eligibleTier(int requested,TnkConfig.Category category,String origin){return TnkConfig.get().tiers().stream().map(TnkConfig.Tier::rank).filter(t->t<=requested).sorted(Comparator.reverseOrder()).filter(t->!pool(t,category,origin).isEmpty()).findFirst().orElse(-1);}

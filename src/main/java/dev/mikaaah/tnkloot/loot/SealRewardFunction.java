@@ -8,6 +8,9 @@ import dev.mikaaah.tnkloot.TnkLoot;
 import dev.mikaaah.tnkloot.dimension.DimensionLoot;
 import dev.mikaaah.tnkloot.rarity.RaritySupport;
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
@@ -28,18 +31,25 @@ public final class SealRewardFunction extends LootItemConditionalFunction {
         commonFields(builder).and(builder.group(
             Codec.intRange(0, 7).fieldOf("tier").forGetter(value -> value.tier),
             Codec.intRange(1, 100).fieldOf("source_level").forGetter(value -> value.sourceLevel),
-            RARITY.fieldOf("rarity").forGetter(value -> value.rarity)
+            RARITY.fieldOf("rarity").forGetter(value -> value.rarity),
+            ResourceLocation.CODEC.optionalFieldOf("preset").forGetter(value -> value.preset),
+            Codec.BOOL.optionalFieldOf("identified", false).forGetter(value -> value.identified),
+            Codec.STRING.optionalFieldOf("category").forGetter(value -> value.category)
         )).apply(builder, SealRewardFunction::new));
 
     private final int tier;
     private final int sourceLevel;
     private final String rarity;
+    private final Optional<ResourceLocation> preset;
+    private final boolean identified;
+    private final Optional<String> category;
 
-    private SealRewardFunction(List<LootItemCondition> conditions, int tier, int sourceLevel, String rarity) {
+    private SealRewardFunction(List<LootItemCondition> conditions, int tier, int sourceLevel, String rarity, Optional<ResourceLocation> preset, boolean identified, Optional<String> category) {
         super(conditions);
         this.tier = tier;
         this.sourceLevel = sourceLevel;
         this.rarity = rarity;
+        this.preset = preset; this.identified = identified; this.category = category;
     }
 
     @Override
@@ -49,7 +59,22 @@ public final class SealRewardFunction extends LootItemConditionalFunction {
 
     @Override
     public ItemStack run(ItemStack stack, LootContext context) {
-        if (!(stack.getItem() instanceof UnidentifiedWeaponItem item) || item.boss()) return stack;
+        if (dev.mikaaah.tnkloot.dungeon.DungeonEquipment.sealed(stack)) return stack;
+        if (!(stack.getItem() instanceof UnidentifiedWeaponItem)) {
+            var kind = dev.mikaaah.tnkloot.dungeon.DungeonEquipment.category(stack, category);
+            if (kind == null) return stack;
+            var settings = new dev.mikaaah.tnkloot.dungeon.DungeonData.Settings(tier, sourceLevel, dev.mikaaah.tnkloot.dungeon.DungeonData.rarities(new com.google.gson.JsonPrimitive(rarity)), identified);
+            var profile = preset.map(dev.mikaaah.tnkloot.dungeon.DungeonData::preset).orElse(null);
+            if (profile != null && profile.json().has("components")) {
+                stack = stack.copy();
+                stack.applyComponentsAndValidate(net.minecraft.core.component.DataComponentPatch.CODEC.parse(net.minecraft.resources.RegistryOps.create(com.mojang.serialization.JsonOps.INSTANCE, context.getLevel().registryAccess()), profile.json().get("components")).getOrThrow());
+            }
+            var id = context.getQueriedLootTableId() == null ? ResourceLocation.parse("tnkloot:datapack_reward") : context.getQueriedLootTableId();
+            var entry = new dev.mikaaah.tnkloot.dungeon.DungeonData.Entry(id, stack, 1, 1, 1, settings, profile, category);
+            return dev.mikaaah.tnkloot.dungeon.DungeonEquipment.reward(entry, context.getLevel(), new Random(context.getRandom().nextLong()));
+        }
+        UnidentifiedWeaponItem item = (UnidentifiedWeaponItem) stack.getItem();
+        if (item.boss()) return stack;
         var fresh = UnidentifiedWeaponItem.create(item.category(), tier, "", "datapack_reward");
         var tag = UnidentifiedWeaponItem.data(stack);
         tag.merge(UnidentifiedWeaponItem.data(fresh));

@@ -19,7 +19,7 @@
 
 This edition uses the real TNK Progression API for source levels, milestone ceilings, rarity caps and mob levels. It retains the Beta 1.0 / 0.19.15 Identifier, seven-slot identification and salvage, previews, collection, custom artwork, boss editor, dimension rewards and optional Create Mechanical Identifier/Ponder integration.
 
-The compatibility candidate passed 19 unit tests and focused server checks for 768 sealed rewards, native Iron's Jewelry preservation and all 18 Spiral floor/chest combinations. All 215 assets match approved 1.1.2. **The complete updated pack has not been tested together.** Earlier broader integration checks remain documented in [the historical release audit](docs/TNK-RELEASE-1-AUDIT.md).
+The reworked candidate passes 23 unit tests and focused server checks for 768 legacy sealed rewards, native Iron's Jewelry preservation, all 18 Spiral floor/chest combinations, 96 exact saved equipment outcomes, the paid NPC reveal, journal previews and 900 golden payouts. The approved 1.1.2 GUI artwork, fonts and models are unchanged. **The complete updated pack has not been tested together.** Earlier broader integration checks remain documented in [the historical release audit](docs/TNK-RELEASE-1-AUDIT.md).
 
 | Component | Supported / checked |
 | --- | --- |
@@ -39,7 +39,11 @@ Use `/tnkloot audit` as an operator to export the actual runtime item groups, so
 
 ## Explicit datapack rewards
 
-`tnkloot:seal_reward` supplies fixed reward strength when a loot context has no player, including Spiral Abyss 2.0.5 floor chests. Apply it to a regular TNK unidentified item:
+Spiral Abyss 2.0.5 floors can now select exact equipment, show the real variants and their per-roll odds, and use one monthly reward file per floor. Regular equipment may arrive unidentified; its completed item and stats are saved at chest opening. Nine-star golden chests make one overall rare check, then choose at most one identified prize across the party. The journal and floor page derive their previews from the same definitions.
+
+See the [dungeon reward authoring guide](docs/DUNGEON-REWARDS.md) for floor tables, reusable presets, guaranteed attributes/enchantments, restricted random affix pools, party odds and monthly updates. Reforging preserves a dungeon item's rarity and guaranteed bonuses, using its saved pool for the random portion. The optional adapter is contained in Loot; use the original Spiral JAR.
+
+`tnkloot:seal_reward` also works inside ordinary vanilla loot tables. Apply it after selecting an actual piece of equipment, or retain the earlier generic-token behavior:
 
 ```json
 {"function":"tnkloot:seal_reward","tier":4,"source_level":80,"rarity":"epic"}

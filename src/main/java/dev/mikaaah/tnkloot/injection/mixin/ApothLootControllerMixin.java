@@ -22,6 +22,6 @@ public abstract class ApothLootControllerMixin {
     }
     @Inject(method="getAvailableAffixes",at=@At("RETURN"),cancellable=true,remap=false)
     private static void tnkloot$affixes(ItemStack stack,LootRarity rarity,AffixType type,CallbackInfoReturnable<Stream<DynamicHolder<Affix>>> result) {
-        result.setReturnValue(result.getReturnValue().filter(affix->affix.getId().getNamespace().equals("tnkloot")));
+        result.setReturnValue(result.getReturnValue().filter(affix->affix.getId().getNamespace().equals("tnkloot") || dev.mikaaah.tnkloot.dungeon.DungeonEquipment.authored(stack)&&dev.mikaaah.tnkloot.dungeon.DungeonEquipment.allowedAffix(stack,affix)));
     }
 }
