@@ -1,3 +1,13 @@
+# 1.1.3 TNK — Native jewellery safeguards and datapack rewards
+
+- Remove Iron's Jewelry ring/necklace blanks from TNK identification and random Apotheosis pools, including existing imported rules. Keep native pattern/material jewellery intact.
+- Remove the obsolete Nightfall preset and stale Nightfall pool entries. Save affected equipment config before cleanup.
+- Add `tnkloot:seal_reward`, a conditional loot function accepting tier 0–7, source level 1–100, and one of the six TNK rarities. Each roll receives a fresh seed and a sealed reward payload.
+- Preserve explicit sealed tokens during hostile loot-table filtering as well as normal chest processing.
+- Supply a separate, opt-in six-floor Spiral Abyss 2.0.5 example datapack. Its balance values are editable and do not enforce individual player progression caps.
+- Audit the new 307-entry pack manifest. Document remaining equipment pool and dimension-route gaps separately.
+- Preserve the approved 1.1.2 GUI and existing optional dependency model.
+
 # 1.1.2 TNK — Restore the CleanLook interface
 
 - Restore the original blue/copper palette, shaped frame, title plates, controls and complete native inventory/hotbar artwork.

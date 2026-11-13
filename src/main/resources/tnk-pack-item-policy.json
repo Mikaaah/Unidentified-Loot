@@ -20,7 +20,12 @@
     "immersiveengineering:chunk_loader",
     "artifacts:whoopee_cushion",
     "artifacts:plastic_drinking_hat",
-    "artifacts:novelty_drinking_hat"
+    "artifacts:novelty_drinking_hat",
+    "prettypipes:item_terminal",
+    "prettypipes:crafting_terminal",
+    "prettypipes:low_crafting_module",
+    "prettypipes:medium_crafting_module",
+    "prettypipes:high_crafting_module"
   ],
   "infiniteFoods": [
     "relics:infinity_ham",

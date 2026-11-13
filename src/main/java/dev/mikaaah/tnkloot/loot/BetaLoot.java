@@ -22,6 +22,7 @@ public final class BetaLoot {
  private BetaLoot(){}
  private static boolean special(ItemStack s){return s.getOrDefault(Apoth.Components.FROM_BOSS,false)||UnidentifiedWeaponItem.data(s).getBoolean("apotheosis_invader")||BossRewards.exclusive(BuiltInRegistries.ITEM.getKey(s.getItem()).toString())||(s.getItem() instanceof UnidentifiedWeaponItem item&&item.boss());}
  private static boolean equipment(ItemStack s){
+  if(UnidentifiedWeaponItem.data(s).getBoolean("tnk_progression_sealed"))return false;
   if(s.getItem() instanceof UnidentifiedWeaponItem item)return !item.boss();
   return dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(BuiltInRegistries.ITEM.getKey(s.getItem()).toString())&&!FinalLoot.own(s)&&!dev.mikaaah.tnkloot.injection.LootProtection.keepNative(s)&&(AffixHelper.hasAffixes(s)||FinalLoot.category(s)!=null);
  }

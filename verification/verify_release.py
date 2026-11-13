@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,sys,zipfile,re
 from asset_validation import validate
 ROOT=Path(__file__).resolve().parents[1]
-jar=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'build/libs/tnkloot-1.1.2-tnk-neoforge-1.21.1.jar'
+jar=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'build/libs/tnkloot-1.1.3-tnk-neoforge-1.21.1.jar'
 with zipfile.ZipFile(jar) as archive:
  data={n:archive.read(n) for n in archive.namelist() if not n.endswith('/')}
 models,textures=validate(data,ROOT/'verification/reference/rarity-textures.zip')

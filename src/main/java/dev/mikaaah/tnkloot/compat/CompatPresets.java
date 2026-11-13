@@ -58,6 +58,13 @@ public final class CompatPresets {
 
       try {
          JsonObject root = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
+         if (root.getAsJsonArray("weapons").asList().stream().anyMatch(value -> {
+            String id = value.getAsJsonObject().get("item").getAsString();
+            return id.startsWith("efn:") || PresetCleanup.requiresNativePayload(id);
+         })) {
+            Path backup = path.resolveSibling("tiers.json.before-1.1.3.bak");
+            if (!Files.exists(backup)) Files.copy(path, backup);
+         }
          JsonArray weapons = root.getAsJsonArray("weapons");
          boolean changed = PresetCleanup.sanitize(root);
          if (!root.has("preset_revision") || root.get("preset_revision").getAsInt() < 2) {

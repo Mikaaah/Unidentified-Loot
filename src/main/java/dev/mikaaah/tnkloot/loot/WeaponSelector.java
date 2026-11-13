@@ -18,7 +18,7 @@ public final class WeaponSelector {
 
    public static boolean available(TnkConfig.Weapon weapon) {
       ResourceLocation id = ResourceLocation.parse(weapon.id());
-      if(!dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(weapon.id()) || !weapon.enabled() || !BuiltInRegistries.ITEM.containsKey(id) || BuiltInRegistries.ITEM.get(id)==Items.AIR)return false;
+      if(dev.mikaaah.tnkloot.compat.PresetCleanup.requiresNativePayload(weapon.id()) || !dev.mikaaah.tnkloot.compat.PackItemPolicy.allowed(weapon.id()) || !weapon.enabled() || !BuiltInRegistries.ITEM.containsKey(id) || BuiltInRegistries.ITEM.get(id)==Items.AIR)return false;
       // These generic trinkets get their entire effect from affixes. Without a
       // matching Curios slot/category they would identify into unusable blanks.
       if(id.getNamespace().equals("apothic_compats")) {

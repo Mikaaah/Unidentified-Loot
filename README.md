@@ -4,29 +4,29 @@
 
 <p align="center"><strong>Bring home a mystery. Identify your finds, discover powerful equipment, and build around the result.</strong></p>
 
-<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">Downloads</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Player guide</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.2/CHANGELOG.md">Changelog</a> · <a href="https://discord.gg/CRYk3uDPVt">Discord</a></p>
+<p align="center"><a href="https://www.curseforge.com/minecraft/mc-mods/unidentified-loot-a-towns-kingdoms-mod">Downloads</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/wiki">Player guide</a> · <a href="https://github.com/Mikaaah/Unidentified-Loot/issues">Report an issue</a> · <a href="CHANGELOG.md">Changelog</a> · <a href="https://discord.gg/CRYk3uDPVt">Discord</a></p>
 
 <p align="center"><img src="https://img.shields.io/badge/Minecraft-1.21.1-5b8731?style=flat-square" alt="Minecraft 1.21.1"> <img src="https://img.shields.io/badge/NeoForge-d77828?style=flat-square" alt="NeoForge"> <a href="https://mikaaah.github.io/TownsAndKingdoms/projects/"><img src="https://img.shields.io/badge/Towns_%26_Kingdoms-Modding_Hub-7f384a?style=flat-square" alt="Towns & Kingdoms Modding Hub"></a></p>
 
 
-**Current TNK guide: 1.0.2.** [Current source](https://github.com/Mikaaah/Unidentified-Loot/tree/release/tnk-1.0.2) · [Standalone 0.6.1-alpha source](https://github.com/Mikaaah/Unidentified-Loot/tree/main). Each edition needs its matching companion and configuration.
+**TNK compatibility candidate: 1.1.3.** [Candidate source](https://github.com/Mikaaah/Unidentified-Loot/tree/compat/tnk-1.1.3-pack-spiral) · [Standalone 0.6.1-alpha source](https://github.com/Mikaaah/Unidentified-Loot/tree/main). Each edition needs its matching companion and configuration.
 
 ## A mystery worth bringing home
 
-**Minecraft 1.21.1 · NeoForge 21.1.262 · Java 21 · 1.0.2 TNK edition**
+**Minecraft 1.21.1 · NeoForge 21.1.262 · Java 21 · 1.1.3 TNK candidate**
 
 **Equipment integration:** crafted equipment can be reforged with the same UL rarity groups and attribute limits used by loot and invader prizes. Pinnacle is activated automatically. See [equipment and Apotheosis integration](docs/APOTHEOSIS-UNIFICATION.md).
 
 This edition uses the real TNK Progression API for source levels, milestone ceilings, rarity caps and mob levels. It retains the Beta 1.0 / 0.19.15 Identifier, seven-slot identification and salvage, previews, collection, custom artwork, boss editor, dimension rewards and optional Create Mechanical Identifier/Ponder integration.
 
-The equipment and boss integration checks pass in focused dependency batches. **The complete Beta 1.0 pack is not certified:** Knaves' Needs optional-integration startup and a separate dimension registry-freeze failure block that test. See [the release audit](https://github.com/Mikaaah/Unidentified-Loot/blob/release/tnk-1.0.2/docs/TNK-RELEASE-1-AUDIT.md) for the evidence and exact limits.
+The compatibility candidate passed 19 unit tests and focused server checks for 768 sealed rewards, native Iron's Jewelry preservation and all 18 Spiral floor/chest combinations. All 215 assets match approved 1.1.2. **The complete updated pack has not been tested together.** Earlier broader integration checks remain documented in [the historical release audit](docs/TNK-RELEASE-1-AUDIT.md).
 
 | Component | Supported / checked |
 | --- | --- |
 | Minecraft / loader | 1.21.1 / NeoForge 21.1.262 |
 | Java | 21 |
-| TNK Progression | Required; 1.2.0-private.1 and 1.3.0-private.1 checked |
-| Core integrations | Apotheosis 8.9.0, Apothic Attributes 2.11.0, Placebo 9.9.4, Patchouli 1.21.1-93-NEOFORGE |
+| TNK Progression | Required; 1.1.0 checked for this candidate |
+| Core integrations | Apotheosis 8.9.0, Apothic Attributes 2.10.0, Placebo 9.9.4, Patchouli 1.21.1-93-NEOFORGE |
 | Create | Optional; 6.0.10 with bundled Ponder 1.0.82 checked |
 | Liquid XP automation | Optional; checked against the Beta 1.0 Create Enchantment Industry runtime |
 | Other loaders / Minecraft versions | Not supported by this build |
@@ -36,6 +36,21 @@ Replace the old `tnkloot` JAR on **both client and server**; install only one co
 The pack item catalogue's fully disabled equipment and infinite-food removals also apply to automatic imports, reward pools and previews. `/tnkloot reload` refreshes this policy.
 
 Use `/tnkloot audit` as an operator to export the actual runtime item groups, source-level ranges, item modifiers, registered attributes, affix definitions and boss mappings to `config/tnkloot/reports`.
+
+## Explicit datapack rewards
+
+`tnkloot:seal_reward` supplies fixed reward strength when a loot context has no player, including Spiral Abyss 2.0.5 floor chests. Apply it to a regular TNK unidentified item:
+
+```json
+{"function":"tnkloot:seal_reward","tier":4,"source_level":80,"rarity":"epic"}
+```
+
+Tier is 0–7, source level is 1–100, and rarity is common, uncommon, rare, epic, legendary or mythic. Standard loot-function conditions are supported. Each roll receives a fresh seed and a sealed strength/origin payload. A later owner cannot reroll or lower it. This explicitly authored reward does not enforce an individual player's progression cap. Boss crates and other items are unchanged. Use pool rolls for several independent tokens rather than stacking tokens with `set_count`.
+
+Build the separate, opt-in six-floor example datapack with `python3 tools/build_spiral_example.py <Spiral-2.0.5.jar> <output.zip>`. Its weights are editable examples; it replaces normal floor reward-table choices, preserves challenges/XP, and adds no hard dependency on Spiral.
+
+Iron's Jewelry ring/necklace blanks are excluded from identification and random Apotheosis pools. Native generated/crafted jewellery retains its pattern and materials. The config migration removes stale blank-jewellery/Nightfall entries with a backup; it does not repair already-broken inventory items.
+
 ## Pull up a chair
 
 Questions, builds, feedback, server news and the occasional wildly overambitious factory: join the **Towns & Kingdoms Modding Hub**.

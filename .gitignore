@@ -13,3 +13,5 @@ restored-src/
 
 run-kubejs-beta1-reference/
 ponder-release-check/
+
+/run-compat/

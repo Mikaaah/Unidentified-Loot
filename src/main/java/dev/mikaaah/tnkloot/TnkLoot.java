@@ -60,6 +60,10 @@ public final class TnkLoot {
    public static final Supplier<MapCodec<WeaponLootModifier>> WEAPON_LOOT_MODIFIER = LOOT_MODIFIER_SERIALIZERS.register(
       "weapon_identification", () -> WeaponLootModifier.CODEC
    );
+   public static final DeferredRegister<net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<?>> LOOT_FUNCTIONS = DeferredRegister.create(Registries.LOOT_FUNCTION_TYPE, MOD_ID);
+   public static final Supplier<net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<dev.mikaaah.tnkloot.loot.SealRewardFunction>> SEAL_REWARD = LOOT_FUNCTIONS.register(
+      "seal_reward", () -> new net.minecraft.world.level.storage.loot.functions.LootItemFunctionType<>(dev.mikaaah.tnkloot.loot.SealRewardFunction.CODEC)
+   );
    public static final Map<TnkConfig.Category, DeferredItem<UnidentifiedWeaponItem>> TOKENS = new EnumMap<>(TnkConfig.Category.class);
    public static final Map<TnkConfig.Category, DeferredItem<UnidentifiedWeaponItem>> BOSS_TOKENS = new EnumMap<>(TnkConfig.Category.class);
    public static final DeferredItem<UnidentifiedWeaponItem> UNIDENTIFIED_WEAPON;
@@ -80,6 +84,7 @@ public final class TnkLoot {
       modBus.addListener((net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent event) -> event.put(IDENTIFIER_ENTITY.get(), Villager.createAttributes().build()));
       BLOCKS.register(modBus);
       LOOT_MODIFIER_SERIALIZERS.register(modBus);
+      LOOT_FUNCTIONS.register(modBus);
       TnkMenus.MENUS.register(modBus);
       modBus.addListener(TnkMenuNetwork::register);
       TnkCreativeTabs.TABS.register(modBus);

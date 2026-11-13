@@ -9,8 +9,13 @@ public final class PresetCleanup {
    private PresetCleanup() {
    }
 
+   /** Modular jewellery must be supplied by its own pattern/material generator. */
+   public static boolean requiresNativePayload(String id) {
+      return id.equals("irons_jewelry:ring") || id.equals("irons_jewelry:necklace");
+   }
+
    public static boolean excluded(String var0) {
-      if (!PackItemPolicy.allowed(var0) || "wom:claw".equals(var0)) {
+      if (!PackItemPolicy.allowed(var0) || "wom:claw".equals(var0) || var0.startsWith("efn:") || requiresNativePayload(var0)) {
          return true;
       } else {
          String var1 = var0.substring(var0.indexOf(58) + 1);
