@@ -20,6 +20,18 @@ def request_json(url, *, authenticated=False, body=None, content_type=None):
     with urllib.request.urlopen(req, timeout=90) as response:
         return json.load(response)
 
+def version_id(versions, name):
+    matches = [v for v in versions if v.get('name', '').casefold() == name.casefold()]
+    ids = {int(v['id']) for v in matches}
+    if len(ids) > 1:
+        native = [v for v in matches if 'apiVersion' in v and v['apiVersion'] is None]
+        if len({int(v['id']) for v in native}) == 1:
+            return int(native[0]['id'])
+    if len(ids) != 1:
+        detail = [{k: v.get(k) for k in ('id', 'name', 'apiVersion', 'gameVersionTypeID')} for v in matches]
+        raise RuntimeError('CurseForge version is missing or ambiguous: ' + name + '; candidates=' + json.dumps(detail))
+    return ids.pop()
+
 def main():
     if os.environ.get('GITHUB_REPOSITORY') != 'Mikaaah/Unidentified-Loot' or os.environ.get('GITHUB_REF') != 'refs/heads/publish/curseforge-1.1.2':
         raise RuntimeError('Publishing is restricted to the explicitly authorized release branch')
@@ -59,10 +71,7 @@ def main():
         versions = versions.get('data', [])
     selected = []
     for label in spec['game_versions']:
-        matches = [v for v in versions if v.get('name') == label]
-        if len(matches) != 1:
-            raise RuntimeError('CurseForge version label is missing or ambiguous: ' + label)
-        selected.append(int(matches[0]['id']))
+        selected.append(version_id(versions, label))
     metadata = {'displayName': jar.name, 'releaseType': spec['release_type'],
                 'changelogType': 'html', 'changelog': (FOLDER / 'changelog.html').read_text(),
                 'gameVersions': selected, 'isMarkedForManualRelease': False,
