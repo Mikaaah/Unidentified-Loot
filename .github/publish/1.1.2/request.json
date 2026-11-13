@@ -13,29 +13,29 @@
   "relations": [
     {
       "slug": "apotheosis",
-      "projectID": "313970",
+      "projectID": 313970,
       "type": "requiredDependency"
     },
     {
       "slug": "placebo",
-      "projectID": "283644",
+      "projectID": 283644,
       "type": "requiredDependency"
     },
     {
       "slug": "patchouli",
-      "projectID": "306770",
+      "projectID": 306770,
       "type": "requiredDependency"
     },
     {
       "slug": "apothic-attributes",
-      "projectID": "898963",
+      "projectID": 898963,
       "type": "requiredDependency"
     },
     {
       "slug": "towns-kingdoms-progression",
-      "projectID": "1789363",
+      "projectID": 1789363,
       "type": "requiredDependency"
     }
   ],
-  "publication_attempt": 2
+  "publication_attempt": 3
 }
