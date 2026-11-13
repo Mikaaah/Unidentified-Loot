@@ -1,6 +1,6 @@
 {
   "source": "assets/minecraft/textures/gui/container/anvil.png",
-  "source_sha256": "7e5dae4d039ea07a5c1511ff14a4f835c6985815b7aff310ff7967c8c24a4a58",
+  "source_sha256": "aef44429d0766706286b2328e863ff0324401e83a99bfb825f9f0beafac17bb8",
   "logical_size": [
     256,
     252
@@ -116,14 +116,14 @@
     228
   ],
   "input_source_frame": [
+    7,
+    17,
     25,
-    45,
-    46,
-    67
+    35
   ],
   "input_source_item_origin": [
-    27,
-    47
+    8,
+    18
   ],
   "input_first_cell": [
     20,

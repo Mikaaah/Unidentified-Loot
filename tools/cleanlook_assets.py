@@ -5,6 +5,8 @@ import io,json,zipfile,hashlib
 class Assets:
  def __init__(self,pack):
   self.zip=zipfile.ZipFile(pack);self.anvil=self.read('assets/minecraft/textures/gui/container/anvil.png');self.widget=self.read('assets/minecraft/textures/gui/sprites/widget/button.png')
+  self.chest=self.read('assets/minecraft/textures/gui/container/generic_54.png')
+  self.brown_slot=self.chest.crop((7,17,25,35))
  def read(self,name):return Image.open(io.BytesIO(self.zip.read(name))).convert('RGBA')
  def export(self,root,namespace):
   folder=Path(root)/'textures/gui/sprites/cleanlook';folder.mkdir(parents=True,exist_ok=True)
@@ -15,7 +17,7 @@ class Assets:
   (folder/'panel_copper.png.mcmeta').write_text(json.dumps({'gui':{'scaling':{'type':'nine_slice','width':48,'height':32,'border':2}}},indent=2)+'\n')
   gui=Path(root)/'textures/gui/cleanlook';gui.mkdir(parents=True,exist_ok=True)
   (gui/'generic_54.png').write_bytes(self.zip.read('assets/minecraft/textures/gui/container/generic_54.png'))
-  self.anvil.crop((25,45,46,67)).save(gui/'slot.png');self.anvil.crop((8,84,24,100)).save(gui/'inventory_cell.png');self.anvil.crop((8,142,24,158)).save(gui/'hotbar_cell.png')
+  self.brown_slot.save(gui/'slot.png');self.anvil.crop((8,84,24,100)).save(gui/'inventory_cell.png');self.anvil.crop((8,142,24,158)).save(gui/'hotbar_cell.png')
   (gui/'provenance.json').write_text(json.dumps({'source':'CleanLook_GUI_Pack.zip','anvil_sha256':hashlib.sha256(self.zip.read('assets/minecraft/textures/gui/container/anvil.png')).hexdigest(),'namespace':namespace,'resampling':'Panel interiors only; inventory and item frames use native pixels'},indent=2)+'\n')
 def nine(tile,w,h,b=2):
  dest=Image.new('RGBA',(w,h));sw,sh=tile.size
@@ -30,7 +32,7 @@ class Canvas:
   x,pw=title;w,h=self.w,self.h
   pts=outline or [(0,10),(8,2),(x-3,2),(x-3,-10),(x+pw+3,-10),(x+pw+3,2),(w-8,2),(w,10),(w,h//2-6),(w-4,h//2),(w,h//2+6),(w,h-6),(w-6,h),(w//2+6,h),(w//2,h-4),(w//2-6,h),(6,h),(0,h-6)]
   mask=Image.new('L',self.im.size);ImageDraw.Draw(mask).polygon([(a+8,b+16) for a,b in pts],fill=255)
-  shadow=Image.new('L',mask.size);shadow.paste(mask.filter(ImageFilter.MaxFilter(9)),(1,2));self.im.paste('#20293F',(0,0),shadow);self.im.paste('#FBFCF8',(0,0),mask.filter(ImageFilter.MaxFilter(7)));self.im.paste('#20293F',(0,0),mask)
+  shadow=Image.new('L',mask.size);shadow.paste(mask.filter(ImageFilter.MaxFilter(5)),(1,2));self.im.paste('#20293F',(0,0),shadow);self.im.paste('#FBFCF8',(0,0),mask.filter(ImageFilter.MaxFilter(3)));self.im.paste('#20293F',(0,0),mask)
   inner=mask.filter(ImageFilter.MinFilter(3));surface=Image.new('RGBA',mask.size);d=ImageDraw.Draw(surface);base=self.assets.anvil.getpixel((48,66))[:3]
   for y in range(surface.height):
    shift=round(5-10*y/max(1,surface.height-1));d.line((0,y,surface.width,y),fill=tuple(max(0,min(255,v+shift)) for v in base)+(255,))
@@ -44,7 +46,7 @@ class Canvas:
  def inventory(self,x,y):
   self.paste(self.assets.anvil.crop((0,68,176,166)),x-8,y-16)
   self.rect(x-6,y-16,174,1,'#000000');self.rect(x-5,y-15,172,1,'#729AA1');self.rect(x-4,y-14,170,1,'#A9C3C8')
- def slot(self,x,y):self.paste(self.assets.anvil.crop((25,45,46,67)),x-2,y-2)
+ def slot(self,x,y):self.paste(self.assets.brown_slot,x-1,y-1)
  def grid(self,x,y,cols,rows,pitchx,pitchy):
   for r in range(rows):
    for c in range(cols):self.slot(x+c*pitchx,y+r*pitchy)

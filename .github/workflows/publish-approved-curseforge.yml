@@ -1,0 +1,31 @@
+name: Publish approved Unidentified Loot 1.1.2
+on:
+  push:
+    branches: [publish/curseforge-1.1.2]
+    paths:
+      - '.github/publish/1.1.2/request.json'
+concurrency:
+  group: curseforge-unidentified-loot-1753149-1.1.2
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  publish:
+    if: github.repository == 'Mikaaah/Unidentified-Loot' && github.ref == 'refs/heads/publish/curseforge-1.1.2'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify and upload the approved JAR
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+        run: python .github/scripts/upload_approved_curseforge.py
+      - name: Keep the upload receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Unidentified-Loot-1.1.2-CurseForge-receipt
+          path: curseforge-upload-receipt.json

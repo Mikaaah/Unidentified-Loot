@@ -1,0 +1,30 @@
+{
+  "container_pack": {
+    "file": "CleanLook_GUI_Pack (1).zip",
+    "sha256": "103c9b80bbb67b9832ff4e1f199c6aceb466ce7c1e15a5e4f2b36b3a09bc7f2f",
+    "role": "Native slot, inventory, hotbar, plate and control artwork"
+  },
+  "menu_pack": {
+    "file": "CleanLook_GUI_Menu (1).zip",
+    "sha256": "a17469c26f29e885305eee4bf38ecf650c53706bfda5332e4f43c7e7060bfffb",
+    "role": "Visual reference; raw paid archive is not redistributed"
+  },
+  "slot_source": "assets/minecraft/textures/gui/container/generic_54.png",
+  "slot_rectangle": [
+    7,
+    17,
+    25,
+    35
+  ],
+  "slot_item_inset": [
+    1,
+    1
+  ],
+  "native_inventory_source": [
+    0,
+    68,
+    176,
+    166
+  ],
+  "palette_recolouring": false
+}

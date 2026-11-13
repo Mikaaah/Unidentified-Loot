@@ -71,6 +71,6 @@ side="BOTH"
 [[dependencies.tnkloot]]
 modId="tnkprogression"
 type="required"
-versionRange="[1.2.0-private.1,)"
+versionRange="[1.1.0,)"
 ordering="AFTER"
 side="BOTH"

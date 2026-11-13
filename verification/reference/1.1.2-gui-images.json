@@ -1,0 +1,11 @@
+{
+  "assets/tnkloot/textures/gui/salvage/background.png": "08885b3af3ea715883e84cbb25face73d2bbdefece62527cd5f14eb2a5f1fea8",
+  "assets/tnkloot/textures/gui/reward_preview.png": "438776b82e95f09a9b866e17c14422a0629b1d9f6c5a6f44f591fe714e290ac1",
+  "assets/tnkloot/textures/gui/tier_vault.png": "43ff2897d94091273e27f803d24f50c9951326808ae6e642f95123c8fafe049a",
+  "assets/tnkloot/textures/gui/tier_vault_items.png": "abf369ee73a1a7c95aff17eb0561507063193b1180fe53aa30b60d0374fd661d",
+  "assets/tnkloot/textures/gui/collection.png": "c3e88d4b973bd0731cf6d95189319d738dae1521b56146dd5ec240aa4bb6a956",
+  "assets/tnkloot/textures/gui/identifier_counter.png": "895263553c5b366fe587e88de29fe645d7c6226db9864c9a2fa3f052ceccb583",
+  "assets/tnkloot/textures/gui/cleanlook/generic_54.png": "b5b4a416b758fd4d2581c196b9098be89b8cd09daa86db53872bddc77801bb1e",
+  "assets/tnkloot/textures/gui/cleanlook/slot.png": "5a77616ef3333a028e7d24b2c236bc85a49833d47e854b62608de578de884034",
+  "assets/tnkloot/textures/gui/mechanical_identifier.png": "1b6defe74b6a00533604eca38e40e2e92007432b0c065ee0dafde571530acc77"
+}

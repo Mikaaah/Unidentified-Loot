@@ -18,7 +18,7 @@ public final class MarketTheme {
   rect(p,x+2,y+h-3,w-4,1,shade(inside,-24));rect(p,x+w-3,y+3,1,h-5,shade(inside,-18));
  }
  public static void panel(GuiGraphics g,int x,int y,int w,int h,int colour){CleanLookDraw.panel(g,colour==0xFF905C49||colour==0xFF7A4841?"panel_copper":"button",x,y,w,h);}
- public static void nativeSlot(GuiGraphics g,int x,int y){g.blit(net.minecraft.resources.ResourceLocation.parse("tnkloot:textures/gui/cleanlook/slot.png"),x-2,y-2,0f,0f,21,22,21,22);}
+ public static void nativeSlot(GuiGraphics g,int x,int y){g.blit(net.minecraft.resources.ResourceLocation.parse("tnkloot:textures/gui/cleanlook/slot.png"),x-1,y-1,0f,0f,18,18,18,18);}
  public static void slot(Paint p,int x,int y,int tint){
   if(tint!=0xFFB88B68)rect(p,x-1,y-1,18,18,tint==0xFF4D2B32?0xFFA77257:0xFF729AA1);
   rect(p,x,y,16,16,shade(tint,-14));

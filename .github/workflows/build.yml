@@ -1,6 +1,7 @@
 name: Build TNK NeoForge release
 on:
   push:
+    branches-ignore: ["publish/**"]
   pull_request:
 jobs:
   build:
@@ -45,7 +46,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: TNK-Loot-1.0.2-neoforge-1.21.1
+          name: TNK-Loot-1.1.2-neoforge-1.21.1
           path: |
             build/libs/*.jar
             build/reports/tests/

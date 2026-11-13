@@ -1,3 +1,10 @@
+# 1.1.2 TNK — Restore the CleanLook interface
+
+- Restore the original blue/copper palette, shaped frame, title plates, controls and complete native inventory/hotbar artwork.
+- Use native brown equipment wells from the supplied CleanLook GUI pack inside the existing layout.
+- Reduce the oversized white outer stroke while preserving the original frame contours.
+- Preserve gameplay code, fonts, equipment artwork, Ponder resources and Progression integration.
+
 ## 1.0.1 TNK Edition — Unified equipment rarities
 
 - Use UL's six rarity groups and tier-bounded affixes throughout Apotheosis loot generation and reforging.

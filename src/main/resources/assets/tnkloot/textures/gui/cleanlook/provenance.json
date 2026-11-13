@@ -1,6 +1,6 @@
 {
   "source": "CleanLook_GUI_Pack.zip",
-  "anvil_sha256": "7e5dae4d039ea07a5c1511ff14a4f835c6985815b7aff310ff7967c8c24a4a58",
+  "anvil_sha256": "aef44429d0766706286b2328e863ff0324401e83a99bfb825f9f0beafac17bb8",
   "namespace": "tnkloot",
   "resampling": "Panel interiors only; inventory and item frames use native pixels"
 }

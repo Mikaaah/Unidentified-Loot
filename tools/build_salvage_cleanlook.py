@@ -11,7 +11,8 @@ def read(name):return Image.open(io.BytesIO(pack.read(name))).convert('RGBA')
 path='assets/minecraft/textures/gui/container/anvil.png';anvil=read(path)
 # These source positions are the vanilla AnvilMenu / ItemCombinerMenu coordinates.
 inventory=anvil.crop((0,68,176,166))
-input_frame=anvil.crop((25,45,46,67)) # item origin is 27,47 inside this source frame
+chest=read('assets/minecraft/textures/gui/container/generic_54.png')
+input_frame=chest.crop((7,17,25,35)) # native brown work well, one-pixel item inset
 W,H=256,252;im=Image.new('RGBA',(W+16,H+28))
 mask=Image.new('L',im.size);md=ImageDraw.Draw(mask)
 outline=[(0,10),(8,2),(40,2),(40,-10),(216,-10),(216,2),(248,2),(256,10),
@@ -19,8 +20,8 @@ outline=[(0,10),(8,2),(40,2),(40,-10),(216,-10),(216,2),(248,2),(256,10),
  (204,252),(194,246),(184,252),(8,252),(0,244)]
 # One connected shell: retain the small right and bottom dents, with no seam around Balance.
 md.polygon([(x+8,y+16) for x,y in outline],fill=255)
-shadow=Image.new('L',im.size);shadow.paste(mask.filter(ImageFilter.MaxFilter(9)),(1,2))
-im.paste('#20293F',(0,0),shadow);im.paste('#FBFCF8',(0,0),mask.filter(ImageFilter.MaxFilter(7)));im.paste('#20293F',(0,0),mask)
+shadow=Image.new('L',im.size);shadow.paste(mask.filter(ImageFilter.MaxFilter(5)),(1,2))
+im.paste('#20293F',(0,0),shadow);im.paste('#FBFCF8',(0,0),mask.filter(ImageFilter.MaxFilter(3)));im.paste('#20293F',(0,0),mask)
 inner=mask.filter(ImageFilter.MinFilter(3));surface=Image.new('RGBA',im.size);d=ImageDraw.Draw(surface)
 base=anvil.getpixel((48,66))[:3]
 for y in range(im.height):
@@ -53,7 +54,7 @@ edge=quote_mask.filter(ImageFilter.MinFilter(3));im.paste('#AD7757',(0,0),edge)
 face=edge.filter(ImageFilter.MinFilter(3));copper=Image.new('RGBA',im.size)
 strip=anvil.crop((168,17,169,41)).resize((186,42),Image.Resampling.NEAREST);copper.paste(strip,(70,57));im.paste(copper,(0,0),face)
 # All work wells are copied from the source anvil frame, including their border.
-for i in range(7):paste(input_frame,18+i*24,101)
+for i in range(7):paste(input_frame,19+i*24,102)
 # Whole inventory section, no crop-and-rebuild of individual cells, no resizing.
 paste(inventory,6,154)
 # Close the blank header strip while retaining all native item cells and the title tab.
@@ -64,7 +65,7 @@ widget=read('assets/minecraft/textures/gui/sprites/widget/button.png');paste(nin
 im.save(out/'background.png')
 meta={'source':path,'source_sha256':hashlib.sha256(pack.read(path)).hexdigest(),'logical_size':[256,252],'texture_size':[272,280],'outline':outline,'balance_attached':True,'inventory_header_closed':True,'right_column':[191,248],
  'inventory_source':[0,68,176,166],'inventory_destination':[6,154],'inventory_translation':[6,86],
- 'player_first_cell':[14,170],'hotbar_first_cell':[14,228],'input_source_frame':[25,45,46,67],'input_source_item_origin':[27,47],
+ 'player_first_cell':[14,170],'hotbar_first_cell':[14,228],'input_source_frame':[7,17,25,35],'input_source_item_origin':[8,18],
  'input_first_cell':[20,103],'input_pitch':24}
 (out/'provenance.json').write_text(json.dumps(meta,indent=2)+'\n')
 sprites=root/'src/main/resources/assets/tnkloot/textures/gui/sprites/salvage';sprites.mkdir(parents=True,exist_ok=True)

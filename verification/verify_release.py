@@ -3,14 +3,15 @@ from pathlib import Path
 import hashlib,json,sys,zipfile,re
 from asset_validation import validate
 ROOT=Path(__file__).resolve().parents[1]
-jar=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'build/libs/tnkloot-1.0.2-tnk-neoforge-1.21.1.jar'
+jar=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'build/libs/tnkloot-1.1.2-tnk-neoforge-1.21.1.jar'
 with zipfile.ZipFile(jar) as archive:
  data={n:archive.read(n) for n in archive.namelist() if not n.endswith('/')}
 models,textures=validate(data,ROOT/'verification/reference/rarity-textures.zip')
 reference=json.loads((ROOT/'verification/reference/0.19.15-images.json').read_text())
+gui_reference=json.loads((ROOT/'verification/reference/1.1.2-gui-images.json').read_text())
 for name,digest in reference.items():
  assert name in data,f'Missing Beta 1.0 artwork: {name}'
- assert hashlib.sha256(data[name]).hexdigest()==digest,f'Changed Beta 1.0 artwork: {name}'
+ assert hashlib.sha256(data[name]).hexdigest()==gui_reference.get(name,digest),f'Unexpected artwork change: {name}'
 for name in ['client/IdentifierScreen','client/SalvageScreen','client/PreviewScreen','client/CollectionScreen',
  'client/ponder/OptionalPonderClient','client/ponder/LootPonderPlugin','client/ponder/LootScenes',
  'boss/BossEditor','boss/BossItems','features/BossSignatures','workshop/LootJournal',
@@ -34,4 +35,4 @@ assert not any(n.startswith(('net/minecraft/','net/neoforged/','com/simibubi/','
 assert not any('PonderClientCheck' in n or 'ClientVisualCheck' in n for n in data)
 assert sum(n.startswith('data/tnkloot/affixes/compat/') and n.endswith('.json') for n in data)==342
 assert 'META-INF/licenses/irons_apothic-LICENSE' in data and 'THIRD_PARTY_NOTICES.md' in data
-print(f'RELEASE_ASSETS_OK: {len(reference)} unchanged Beta 1.0 artwork files, {models} valid models, {textures} exact rarity icons, four origin mixins, thirteen Apotheosis integration mixins, Legendary salvage, 342 optional affixes, no bundled APIs/test client')
+print(f'RELEASE_ASSETS_OK: {len(reference)-len(gui_reference)} unchanged reference images; {len(gui_reference)} corrected GUI textures; {models} valid models, {textures} exact rarity icons, four origin mixins, thirteen Apotheosis integration mixins, Legendary salvage, 342 optional affixes, no bundled APIs/test client')

@@ -4,7 +4,7 @@ plugins {
     id 'idea'
 }
 
-version = '1.0.2-tnk-neoforge-1.21.1'
+version = '1.1.2'
 group = 'dev.mikaaah.tnkloot'
 base { archivesName = 'tnkloot' }
 
@@ -37,9 +37,16 @@ dependencies {
 }
 tasks.named('test', Test) { useJUnitPlatform() }
 java { withSourcesJar() }
+tasks.named('jar') {
+    archiveFileName = "tnkloot-${project.version}-tnk-neoforge-1.21.1.jar"
+}
+tasks.named('sourcesJar') {
+    archiveFileName = "tnkloot-${project.version}-tnk-neoforge-1.21.1-sources.jar"
+}
 tasks.named('processResources') {
     inputs.property('version', project.version)
     filesMatching('META-INF/neoforge.mods.toml') { expand(version: project.version) }
+    from('release.json') { into 'META-INF'; rename { 'tnk-release.json' } }
 }
 
 neoForge.unitTest {
@@ -68,8 +75,6 @@ if (providers.gradleProperty('extraRuntimeDirectory').isPresent()) {
 if (providers.gradleProperty('clientVisualCheck').isPresent()) {
     sourceSets.main.java.srcDir('verification/client')
     neoForge.runs.client {
-        programArgument '--quickPlaySingleplayer'
-        programArgument 'TNKLootVisual'
         programArgument '--width'
         programArgument '1280'
         programArgument '--height'
