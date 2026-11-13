@@ -42,7 +42,7 @@ preset('rare_bow', {'enchantments': {'minecraft:power': 5, 'minecraft:unbreaking
 themes = [
     ('Arcane', 1, 20, [('irons_spellbooks:wizard_helmet', 'irons_spellbooks', 'arcane_helmet'), ('ars_nouveau:arcanist_hood', 'ars_nouveau', 'adventurer')]),
     ('Aether', 2, 40, [('aether:zanite_helmet', 'aether', 'adventurer'), ('aether:zanite_chestplate', 'aether', 'adventurer')]),
-    ('Aquatic', 3, 60, [('hybrid_aquatic:diving_helmet', 'hybrid_aquatic', 'adventurer'), ('hybrid_aquatic:diving_suit', 'hybrid_aquatic', 'adventurer')]),
+    ('Aquatic', 3, 60, []),
     ('Twilight', 4, 80, [('twilightforest:ironwood_helmet', 'twilightforest', 'adventurer'), ('twilightforest:steeleaf_chestplate', 'twilightforest', 'adventurer')]),
     ('Infernal', 6, 94, [('cataclysm:bone_reptile_helmet', 'cataclysm', 'adventurer'), ('cataclysm:bone_reptile_chestplate', 'cataclysm', 'adventurer')]),
     ('End', 7, 100, [('enderscape:drift_leggings', 'enderscape', 'adventurer'), ('the_beyond:pathfinder_boots', 'the_beyond', 'adventurer')])]

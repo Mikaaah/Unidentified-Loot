@@ -20,7 +20,8 @@
     "ApothAffixLootRegistryMixin",
     "ApothAffixIngredientMixin",
     "ApothAffixTradeMixin",
-    "ApothAffixLootModifierMixin"
+    "ApothAffixLootModifierMixin",
+    "ApothApprovedCategoryMixin"
   ],
   "injectors": {
     "defaultRequire": 1

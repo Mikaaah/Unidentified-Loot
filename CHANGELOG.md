@@ -1,5 +1,10 @@
 # 1.1.3 TNK — Editable dungeon rewards and native jewellery safeguards
 
+- Apply the approved pack equipment choices: copper at chainmail strength, AE2 ordinary tools at iron strength, IE armour above iron, and Deeper and Darker armour above netherite.
+- Add End pools for The Beyond and Enderscape, plus Otherside armour routing. Preserve native item state and custom dimension settings during migration.
+- Keep excluded clothing, diving gear, guns, powered/utility equipment and Supplementaries items out of TNK generated pools while retaining native crafting and use.
+- Assign the Echo Mace exclusively to Last of Deepslate's boss reward; preserve native Echo Charges and smithing-template drops.
+
 - Select exact equipment per dungeon instead of redirecting it into a global identification pool. Save the complete rolled item on unidentified rewards; later owners and monthly rotations preserve it.
 - Add one editable reward definition per Spiral floor with weighted materials, food, real potion variants, equipment and golden prizes. Derive floor and journal previews, variant identities and normal/rare percentages from those definitions.
 - Make golden-only rare loot one overall proc followed by weighted selection of at most one identified prize across the party. Support explicit shared/per-player chance scaling and preserve Spiral's pickup announcement and saved payout markers.

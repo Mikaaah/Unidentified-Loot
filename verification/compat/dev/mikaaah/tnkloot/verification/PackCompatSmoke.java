@@ -150,6 +150,7 @@ public final class PackCompatSmoke {
                 results.addProperty("spiral_floor_chest_cases", 18);
                 results.addProperty("spiral_tokens", spiralTokens);
             }
+            if(ModList.get().isLoaded("archaion") && ModList.get().isLoaded("enderscape"))results.add("approved_equipment",ApprovedEquipmentSmoke.verify(server));
             Files.createDirectories(java.nio.file.Path.of("verification"));
             Files.writeString(java.nio.file.Path.of("verification/compat-results.json"), results.toString());
             TnkLoot.LOG.info("TNKLOOT_PACK_COMPAT_OK: {}", results);

@@ -11,6 +11,7 @@ public final class LootProtection {
     private LootProtection() {}
     public static boolean keepNative(ItemStack stack) {
         if (stack.isEmpty() || FinalLoot.own(stack)) return false;
+        if (dev.mikaaah.tnkloot.compat.PackEquipmentRules.nativeOnly(BuiltInRegistries.ITEM.getKey(stack.getItem()).toString())) return true;
         if (dev.mikaaah.tnkloot.compat.PresetCleanup.requiresNativePayload(BuiltInRegistries.ITEM.getKey(stack.getItem()).toString())) return true;
         var tag=dev.mikaaah.tnkloot.loot.UnidentifiedWeaponItem.data(stack);
         if(tag.getBoolean("tnk_random_pool")&&tag.getBoolean("tnk_external_generated"))return false;

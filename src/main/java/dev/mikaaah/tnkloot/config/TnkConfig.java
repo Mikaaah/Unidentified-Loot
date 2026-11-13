@@ -267,7 +267,7 @@ public final class TnkConfig {
          if (Files.exists(active)) {
             JsonObject prior = JsonParser.parseString(Files.readString(active)).getAsJsonObject();
 
-            for (String key : List.of("preset_revision", "compat_profiles", "tnk_release_revision")) {
+            for (String key : List.of("preset_revision", "compat_profiles", "tnk_release_revision", "tnk_pack_compat_revision")) {
                if (prior.has(key)) {
                   root.add(key, prior.get(key).deepCopy());
                }
@@ -390,7 +390,8 @@ public final class TnkConfig {
          "weapons",
          "preset_revision",
          "compat_profiles",
-         "tnk_release_revision"
+         "tnk_release_revision",
+         "tnk_pack_compat_revision"
       );
       TnkConfig.Mode mode = TnkConfig.Mode.valueOf(string(root, "progression_mode", "ADVANCEMENTS").toUpperCase(Locale.ROOT));
       boolean share = bool(root, "share_ftb_teams", true);

@@ -19,6 +19,6 @@ public final class DimensionSupport {
   }root.add("base_compat_extras",seen);
   // Only wearable ring/necklace IDs exist in Iron's Jewelry 2.0.2; remove invalid older reward entries too.
   for(var p:pools){var list=p.getAsJsonObject().getAsJsonArray("items");for(int i=list.size()-1;i>=0;i--){String id=list.get(i).getAsJsonObject().get("item").getAsString();if(id.startsWith("irons_jewelry:")&&!Set.of("irons_jewelry:ring","irons_jewelry:necklace").contains(id)){list.remove(i);changed=true;}}}
-  if(!changed)return true;BossRewards.parse(root);Path backup=path.resolveSibling("boss-rewards.json.before-0.12.0.bak");if(!Files.exists(backup))Files.copy(path,backup);Path temp=path.resolveSibling("boss-rewards.json.basecompat.tmp");Files.writeString(temp,new GsonBuilder().setPrettyPrinting().create().toJson(root));Files.move(temp,path,StandardCopyOption.ATOMIC_MOVE,StandardCopyOption.REPLACE_EXISTING);return BossRewards.reload();
+  if(!changed)return true;BossRewards.parse(root);Path backup=path.resolveSibling("boss-rewards.json.before-1.1.3.bak");if(!Files.exists(backup))Files.copy(path,backup);Path temp=path.resolveSibling("boss-rewards.json.basecompat.tmp");Files.writeString(temp,new GsonBuilder().setPrettyPrinting().create().toJson(root));Files.move(temp,path,StandardCopyOption.ATOMIC_MOVE,StandardCopyOption.REPLACE_EXISTING);return BossRewards.reload();
  }catch(Exception ex){dev.mikaaah.tnkloot.TnkLoot.LOG.error("New boss preset migration failed",ex);return false;}}
 }

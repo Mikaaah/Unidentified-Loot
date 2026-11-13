@@ -520,6 +520,23 @@
           "weight": 1
         }
       ]
+    },
+    {
+      "id": "archaion/last_of_deepslate",
+      "mod": "archaion",
+      "entity": "archaion:last_of_deepslate",
+      "name": "Last of Deepslate",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "archaion:echo_mace",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
     }
   ]
 }

@@ -30,6 +30,7 @@ public final class BaseCompat {
   return null;
  }
  public static int[] band(String id,Item item,TnkConfig.Category cat){
+  int[] approved=PackEquipmentRules.band(id);if(approved!=null)return approved;
   String p=id.substring(id.indexOf(':')+1);
   String[] names={"skyroot","holystone","zanite","gravitite","skyjade","stratus","stormforged","ironwood","steeleaf","knightmetal","fiery","arctic","yeti","nether_ruby","cincinnasite","thallasium","terminite","aeternium","crystalite","netherite","diamond","leather","novice","apprentice","archmage","sorcerer","battlemage"};
   int[][] ranges={{0,1},{1,2},{2,4},{4,6},{2,4},{5,7},{6,7},{1,3},{2,4},{4,6},{5,7},{2,4},{5,7},{5,7},{3,5},{3,5},{4,6},{6,7},{5,7},{5,7},{3,6},{0,1},{0,2},{2,4},{5,7},{3,5},{4,7}};

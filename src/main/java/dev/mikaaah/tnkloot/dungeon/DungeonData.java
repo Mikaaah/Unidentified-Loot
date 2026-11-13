@@ -42,7 +42,7 @@ public final class DungeonData {
                         Settings settings, Preset preset, Optional<String> category) {
         public Entry { template = template.copy(); }
         @Override public ItemStack template() { return template.copy(); }
-        public boolean available() { return PackItemPolicy.allowed(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(template.getItem()).toString()); }
+        public boolean available() { String id=net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(template.getItem()).toString();return PackItemPolicy.allowed(id) && dev.mikaaah.tnkloot.compat.PackEquipmentRules.lootAllowed(id); }
     }
     public record Rare(Optional<Double> chance, boolean perPlayer, Optional<List<Entry>> entries, Settings settings) {
         public Rare { entries = entries.map(List::copyOf); }

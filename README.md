@@ -17,9 +17,11 @@
 
 **Equipment integration:** crafted equipment can be reforged with the same UL rarity groups and attribute limits used by loot and invader prizes. Pinnacle is activated automatically. See [equipment and Apotheosis integration](docs/APOTHEOSIS-UNIFICATION.md).
 
+The [approved TNK3 equipment rules](docs/PACK-EQUIPMENT-1.1.3.md) define the new copper, Deeper and Darker, End, IE and AE2 pools; preserve crafting-only equipment; and assign the Echo Mace to Last of Deepslate. Existing configurations migrate with backups and retain their weights and disabled-item choices.
+
 This edition uses the real TNK Progression API for source levels, milestone ceilings, rarity caps and mob levels. It retains the Beta 1.0 / 0.19.15 Identifier, seven-slot identification and salvage, previews, collection, custom artwork, boss editor, dimension rewards and optional Create Mechanical Identifier/Ponder integration.
 
-The reworked candidate passes 23 unit tests and focused server checks for 768 legacy sealed rewards, native Iron's Jewelry preservation, all 18 Spiral floor/chest combinations, 96 exact saved equipment outcomes, the paid NPC reveal, journal previews and 900 golden payouts. The approved 1.1.2 GUI artwork, fonts and models are unchanged. **The complete updated pack has not been tested together.** Earlier broader integration checks remain documented in [the historical release audit](docs/TNK-RELEASE-1-AUDIT.md).
+The reworked candidate passes 27 unit tests and focused server checks for 768 legacy sealed rewards, native Iron's Jewelry preservation, all 18 Spiral floor/chest combinations, 96 exact saved equipment outcomes, the paid NPC reveal, journal previews and 900 golden payouts. The approved 1.1.2 GUI artwork, fonts and models are unchanged. **The complete updated pack has not been tested together.** Earlier broader integration checks remain documented in [the historical release audit](docs/TNK-RELEASE-1-AUDIT.md).
 
 | Component | Supported / checked |
 | --- | --- |

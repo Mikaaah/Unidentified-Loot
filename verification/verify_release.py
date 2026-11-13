@@ -27,7 +27,7 @@ for method,title in [('loot','loot_basics'),('identify','identifying'),('salvage
  for number,caption in enumerate(captions,1):assert lang.get(f'tnkloot.ponder.{title}.text_{number}')==caption,f'Ponder caption {title}/{number}'
 mixins=json.loads(data['tnkloot.loot.mixins.json'])
 assert {'CommonHooksMixin','LootContextAccess','LootParamsMixin','LootParamsBuilderMixin'}.issubset(mixins['mixins'])
-assert len([name for name in mixins['mixins'] if name.startswith('Apoth')])==13
+assert len([name for name in mixins['mixins'] if name.startswith('Apoth')])==14
 assert {'ApothAffixIngredientMixin','ApothAffixLootModifierMixin','ApothAffixLootRegistryMixin','ApothAffixTradeMixin'}.issubset(mixins['mixins'])
 legendary=json.loads(data['data/tnkloot/recipe/salvaging/affix_item/legendary.json'])
 assert legendary['input']['rarity']=='tnkloot:legendary' and legendary['outputs'][0]['stack']['id']=='minecraft:echo_shard'
@@ -39,4 +39,4 @@ assert len(spiral['mixins'])==3 and len(spiral['client'])==1 and spiral['plugin'
 assert sum(n.startswith('data/tnkloot/affixes/dungeon/') and n.endswith('.json') for n in data)==2
 assert sum(n.startswith('data/tnkloot/affixes/compat/') and n.endswith('.json') for n in data)==342
 assert 'META-INF/licenses/irons_apothic-LICENSE' in data and 'THIRD_PARTY_NOTICES.md' in data
-print(f'RELEASE_ASSETS_OK: {len(reference)-len(gui_reference)} unchanged reference images; {len(gui_reference)} corrected GUI textures; {models} valid models, {textures} exact rarity icons, four origin mixins, thirteen Apotheosis integration mixins, Legendary salvage, 342 optional affixes, no bundled APIs/test client')
+print(f'RELEASE_ASSETS_OK: {len(reference)-len(gui_reference)} unchanged reference images; {len(gui_reference)} corrected GUI textures; {models} valid models, {textures} exact rarity icons, four origin mixins, fourteen Apotheosis integration mixins, Legendary salvage, 342 optional affixes, no bundled APIs/test client')

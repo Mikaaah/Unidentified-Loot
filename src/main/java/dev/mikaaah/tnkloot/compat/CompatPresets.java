@@ -40,6 +40,7 @@ public final class CompatPresets {
             var2 = JsonParser.parseReader(new InputStreamReader(in, StandardCharsets.UTF_8)).getAsJsonObject();
          }
 
+         if (name.equals("compat-presets.json")) PackEquipmentRules.appendProfiles(var2.getAsJsonArray("profiles"));
          return var2;
       } catch (IOException var6) {
          throw new UncheckedIOException(var6);
@@ -58,15 +59,20 @@ public final class CompatPresets {
 
       try {
          JsonObject root = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
-         if (root.getAsJsonArray("weapons").asList().stream().anyMatch(value -> {
+         if (!root.has("tnk_pack_compat_revision")) {
+            Path packBackup = path.resolveSibling("tiers.json.before-1.1.3-pack-rules.bak");
+            if (!Files.exists(packBackup)) Files.copy(path, packBackup);
+         }
+         if (!root.has("tnk_pack_compat_revision") || root.getAsJsonArray("weapons").asList().stream().anyMatch(value -> {
             String id = value.getAsJsonObject().get("item").getAsString();
-            return id.startsWith("efn:") || PresetCleanup.requiresNativePayload(id);
+            return id.startsWith("efn:") || PresetCleanup.requiresNativePayload(id) || PackEquipmentRules.nativeOnly(id);
          })) {
             Path backup = path.resolveSibling("tiers.json.before-1.1.3.bak");
             if (!Files.exists(backup)) Files.copy(path, backup);
          }
          JsonArray weapons = root.getAsJsonArray("weapons");
-         boolean changed = PresetCleanup.sanitize(root);
+         boolean changed = PackEquipmentRules.migrate(root);
+         changed |= PresetCleanup.sanitize(root);
          if (!root.has("preset_revision") || root.get("preset_revision").getAsInt() < 2) {
             weapons = migrateVanilla(root, weapons);
             root.add("weapons", weapons);

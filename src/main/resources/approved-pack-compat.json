@@ -1,0 +1,556 @@
+{
+  "profiles": [
+    {
+      "id": "tnk3_113_backport",
+      "requires": [
+        "vanillabackport"
+      ],
+      "items": [
+        {
+          "item": "minecraft:copper_helmet",
+          "category": "helmet",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_chestplate",
+          "category": "chestplate",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_leggings",
+          "category": "leggings",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_boots",
+          "category": "boots",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_sword",
+          "category": "weapon",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_axe",
+          "category": "tool",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_pickaxe",
+          "category": "tool",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_shovel",
+          "category": "tool",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_hoe",
+          "category": "tool",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:wooden_spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 0,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:stone_spear",
+          "category": "weapon",
+          "min_tier": 0,
+          "max_tier": 1,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:copper_spear",
+          "category": "weapon",
+          "min_tier": 1,
+          "max_tier": 2,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:iron_spear",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:diamond_spear",
+          "category": "weapon",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "minecraft:netherite_spear",
+          "category": "weapon",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "tnk3_113_deeperdarker",
+      "requires": [
+        "deeperdarker"
+      ],
+      "items": [
+        {
+          "item": "deeperdarker:resonarium_helmet",
+          "category": "helmet",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:resonarium_chestplate",
+          "category": "chestplate",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:resonarium_leggings",
+          "category": "leggings",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:resonarium_boots",
+          "category": "boots",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:warden_helmet",
+          "category": "helmet",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:warden_chestplate",
+          "category": "chestplate",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:warden_leggings",
+          "category": "leggings",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "deeperdarker:warden_boots",
+          "category": "boots",
+          "min_tier": 6,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "tnk3_113_ie",
+      "requires": [
+        "immersiveengineering"
+      ],
+      "items": [
+        {
+          "item": "immersiveengineering:armor_steel_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_steel_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_steel_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_steel_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_faraday_helmet",
+          "category": "helmet",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_faraday_chestplate",
+          "category": "chestplate",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_faraday_leggings",
+          "category": "leggings",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:armor_faraday_boots",
+          "category": "boots",
+          "min_tier": 3,
+          "max_tier": 4,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:sword_steel",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:axe_steel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:pickaxe_steel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:shovel_steel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "immersiveengineering:hoe_steel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "tnk3_113_ae2",
+      "requires": [
+        "ae2"
+      ],
+      "items": [
+        {
+          "item": "ae2:certus_quartz_sword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:certus_quartz_axe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:certus_quartz_pickaxe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:certus_quartz_shovel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:certus_quartz_hoe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:nether_quartz_sword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:nether_quartz_axe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:nether_quartz_pickaxe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:nether_quartz_shovel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:nether_quartz_hoe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:fluix_sword",
+          "category": "weapon",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:fluix_axe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:fluix_pickaxe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:fluix_shovel",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "ae2:fluix_hoe",
+          "category": "tool",
+          "min_tier": 2,
+          "max_tier": 3,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "tnk3_113_beyond",
+      "requires": [
+        "the_beyond"
+      ],
+      "items": [
+        {
+          "item": "the_beyond:brittle_sword",
+          "category": "weapon",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "the_beyond:brittle_axe",
+          "category": "tool",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "the_beyond:brittle_pickaxe",
+          "category": "tool",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "the_beyond:brittle_shovel",
+          "category": "tool",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "the_beyond:brittle_hoe",
+          "category": "tool",
+          "min_tier": 4,
+          "max_tier": 6,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "the_beyond:anchor_leggings",
+          "category": "leggings",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "the_beyond:pathfinder_boots",
+          "category": "boots",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "tnk3_113_enderscape",
+      "requires": [
+        "enderscape"
+      ],
+      "items": [
+        {
+          "item": "enderscape:drift_leggings",
+          "category": "leggings",
+          "min_tier": 5,
+          "max_tier": 7,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "enderscape:end_stone_rubble_shield",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "enderscape:kurodite_rubble_shield",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "enderscape:mirestone_rubble_shield",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "item": "enderscape:veradite_rubble_shield",
+          "category": "tool",
+          "min_tier": 3,
+          "max_tier": 5,
+          "weight": 1,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}
